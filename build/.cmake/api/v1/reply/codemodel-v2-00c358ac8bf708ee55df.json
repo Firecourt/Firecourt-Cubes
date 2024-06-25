@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-378ecac63e80290b44f1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "FirecourtStudio",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "FirecourtStudio::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FirecourtStudio-Debug-fbb5b37dc92fa75878c7.json",
+					"name" : "FirecourtStudio",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FirecourtStudio_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FirecourtStudio_autogen-Debug-f60b1b9289cab57040ad.json",
+					"name" : "FirecourtStudio_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FirecourtStudio_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FirecourtStudio_autogen_timestamp_deps-Debug-e0a37ae98bd8e570cbe3.json",
+					"name" : "FirecourtStudio_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/heather/FirecourtStudio/build",
+		"source" : "/home/heather/FirecourtStudio"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
