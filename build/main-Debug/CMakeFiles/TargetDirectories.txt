@@ -1,9 +1,0 @@
-/home/heather/FirecourtStudio/build/main-Debug/CMakeFiles/FirecourtStudio.dir
-/home/heather/FirecourtStudio/build/main-Debug/CMakeFiles/edit_cache.dir
-/home/heather/FirecourtStudio/build/main-Debug/CMakeFiles/rebuild_cache.dir
-/home/heather/FirecourtStudio/build/main-Debug/CMakeFiles/list_install_components.dir
-/home/heather/FirecourtStudio/build/main-Debug/CMakeFiles/install.dir
-/home/heather/FirecourtStudio/build/main-Debug/CMakeFiles/install/local.dir
-/home/heather/FirecourtStudio/build/main-Debug/CMakeFiles/install/strip.dir
-/home/heather/FirecourtStudio/build/main-Debug/CMakeFiles/FirecourtStudio_autogen_timestamp_deps.dir
-/home/heather/FirecourtStudio/build/main-Debug/CMakeFiles/FirecourtStudio_autogen.dir

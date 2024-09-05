@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/heather/FirecourtStudio
+CMAKE_SOURCE_DIR = /home/cyberbitch/Documents/GitHub/Firecourt-Cubes
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/heather/FirecourtStudio/build
+CMAKE_BINARY_DIR = /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/heather/FirecourtStudio/build/CMakeFiles /home/heather/FirecourtStudio/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/CMakeFiles /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/heather/FirecourtStudio/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -158,79 +158,78 @@ preinstall/fast:
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -P /home/heather/FirecourtStudio/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named FirecourtStudio
+# Target rules for targets named FirecourtCubes
 
 # Build rule for target.
-FirecourtStudio: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FirecourtStudio
-.PHONY : FirecourtStudio
+FirecourtCubes: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FirecourtCubes
+.PHONY : FirecourtCubes
 
 # fast build rule for target.
-FirecourtStudio/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtStudio.dir/build.make CMakeFiles/FirecourtStudio.dir/build
-.PHONY : FirecourtStudio/fast
+FirecourtCubes/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/build
+.PHONY : FirecourtCubes/fast
 
 #=============================================================================
-# Target rules for targets named FirecourtStudio_autogen_timestamp_deps
+# Target rules for targets named FirecourtCubes_autogen_timestamp_deps
 
 # Build rule for target.
-FirecourtStudio_autogen_timestamp_deps: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FirecourtStudio_autogen_timestamp_deps
-.PHONY : FirecourtStudio_autogen_timestamp_deps
+FirecourtCubes_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FirecourtCubes_autogen_timestamp_deps
+.PHONY : FirecourtCubes_autogen_timestamp_deps
 
 # fast build rule for target.
-FirecourtStudio_autogen_timestamp_deps/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtStudio_autogen_timestamp_deps.dir/build.make CMakeFiles/FirecourtStudio_autogen_timestamp_deps.dir/build
-.PHONY : FirecourtStudio_autogen_timestamp_deps/fast
+FirecourtCubes_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes_autogen_timestamp_deps.dir/build.make CMakeFiles/FirecourtCubes_autogen_timestamp_deps.dir/build
+.PHONY : FirecourtCubes_autogen_timestamp_deps/fast
 
 #=============================================================================
-# Target rules for targets named FirecourtStudio_autogen
+# Target rules for targets named FirecourtCubes_autogen
 
 # Build rule for target.
-FirecourtStudio_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FirecourtStudio_autogen
-.PHONY : FirecourtStudio_autogen
+FirecourtCubes_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FirecourtCubes_autogen
+.PHONY : FirecourtCubes_autogen
 
 # fast build rule for target.
-FirecourtStudio_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtStudio_autogen.dir/build.make CMakeFiles/FirecourtStudio_autogen.dir/build
-.PHONY : FirecourtStudio_autogen/fast
+FirecourtCubes_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes_autogen.dir/build.make CMakeFiles/FirecourtCubes_autogen.dir/build
+.PHONY : FirecourtCubes_autogen/fast
 
-FirecourtStudio_autogen/mocs_compilation.o: FirecourtStudio_autogen/mocs_compilation.cpp.o
-.PHONY : FirecourtStudio_autogen/mocs_compilation.o
+FirecourtCubes_autogen/mocs_compilation.o: FirecourtCubes_autogen/mocs_compilation.cpp.o
+.PHONY : FirecourtCubes_autogen/mocs_compilation.o
 
 # target to build an object file
-FirecourtStudio_autogen/mocs_compilation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtStudio.dir/build.make CMakeFiles/FirecourtStudio.dir/FirecourtStudio_autogen/mocs_compilation.cpp.o
-.PHONY : FirecourtStudio_autogen/mocs_compilation.cpp.o
+FirecourtCubes_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/FirecourtCubes_autogen/mocs_compilation.cpp.o
+.PHONY : FirecourtCubes_autogen/mocs_compilation.cpp.o
 
-FirecourtStudio_autogen/mocs_compilation.i: FirecourtStudio_autogen/mocs_compilation.cpp.i
-.PHONY : FirecourtStudio_autogen/mocs_compilation.i
+FirecourtCubes_autogen/mocs_compilation.i: FirecourtCubes_autogen/mocs_compilation.cpp.i
+.PHONY : FirecourtCubes_autogen/mocs_compilation.i
 
 # target to preprocess a source file
-FirecourtStudio_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtStudio.dir/build.make CMakeFiles/FirecourtStudio.dir/FirecourtStudio_autogen/mocs_compilation.cpp.i
-.PHONY : FirecourtStudio_autogen/mocs_compilation.cpp.i
+FirecourtCubes_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/FirecourtCubes_autogen/mocs_compilation.cpp.i
+.PHONY : FirecourtCubes_autogen/mocs_compilation.cpp.i
 
-FirecourtStudio_autogen/mocs_compilation.s: FirecourtStudio_autogen/mocs_compilation.cpp.s
-.PHONY : FirecourtStudio_autogen/mocs_compilation.s
+FirecourtCubes_autogen/mocs_compilation.s: FirecourtCubes_autogen/mocs_compilation.cpp.s
+.PHONY : FirecourtCubes_autogen/mocs_compilation.s
 
 # target to generate assembly for a file
-FirecourtStudio_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtStudio.dir/build.make CMakeFiles/FirecourtStudio.dir/FirecourtStudio_autogen/mocs_compilation.cpp.s
-.PHONY : FirecourtStudio_autogen/mocs_compilation.cpp.s
+FirecourtCubes_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/FirecourtCubes_autogen/mocs_compilation.cpp.s
+.PHONY : FirecourtCubes_autogen/mocs_compilation.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtStudio.dir/build.make CMakeFiles/FirecourtStudio.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -238,7 +237,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtStudio.dir/build.make CMakeFiles/FirecourtStudio.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -246,7 +245,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtStudio.dir/build.make CMakeFiles/FirecourtStudio.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 mainwindow.o: mainwindow.cpp.o
@@ -254,7 +253,7 @@ mainwindow.o: mainwindow.cpp.o
 
 # target to build an object file
 mainwindow.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtStudio.dir/build.make CMakeFiles/FirecourtStudio.dir/mainwindow.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/mainwindow.cpp.o
 .PHONY : mainwindow.cpp.o
 
 mainwindow.i: mainwindow.cpp.i
@@ -262,7 +261,7 @@ mainwindow.i: mainwindow.cpp.i
 
 # target to preprocess a source file
 mainwindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtStudio.dir/build.make CMakeFiles/FirecourtStudio.dir/mainwindow.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/mainwindow.cpp.i
 .PHONY : mainwindow.cpp.i
 
 mainwindow.s: mainwindow.cpp.s
@@ -270,8 +269,32 @@ mainwindow.s: mainwindow.cpp.s
 
 # target to generate assembly for a file
 mainwindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtStudio.dir/build.make CMakeFiles/FirecourtStudio.dir/mainwindow.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
+
+settingsdialog.o: settingsdialog.cpp.o
+.PHONY : settingsdialog.o
+
+# target to build an object file
+settingsdialog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/settingsdialog.cpp.o
+.PHONY : settingsdialog.cpp.o
+
+settingsdialog.i: settingsdialog.cpp.i
+.PHONY : settingsdialog.i
+
+# target to preprocess a source file
+settingsdialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/settingsdialog.cpp.i
+.PHONY : settingsdialog.cpp.i
+
+settingsdialog.s: settingsdialog.cpp.s
+.PHONY : settingsdialog.s
+
+# target to generate assembly for a file
+settingsdialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/settingsdialog.cpp.s
+.PHONY : settingsdialog.cpp.s
 
 # Help Target
 help:
@@ -285,18 +308,21 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... FirecourtStudio_autogen"
-	@echo "... FirecourtStudio_autogen_timestamp_deps"
-	@echo "... FirecourtStudio"
-	@echo "... FirecourtStudio_autogen/mocs_compilation.o"
-	@echo "... FirecourtStudio_autogen/mocs_compilation.i"
-	@echo "... FirecourtStudio_autogen/mocs_compilation.s"
+	@echo "... FirecourtCubes_autogen"
+	@echo "... FirecourtCubes_autogen_timestamp_deps"
+	@echo "... FirecourtCubes"
+	@echo "... FirecourtCubes_autogen/mocs_compilation.o"
+	@echo "... FirecourtCubes_autogen/mocs_compilation.i"
+	@echo "... FirecourtCubes_autogen/mocs_compilation.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... mainwindow.o"
 	@echo "... mainwindow.i"
 	@echo "... mainwindow.s"
+	@echo "... settingsdialog.o"
+	@echo "... settingsdialog.i"
+	@echo "... settingsdialog.s"
 .PHONY : help
 
 
@@ -308,7 +334,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -P /home/heather/FirecourtStudio/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
