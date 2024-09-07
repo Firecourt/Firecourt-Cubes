@@ -340,6 +340,7 @@ FirecourtCubes_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDockWidget \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidget \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar \
@@ -365,6 +366,7 @@ FirecourtCubes_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistwidget.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
@@ -453,6 +455,5 @@ FirecourtCubes_autogen/timestamp: \
 	/usr/share/cmake-3.29/Modules/Platform/Linux-Initialize.cmake \
 	/usr/share/cmake-3.29/Modules/Platform/Linux.cmake \
 	/usr/share/cmake-3.29/Modules/Platform/UnixPaths.cmake \
-	/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/mainwindow.ui \
 	/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/settingsdialog.ui \
 	/usr/bin/cmake

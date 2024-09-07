@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.15.14
+** Created by: Qt User Interface Compiler version 5.15.10
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -25,7 +25,6 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
-    QAction *actionNew_Project;
     QAction *actionOpen;
     QAction *actionSave;
     QAction *actionSave_As;
@@ -59,15 +58,20 @@ public:
     QAction *actionSolo;
     QAction *actionMute;
     QAction *actionRecord;
+    QAction *actionEmpty_Project;
+    QAction *actionTemplates;
     QWidget *centralwidget;
     QVBoxLayout *vboxLayout;
     QMenuBar *menubar;
     QMenu *menuFile_2;
+    QMenu *menu_New_Project;
     QMenu *menuEdit_2;
     QMenu *menuView_2;
     QMenu *menuProject_2;
     QMenu *menuTrack;
     QToolBar *toolBar;
+    QWidget *browserWidget;
+    QVBoxLayout *vboxLayout1;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -75,8 +79,40 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(1200, 800);
-        actionNew_Project = new QAction(MainWindow);
-        actionNew_Project->setObjectName(QString::fromUtf8("actionNew_Project"));
+        MainWindow->setMouseTracking(true);
+        MainWindow->setTabletTracking(true);
+        MainWindow->setAcceptDrops(true);
+        MainWindow->setAutoFillBackground(false);
+        MainWindow->setDockNestingEnabled(true);
+        MainWindow->setUnifiedTitleAndToolBarOnMac(true);
+        MainWindow->setStyleSheet(QString::fromUtf8("\n"
+"    QMainWindow {\n"
+"        background-color: rgba(21, 53, 90, 0.8);\n"
+"    }\n"
+"    QMenuBar {\n"
+"        background-color: rgba(40, 40, 40, 0.8);\n"
+"        color: white;\n"
+"    }\n"
+"    QToolBar {\n"
+"        background-color: rgba(40, 40, 40, 0.8);\n"
+"        border: 1px solid rgba(255, 255, 255, 0.2);\n"
+"    }\n"
+"    QStatusBar {\n"
+"        background-color: rgba(40, 40, 40, 0.8);\n"
+"    }\n"
+"    QPushButton {\n"
+"        background-color: rgba(255, 0, 0, 0.5);\n"
+"        border-radius: 5px;\n"
+"        border: 1px solid white;\n"
+"        color: white;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(255, 0, 0, 0.7);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(255, 0, 0, 1);\n"
+"    }\n"
+"   "));
         actionOpen = new QAction(MainWindow);
         actionOpen->setObjectName(QString::fromUtf8("actionOpen"));
         actionSave = new QAction(MainWindow);
@@ -143,15 +179,20 @@ public:
         actionMute->setObjectName(QString::fromUtf8("actionMute"));
         actionRecord = new QAction(MainWindow);
         actionRecord->setObjectName(QString::fromUtf8("actionRecord"));
+        actionEmpty_Project = new QAction(MainWindow);
+        actionEmpty_Project->setObjectName(QString::fromUtf8("actionEmpty_Project"));
+        actionTemplates = new QAction(MainWindow);
+        actionTemplates->setObjectName(QString::fromUtf8("actionTemplates"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        centralwidget->setStyleSheet(QString::fromUtf8("background-color: #1e1e1e;"));
         vboxLayout = new QVBoxLayout(centralwidget);
         vboxLayout->setObjectName(QString::fromUtf8("vboxLayout"));
         menubar = new QMenuBar(centralwidget);
         menubar->setObjectName(QString::fromUtf8("menubar"));
         menuFile_2 = new QMenu(menubar);
         menuFile_2->setObjectName(QString::fromUtf8("menuFile_2"));
+        menu_New_Project = new QMenu(menuFile_2);
+        menu_New_Project->setObjectName(QString::fromUtf8("menu_New_Project"));
         menuEdit_2 = new QMenu(menubar);
         menuEdit_2->setObjectName(QString::fromUtf8("menuEdit_2"));
         menuView_2 = new QMenu(menubar);
@@ -162,12 +203,21 @@ public:
         menuTrack->setObjectName(QString::fromUtf8("menuTrack"));
 
         vboxLayout->addWidget(menubar);
-         MainWindow->setMenuBar(menubar);
 
         toolBar = new QToolBar(centralwidget);
         toolBar->setObjectName(QString::fromUtf8("toolBar"));
 
         vboxLayout->addWidget(toolBar);
+
+        browserWidget = new QWidget(centralwidget);
+        browserWidget->setObjectName(QString::fromUtf8("browserWidget"));
+        browserWidget->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255, 0.1);"));
+        browserWidget->setMinimumSize(QSize(200, 0));
+        vboxLayout1 = new QVBoxLayout(browserWidget);
+        vboxLayout1->setObjectName(QString::fromUtf8("vboxLayout1"));
+        vboxLayout1->setContentsMargins(0, 0, 0, 0);
+
+        vboxLayout->addWidget(browserWidget);
 
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
@@ -179,7 +229,7 @@ public:
         menubar->addAction(menuProject_2->menuAction());
         menubar->addAction(menuView_2->menuAction());
         menubar->addAction(menuTrack->menuAction());
-        menuFile_2->addAction(actionNew_Project);
+        menuFile_2->addAction(menu_New_Project->menuAction());
         menuFile_2->addAction(actionOpen);
         menuFile_2->addAction(actionSave);
         menuFile_2->addAction(actionSave_As);
@@ -187,6 +237,8 @@ public:
         menuFile_2->addAction(actionExport);
         menuFile_2->addAction(actionPreferences);
         menuFile_2->addAction(actionExit);
+        menu_New_Project->addAction(actionEmpty_Project);
+        menu_New_Project->addAction(actionTemplates);
         menuEdit_2->addAction(actionUndo);
         menuEdit_2->addAction(actionRedo);
         menuEdit_2->addAction(actionCut);
@@ -221,8 +273,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Firecourt Studio", nullptr));
-        actionNew_Project->setText(QCoreApplication::translate("MainWindow", "&New Project", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Firecourt Cubes", nullptr));
         actionOpen->setText(QCoreApplication::translate("MainWindow", "&Open...", nullptr));
         actionSave->setText(QCoreApplication::translate("MainWindow", "&Save...", nullptr));
         actionSave_As->setText(QCoreApplication::translate("MainWindow", "Sa&ve As...", nullptr));
@@ -256,7 +307,10 @@ public:
         actionSolo->setText(QCoreApplication::translate("MainWindow", "&Solo", nullptr));
         actionMute->setText(QCoreApplication::translate("MainWindow", "&Mute", nullptr));
         actionRecord->setText(QCoreApplication::translate("MainWindow", "&Record", nullptr));
+        actionEmpty_Project->setText(QCoreApplication::translate("MainWindow", "Empty Project...", nullptr));
+        actionTemplates->setText(QCoreApplication::translate("MainWindow", "Templates", nullptr));
         menuFile_2->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
+        menu_New_Project->setTitle(QCoreApplication::translate("MainWindow", "&New Project", nullptr));
         menuEdit_2->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         menuView_2->setTitle(QCoreApplication::translate("MainWindow", "View", nullptr));
         menuProject_2->setTitle(QCoreApplication::translate("MainWindow", "Project", nullptr));

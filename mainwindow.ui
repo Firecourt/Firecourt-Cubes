@@ -10,13 +10,58 @@
     <height>800</height>
    </rect>
   </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="tabletTracking">
+   <bool>true</bool>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
   <property name="windowTitle">
-   <string>Firecourt Studio</string>
+   <string>Firecourt Cubes</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="dockNestingEnabled">
+   <bool>true</bool>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>true</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QMainWindow {
+        background-color: rgba(21, 53, 90, 0.8);
+    }
+    QMenuBar {
+        background-color: rgba(40, 40, 40, 0.8);
+        color: white;
+    }
+    QToolBar {
+        background-color: rgba(40, 40, 40, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    QStatusBar {
+        background-color: rgba(40, 40, 40, 0.8);
+    }
+    QPushButton {
+        background-color: rgba(255, 0, 0, 0.5);
+        border-radius: 5px;
+        border: 1px solid white;
+        color: white;
+    }
+    QPushButton:hover {
+        background-color: rgba(255, 0, 0, 0.7);
+    }
+    QPushButton:pressed {
+        background-color: rgba(255, 0, 0, 1);
+    }
+   </string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <property name="styleSheet">
-    <string notr="true">background-color: #1e1e1e;</string>
-   </property>
    <layout class="QVBoxLayout">
     <item>
      <widget class="QMenuBar" name="menubar">
@@ -24,7 +69,14 @@
        <property name="title">
         <string>File</string>
        </property>
-       <addaction name="actionNew_Project"/>
+       <widget class="QMenu" name="menu_New_Project">
+        <property name="title">
+         <string>&amp;New Project</string>
+        </property>
+        <addaction name="actionEmpty_Project"/>
+        <addaction name="actionTemplates"/>
+       </widget>
+       <addaction name="menu_New_Project"/>
        <addaction name="actionOpen"/>
        <addaction name="actionSave"/>
        <addaction name="actionSave_As"/>
@@ -79,24 +131,29 @@
        <addaction name="actionMute"/>
        <addaction name="actionRecord"/>
       </widget>
-      <addaction name="menuFile_2"/>
-      <addaction name="menuEdit_2"/>
-      <addaction name="menuProject_2"/>
-      <addaction name="menuView_2"/>
-      <addaction name="menuTrack"/>
+
      </widget>
     </item>
     <item>
      <widget class="QToolBar" name="toolBar"/>
     </item>
+    <item>
+     <widget class="QWidget" name="browserWidget">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0.1);</string>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>200</width>
+        <height>0</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout"/>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionNew_Project">
-   <property name="text">
-    <string>&amp;New Project</string>
-   </property>
-  </action>
   <action name="actionOpen">
    <property name="text">
     <string>&amp;Open...</string>
@@ -260,6 +317,16 @@
   <action name="actionRecord">
    <property name="text">
     <string>&amp;Record</string>
+   </property>
+  </action>
+  <action name="actionEmpty_Project">
+   <property name="text">
+    <string>Empty Project...</string>
+   </property>
+  </action>
+  <action name="actionTemplates">
+   <property name="text">
+    <string>Templates</string>
    </property>
   </action>
  </widget>

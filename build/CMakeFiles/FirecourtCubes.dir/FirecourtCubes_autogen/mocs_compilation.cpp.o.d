@@ -342,8 +342,9 @@ CMakeFiles/FirecourtCubes.dir/FirecourtCubes_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbar.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h \
+ /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/EWIEGA46WW/moc_settingsdialog.cpp \
  /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/EWIEGA46WW/../../../settingsdialog.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
- /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/EWIEGA46WW/moc_settingsdialog.cpp \
- /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/EWIEGA46WW/../../../settingsdialog.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h

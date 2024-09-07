@@ -8,7 +8,6 @@ FirecourtCubes_autogen/timestamp: /home/cyberbitch/Documents/GitHub/Firecourt-Cu
   /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/main.cpp \
   /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/mainwindow.cpp \
   /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/mainwindow.h \
-  /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/mainwindow.ui \
   /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/settingsdialog.cpp \
   /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/settingsdialog.h \
   /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/settingsdialog.ui \
@@ -345,6 +344,7 @@ FirecourtCubes_autogen/timestamp: /home/cyberbitch/Documents/GitHub/Firecourt-Cu
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDockWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar \
@@ -370,6 +370,7 @@ FirecourtCubes_autogen/timestamp: /home/cyberbitch/Documents/GitHub/Firecourt-Cu
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
@@ -797,6 +798,7 @@ CMakeFiles/FirecourtCubes.dir/FirecourtCubes_autogen/mocs_compilation.cpp.o: Fir
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDockWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar \
@@ -822,6 +824,7 @@ CMakeFiles/FirecourtCubes.dir/FirecourtCubes_autogen/mocs_compilation.cpp.o: Fir
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
@@ -854,7 +857,6 @@ CMakeFiles/FirecourtCubes.dir/FirecourtCubes_autogen/mocs_compilation.cpp.o: Fir
 
 CMakeFiles/FirecourtCubes.dir/main.cpp.o: /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/main.cpp \
   /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/mainwindow.h \
-  /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/settingsdialog.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -1193,10 +1195,10 @@ CMakeFiles/FirecourtCubes.dir/main.cpp.o: /home/cyberbitch/Documents/GitHub/Fire
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDockWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar \
@@ -1216,13 +1218,13 @@ CMakeFiles/FirecourtCubes.dir/main.cpp.o: /home/cyberbitch/Documents/GitHub/Fire
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qactiongroup.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdockwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
@@ -1254,10 +1256,7 @@ CMakeFiles/FirecourtCubes.dir/main.cpp.o: /home/cyberbitch/Documents/GitHub/Fire
   /usr/lib/linux/uapi/x86/asm/errno.h
 
 CMakeFiles/FirecourtCubes.dir/mainwindow.cpp.o: /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/mainwindow.cpp \
-  /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/custommenubar.h \
   /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/mainwindow.h \
-  /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/settingsdialog.h \
-  /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/ui_mainwindow.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -1495,7 +1494,6 @@ CMakeFiles/FirecourtCubes.dir/mainwindow.cpp.o: /home/cyberbitch/Documents/GitHu
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h \
@@ -1509,14 +1507,7 @@ CMakeFiles/FirecourtCubes.dir/mainwindow.cpp.o: /home/cyberbitch/Documents/GitHu
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainertools_impl.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdir.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfileinfo.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h \
@@ -1573,10 +1564,8 @@ CMakeFiles/FirecourtCubes.dir/mainwindow.cpp.o: /home/cyberbitch/Documents/GitHu
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontinfo.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontmetrics.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h \
@@ -1597,18 +1586,13 @@ CMakeFiles/FirecourtCubes.dir/mainwindow.cpp.o: /home/cyberbitch/Documents/GitHu
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QAction \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDockWidget \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFileDialog \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenu \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStatusBar \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTextEdit \
@@ -1623,22 +1607,19 @@ CMakeFiles/FirecourtCubes.dir/mainwindow.cpp.o: /home/cyberbitch/Documents/GitHu
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qaction.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qactiongroup.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdockwidget.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qfiledialog.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenu.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenubar.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
@@ -1905,6 +1886,7 @@ CMakeFiles/FirecourtCubes.dir/settingsdialog.cpp.o: /home/cyberbitch/Documents/G
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h \
@@ -1948,6 +1930,7 @@ CMakeFiles/FirecourtCubes.dir/settingsdialog.cpp.o: /home/cyberbitch/Documents/G
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h \
@@ -1974,29 +1957,64 @@ CMakeFiles/FirecourtCubes.dir/settingsdialog.cpp.o: /home/cyberbitch/Documents/G
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontinfo.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontmetrics.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextcursor.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextformat.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QComboBox \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialogButtonBox \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFormLayout \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLayout \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSlider \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSpinBox \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTabWidget \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialogbuttonbox.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qformlayout.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qspinbox.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
@@ -2012,11 +2030,19 @@ CMakeFiles/FirecourtCubes.dir/settingsdialog.cpp.o: /home/cyberbitch/Documents/G
   /usr/lib/linux/uapi/x86/asm/errno.h
 
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h:
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qspinbox.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qfiledialog.h:
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qformlayout.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qdir.h:
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTabWidget:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSlider:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLayout:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QComboBox:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h:
 
@@ -2036,8 +2062,6 @@ CMakeFiles/FirecourtCubes.dir/settingsdialog.cpp.o: /home/cyberbitch/Documents/G
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFileDialog:
-
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
@@ -2049,6 +2073,8 @@ CMakeFiles/FirecourtCubes.dir/settingsdialog.cpp.o: /home/cyberbitch/Documents/G
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
 /usr/include/stdlib.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFormLayout:
 
 /usr/include/c++/13/variant:
 
@@ -2186,6 +2212,8 @@ FirecourtCubes_autogen/mocs_compilation.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidget:
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit:
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h:
@@ -2298,8 +2326,6 @@ FirecourtCubes_autogen/mocs_compilation.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qfileinfo.h:
-
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringview.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h:
@@ -2354,9 +2380,9 @@ FirecourtCubes_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/13/cstdlib:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h:
-
 /usr/include/c++/13/cctype:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSpinBox:
 
 /usr/include/c++/13/bits/uses_allocator_args.h:
 
@@ -2396,9 +2422,9 @@ FirecourtCubes_autogen/mocs_compilation.cpp:
 
 /usr/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake:
 
-/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/mainwindow.cpp:
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h:
 
-/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/ui_mainwindow.h:
+/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/mainwindow.cpp:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake:
 
@@ -2458,6 +2484,8 @@ FirecourtCubes_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/13/bits/ranges_algobase.h:
 
+/usr/include/c++/13/bits/ostream_insert.h:
+
 /usr/include/c++/13/bits/range_access.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h:
@@ -2472,21 +2500,15 @@ FirecourtCubes_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/13/bits/ranges_uninitialized.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h:
-
 /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h:
-
-/usr/include/c++/13/bits/ostream_insert.h:
 
 /usr/include/c++/13/bits/ostream.tcc:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h:
 
 /usr/include/c++/13/numbers:
+
+/usr/include/c++/13/cwctype:
 
 /usr/include/c++/13/bits/move_only_function.h:
 
@@ -2501,8 +2523,6 @@ FirecourtCubes_autogen/EWIEGA46WW/moc_mainwindow.cpp:
 /usr/include/c++/13/bits/mofunc_impl.h:
 
 CMakeFiles/3.29.6/CMakeCXXCompiler.cmake:
-
-/usr/include/c++/13/bits/memoryfwd.h:
 
 /usr/include/c++/13/backward/binders.h:
 
@@ -2571,8 +2591,6 @@ CMakeFiles/3.29.6/CMakeCXXCompiler.cmake:
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
 /usr/include/c++/13/bits/stream_iterator.h:
-
-/usr/include/c++/13/stdexcept:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt5LinguistTools/Qt5LinguistToolsConfig.cmake:
 
@@ -2646,15 +2664,11 @@ FirecourtCubes_autogen/moc_predefs.h:
 
 /usr/include/assert.h:
 
-/usr/include/x86_64-linux-gnu/sys/select.h:
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h:
 
-/usr/include/c++/13/cwchar:
+/usr/include/c++/13/bits/basic_ios.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h:
-
-/usr/include/c++/13/bits/ranges_base.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h:
+/usr/include/x86_64-linux-gnu/bits/time64.h:
 
 /usr/include/c++/13/bits/atomic_lockfree_defines.h:
 
@@ -2664,11 +2678,15 @@ FirecourtCubes_autogen/moc_predefs.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h:
+/usr/include/x86_64-linux-gnu/sys/select.h:
 
-/usr/include/c++/13/bits/basic_ios.h:
+/usr/include/c++/13/cwchar:
 
-/usr/include/x86_64-linux-gnu/bits/time64.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h:
+
+/usr/include/c++/13/bits/ranges_base.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h:
 
 /usr/include/c++/13/atomic:
 
@@ -2744,8 +2762,6 @@ FirecourtCubes_autogen/moc_predefs.h:
 
 /usr/include/c++/13/streambuf:
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox:
-
 /usr/include/c++/13/bits/exception_ptr.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstatusbar.h:
@@ -2762,7 +2778,7 @@ FirecourtCubes_autogen/moc_predefs.h:
 
 /usr/include/c++/13/bits/locale_classes.tcc:
 
-/usr/include/c++/13/cwctype:
+/usr/include/c++/13/bits/memoryfwd.h:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt5LinguistTools/Qt5LinguistToolsConfigVersion.cmake:
 
@@ -2824,6 +2840,12 @@ FirecourtCubes_autogen/moc_predefs.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h:
+
 /usr/include/c++/13/ext/alloc_traits.h:
 
 /usr/include/c++/13/list:
@@ -2856,13 +2878,13 @@ FirecourtCubes_autogen/moc_predefs.h:
 
 /usr/include/c++/13/pstl/glue_numeric_defs.h:
 
+/usr/include/c++/13/stdexcept:
+
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake:
 
 /usr/include/c++/13/string:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QAction:
 
 /usr/include/c++/13/map:
 
@@ -2912,8 +2934,6 @@ FirecourtCubes_autogen/moc_predefs.h:
 
 /usr/include/stdc-predef.h:
 
-/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/mainwindow.ui:
-
 /usr/include/string.h:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake:
@@ -2942,8 +2962,6 @@ FirecourtCubes_autogen/moc_predefs.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialogButtonBox:
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenu:
-
 /usr/include/c++/13/bits/requires_hosted.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
@@ -2966,9 +2984,9 @@ FirecourtCubes_autogen/moc_predefs.h:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
-/usr/include/time.h:
-
 /usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
+
+/usr/include/time.h:
 
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
@@ -3020,8 +3038,6 @@ FirecourtCubes_autogen/moc_predefs.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h:
-
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
@@ -3049,8 +3065,6 @@ FirecourtCubes_autogen/moc_predefs.h:
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
-
-/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/custommenubar.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h:
 

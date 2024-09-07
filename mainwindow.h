@@ -13,7 +13,15 @@
 #include <QStatusBar>
 #include <QToolBar>
 #include <QWidget>
-#include "settingsdialog.h"
+#include <QLineEdit>
+#include <QUndoStack>
+#include "project.h"
+#include <istream>
+#include <unistd.h>
+#include <iostream>
+#include <ostream>
+#include <ios>
+
 namespace Ui {
 class MainWindow;
 }
@@ -25,6 +33,10 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+private:
+    Project currentProject;  // Declare currentProject as a member variable
+    QUndoStack* undoStack;   // Assuming you're using QUndoStack for undo/redo operations
+
 private slots:
     void newProject();
     void openFile();
@@ -61,6 +73,7 @@ private slots:
     void muteTrack();
     void recordTrack();
 
+
 private:
     Ui::MainWindow *ui;
 
@@ -77,7 +90,7 @@ private:
     QPushButton *playButton;
     QPushButton *stopButton;
     QPushButton *recordButton;
-     QAction *preferencesAction;
+    QAction *preferencesAction;
     QMenu *fileMenu;
     QMenu *editMenu;
     QMenu *viewMenu;
@@ -92,7 +105,7 @@ private:
     void createDockWindows();
     void createTransportControls();
     void showSettingsDialog();
-
+    void addSearchField();
 };
 
 #endif // MAINWINDOW_H
