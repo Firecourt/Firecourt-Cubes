@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build",
+  "command": "/usr/bin/clang++-17 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -g -std=gnu++17 -fPIC -o CMakeFiles/FirecourtCubes.dir/FirecourtCubes_autogen/mocs_compilation.cpp.o -c /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/mocs_compilation.cpp",
+  "file": "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/FirecourtCubes.dir/FirecourtCubes_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build",
+  "command": "/usr/bin/clang++-17 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -g -std=gnu++17 -fPIC -o CMakeFiles/FirecourtCubes.dir/main.cpp.o -c /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/main.cpp",
+  "file": "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/main.cpp",
+  "output": "CMakeFiles/FirecourtCubes.dir/main.cpp.o"
+},
+{
+  "directory": "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build",
+  "command": "/usr/bin/clang++-17 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -g -std=gnu++17 -fPIC -o CMakeFiles/FirecourtCubes.dir/mainwindow.cpp.o -c /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/mainwindow.cpp",
+  "file": "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/mainwindow.cpp",
+  "output": "CMakeFiles/FirecourtCubes.dir/mainwindow.cpp.o"
+},
+{
+  "directory": "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build",
+  "command": "/usr/bin/clang++-17 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -g -std=gnu++17 -fPIC -o CMakeFiles/FirecourtCubes.dir/project.cpp.o -c /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/project.cpp",
+  "file": "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/project.cpp",
+  "output": "CMakeFiles/FirecourtCubes.dir/project.cpp.o"
+},
+{
+  "directory": "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build",
+  "command": "/usr/bin/clang++-17 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -g -std=gnu++17 -fPIC -o CMakeFiles/FirecourtCubes.dir/settingsdialog.cpp.o -c /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/settingsdialog.cpp",
+  "file": "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/settingsdialog.cpp",
+  "output": "CMakeFiles/FirecourtCubes.dir/settingsdialog.cpp.o"
+}
+]

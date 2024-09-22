@@ -2,9 +2,15 @@
 #include "ui_mainwindow.h"
 #include <unistd.h>
 #include <QFile>
+#include<QFileDialog>
 #include <QProcess>
 #include <QDebug>
 #include <QInputDialog>
+#include <QDir>
+#include <QKeySequence>
+#include <QShortcut>
+
+#include <string>
 using namespace std;
 
 
@@ -13,6 +19,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
 
 
         ui->setupUi(this);
+
 
 
 }
@@ -25,24 +32,21 @@ MainWindow::~MainWindow(){
 
 void MainWindow::newProject(){
     // Clear current project settings
-    currentProject.clear(); // Assuming currentProject is an object managing your project
-
-    // Optionally, open a dialog for project settings
-    QString projectName = QInputDialog::getText(this, "New Project", "Enter project name:");
-
-    if (!projectName.isEmpty()) {
-        // Set the new project name and create necessary files or directories
-        currentProject.setName(projectName);
-        statusBar()->showMessage("New project created: " + projectName);
-    }
 
 
 }
 void MainWindow::openFile(){
+    QStringList files = QFileDialog::getOpenFileNames(this, tr("Open Audio Files"), "", tr("Audio Files (*.mp3 *wav *.ogg *.flac *.acc)"));
+    if (!files.isEmpty()){
+        foreach (const QString &filePath, files) {
+            qDebug() << "File selected: " <<filePath;
 
 
+        }
+    }
 }
 void MainWindow::importFile(){
+
 
 
 }
