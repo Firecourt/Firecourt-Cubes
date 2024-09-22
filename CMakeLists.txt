@@ -31,8 +31,16 @@ set(PROJECT_SOURCES
     ${TS_FILES}
 )
 
-# Add the executable
-add_executable(FirecourtCubes ${PROJECT_SOURCES})
+set(UI_FILES
+    mainwindow.ui
+    settingsdialog.ui
+)
+
+# Use qt5_wrap_ui to generate the header files from UI files
+qt5_wrap_ui(UI_HEADERS ${UI_FILES})
+
+# Add the executable with both sources and generated UI headers
+add_executable(FirecourtCubes ${PROJECT_SOURCES} ${UI_HEADERS})
 
 # Automatically handle MOC, UIC, and RCC
 set_target_properties(FirecourtCubes PROPERTIES
@@ -62,7 +70,6 @@ elseif(UNIX)
     find_library(JACK_LIB jack)
     target_link_libraries(FirecourtCubes PRIVATE ${JACK_LIB})
 endif()
-
 
 # Vulkan support
 find_package(Vulkan REQUIRED)

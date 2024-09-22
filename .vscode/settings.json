@@ -2,7 +2,13 @@
     "files.associations": {
         "qdialog": "cpp",
         "qapplication": "cpp",
-        "qvariant": "cpp"
+        "qvariant": "cpp",
+        "qtextedit": "cpp",
+        "qlistwidget": "cpp",
+        "qkeysequence": "cpp",
+        "qundostack": "cpp",
+        "qvboxlayout": "cpp",
+        "qinputdialog": "cpp"
     },
     "cmake.options.statusBarVisibility": "hidden"
 }

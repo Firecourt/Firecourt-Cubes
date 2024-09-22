@@ -1,4 +1,74 @@
-/ai_module/venv
-.venv
-.cache
-.vscode
+# Qt project files
+*.pro.user
+*.pro.user.*
+
+# Build directories
+/build/
+*/build/
+*.o
+*.obj
+*.exe
+*.out
+*.app
+
+# Object files
+*.o
+*.obj
+
+# Temporary files
+*.tmp
+*.log
+
+# Backup files
+*~
+*.bak
+*.swp
+
+# Qt Creator specific files
+*.moc
+*.qmlc
+*.h.gch
+
+# IDE specific files
+/.idea/
+/.vscode/
+/*.user
+/*.sublime-project
+/*.sublime-workspace
+
+# CMake files
+CMakeLists.txt.user
+CMakeCache.txt
+*.cmake
+Makefile
+
+# Library files
+*.so
+*.dylib
+*.dll
+*.a
+
+# Documentation
+*.dox
+
+# System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Environment files
+*.env
+
+# Personal files
+*.iml
+*.jks
+*.jre
+*.log
+
+# Ignore all configuration files (optional)
+*.config
+*.cfg
+*.settings
+
+# Ignore any other files you want to exclude
+venv

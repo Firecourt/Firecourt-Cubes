@@ -17,7 +17,7 @@
 #include <QUndoStack>
 #include "project.h"
 #include <iostream>
-
+#include "ui_mainwindow.h"
 namespace Ui {
 class MainWindow;
 }
@@ -100,5 +100,7 @@ private:
     void setupCustomUi();         ///< Sets up the custom UI elements
     void createActions();         ///< Creates actions for menus and toolbars
     void createMenus();           ///< Creates menus
-    void createToolBars();        ///< Creates toolb
-}
+    void createToolBars();        ///< Creates toolbars
+};
+
+#endif // MAINWINDOW_H

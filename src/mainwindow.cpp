@@ -1,5 +1,6 @@
 #include "../include/mainwindow.h"
-#include "../include/ui_mainwindow.h"
+#include "../include/ui_mainwindow.h" // Ensure this is correct and exists
+
 #include <QFile>
 #include <QFileDialog>
 #include <QProcess>
@@ -12,8 +13,8 @@
 
 using namespace std;
 
-MainWindow::MainWindow(QWidget *parent) 
-    : QMainWindow(parent), ui(new Ui::MainWindow) {
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent), ui(new Ui::MainWindow), undoStack(new QUndoStack(this)) {
     ui->setupUi(this);
     setupCustomUi();  // Custom UI setup
 }
