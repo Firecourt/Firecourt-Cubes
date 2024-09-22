@@ -3,15 +3,12 @@
 
 #include <QFile>
 #include <QFileDialog>
-#include <QProcess>
 #include <QDebug>
 #include <QInputDialog>
 #include <QDir>
 #include <QKeySequence>
 #include <QShortcut>
 #include <string>
-
-using namespace std;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow), undoStack(new QUndoStack(this)) {
@@ -25,31 +22,30 @@ MainWindow::~MainWindow() {
 
 void MainWindow::setupCustomUi() {
     // Initialize custom UI components, connect signals/slots, etc.
-    // Example: set up keyboard shortcuts
     new QShortcut(QKeySequence("Ctrl+N"), this, SLOT(newProject()));
     new QShortcut(QKeySequence("Ctrl+O"), this, SLOT(openFile()));
-    // Additional setup...
+    // Additional shortcuts...
 }
 
 void MainWindow::newProject() {
-    // Clear current project settings and initialize new project
     currentProject.clear();  // Assuming Project class has a clear method
     qDebug() << "New project created.";
 }
 
 void MainWindow::openFile() {
-    QStringList files = QFileDialog::getOpenFileNames(this, tr("Open Audio Files"), "", tr("Audio Files (*.mp3 *.wav *.ogg *.flac *.aac)"));
+    QStringList files = QFileDialog::getOpenFileNames(this, tr("Open Audio Files"), "", 
+                          tr("Audio Files (*.mp3 *.wav *.ogg *.flac *.aac)"));
     if (!files.isEmpty()) {
-        foreach (const QString &filePath, files) {
+        for (const QString &filePath : files) {
             qDebug() << "File selected: " << filePath;
-            // Add logic to handle the opened files, such as loading into the project
+            // Logic to handle opened files (e.g., loading into the project)
         }
     }
 }
 
 void MainWindow::importFile() {
-    // Logic to import audio files into the current project
-    QString filePath = QFileDialog::getOpenFileName(this, tr("Import Audio File"), "", tr("Audio Files (*.mp3 *.wav *.ogg *.flac *.aac)"));
+    QString filePath = QFileDialog::getOpenFileName(this, tr("Import Audio File"), "", 
+                          tr("Audio Files (*.mp3 *.wav *.ogg *.flac *.aac)"));
     if (!filePath.isEmpty()) {
         qDebug() << "File imported: " << filePath;
         // Implement import functionality
@@ -57,44 +53,40 @@ void MainWindow::importFile() {
 }
 
 void MainWindow::saveFile() {
-    // Logic to save the current project state
-    QString filePath = QFileDialog::getSaveFileName(this, tr("Save Project"), "", tr("Project Files (*.proj)"));
+    QString filePath = QFileDialog::getSaveFileName(this, tr("Save Project"), "", 
+                          tr("Project Files (*.proj)"));
     if (!filePath.isEmpty()) {
         QFile file(filePath);
         if (file.open(QIODevice::WriteOnly)) {
             // Save project data to file
             qDebug() << "Project saved at: " << filePath;
+            file.close();  // Close the file after saving
         } else {
-            qDebug() << "Failed to save project.";
+            qDebug() << "Failed to save project at: " << filePath;
         }
     }
 }
 
 void MainWindow::saveFileAs() {
-    // Similar to saveFile but allows for a different file name
     saveFile();  // Reuse saveFile logic for simplicity
 }
 
 void MainWindow::exportFile() {
-    // Logic to export the current project to a specific format
     qDebug() << "Exporting project...";
     // Implement export functionality
 }
 
 void MainWindow::openPreferences() {
-    // Logic to open preferences/settings dialog
     qDebug() << "Opening preferences...";
     // Implement preferences dialog
 }
 
 void MainWindow::exitApp() {
-    // Logic to exit application gracefully, e.g., prompt to save unsaved work
     qDebug() << "Exiting application.";
     close();  // Or QApplication::quit();
 }
 
 void MainWindow::undoAction() {
-    // Logic to undo last action
     if (undoStack->canUndo()) {
         undoStack->undo();
         qDebug() << "Undo action performed.";
@@ -102,16 +94,13 @@ void MainWindow::undoAction() {
 }
 
 void MainWindow::redoAction() {
-    // Logic to redo last undone action
     if (undoStack->canRedo()) {
         undoStack->redo();
         qDebug() << "Redo action performed.";
     }
 }
 
-// Implement additional functionalities below...
-// Example stubs for actions without specific implementation
-
+// Implementing additional actions
 void MainWindow::cutAction() {
     qDebug() << "Cut action triggered.";
     // Implement cut functionality

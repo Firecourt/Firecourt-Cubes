@@ -18,6 +18,7 @@
 #include "project.h"
 #include <iostream>
 #include "ui_mainwindow.h"
+
 namespace Ui {
 class MainWindow;
 }
@@ -31,55 +32,17 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    ~MainWindow() override;
 
 private:
     Project currentProject;  ///< Instance of the current project
-    QScopedPointer<QUndoStack> undoStack;  ///< Undo/redo stack
-
-private slots:
-    void newProject();
-    void openFile();
-    void saveFile();
-    void saveFileAs();
-    void importFile();
-    void exportFile();
-    void openPreferences();
-    void exitApp();
-    void undoAction();
-    void redoAction();
-    void cutAction();
-    void copyAction();
-    void pasteAction();
-    void deleteAction();
-    void selectAll();
-    void findReplace();
-    void zoomIn();
-    void zoomOut();
-    void showGrid();
-    void showTools();
-    void showMixer();
-    void showBrowser();
-    void showInspector();
-    void showTransportControls();
-    void addTrack();
-    void deleteTrack();
-    void renameTrack();
-    void groupTracks();
-    void ungroupTracks();
-    void freezeTrack();
-    void bounceExportTrack();
-    void soloTrack();
-    void muteTrack();
-    void recordTrack();
-
-private:
-    QScopedPointer<Ui::MainWindow> ui;  ///< Pointer to the UI
+    Ui::MainWindow *ui;
+    QUndoStack *undoStack;
 
     // Custom widgets for the DAW interface
-    QDockWidget *browserDock;
-    QDockWidget *playlistDock;
-    QDockWidget *mixerDock;
+    QDockWidget *browserDock;  ///< Dock for the browser
+    QDockWidget *playlistDock;  ///< Dock for the playlist
+    QDockWidget *mixerDock;     ///< Dock for the mixer
 
     QListWidget *browserList;  ///< List widget for the browser
     QListWidget *playlist;      ///< List widget for the playlist
@@ -101,6 +64,42 @@ private:
     void createActions();         ///< Creates actions for menus and toolbars
     void createMenus();           ///< Creates menus
     void createToolBars();        ///< Creates toolbars
+
+private slots:
+    void newProject();           ///< Create a new project
+    void openFile();            ///< Open an existing file
+    void saveFile();            ///< Save the current file
+    void saveFileAs();          ///< Save the current file with a new name
+    void importFile();          ///< Import a file into the project
+    void exportFile();          ///< Export the current project
+    void openPreferences();      ///< Open the preferences dialog
+    void exitApp();             ///< Exit the application
+    void undoAction();          ///< Undo the last action
+    void redoAction();          ///< Redo the last undone action
+    void cutAction();           ///< Cut selected content
+    void copyAction();          ///< Copy selected content
+    void pasteAction();         ///< Paste copied content
+    void deleteAction();        ///< Delete selected content
+    void selectAll();           ///< Select all content
+    void findReplace();         ///< Open find and replace dialog
+    void zoomIn();              ///< Zoom in on the workspace
+    void zoomOut();             ///< Zoom out from the workspace
+    void showGrid();            ///< Toggle grid visibility
+    void showTools();           ///< Show tools panel
+    void showMixer();           ///< Show mixer panel
+    void showBrowser();         ///< Show browser panel
+    void showInspector();       ///< Show inspector panel
+    void showTransportControls(); ///< Show transport controls
+    void addTrack();            ///< Add a new track
+    void deleteTrack();         ///< Delete the selected track
+    void renameTrack();         ///< Rename the selected track
+    void groupTracks();         ///< Group selected tracks
+    void ungroupTracks();       ///< Ungroup selected tracks
+    void freezeTrack();         ///< Freeze the selected track
+    void bounceExportTrack();   ///< Bounce and export the selected track
+    void soloTrack();           ///< Solo the selected track
+    void muteTrack();           ///< Mute the selected track
+    void recordTrack();         ///< Start recording on the selected track
 };
 
 #endif // MAINWINDOW_H

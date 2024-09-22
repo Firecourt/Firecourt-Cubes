@@ -8,7 +8,8 @@
         "qkeysequence": "cpp",
         "qundostack": "cpp",
         "qvboxlayout": "cpp",
-        "qinputdialog": "cpp"
+        "qinputdialog": "cpp",
+        "qdir": "cpp"
     },
     "cmake.options.statusBarVisibility": "hidden"
 }

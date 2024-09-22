@@ -32,8 +32,8 @@ set(PROJECT_SOURCES
 )
 
 set(UI_FILES
-    mainwindow.ui
-    settingsdialog.ui
+    include/mainwindow.ui
+    include/settingsdialog.ui
 )
 
 # Use qt5_wrap_ui to generate the header files from UI files
@@ -43,6 +43,8 @@ qt5_wrap_ui(UI_HEADERS ${UI_FILES})
 add_executable(FirecourtCubes ${PROJECT_SOURCES} ${UI_HEADERS})
 
 # Automatically handle MOC, UIC, and RCC
+set(CMAKE_AUTOUIC ON)  # Automatically handle .ui files
+
 set_target_properties(FirecourtCubes PROPERTIES
     AUTOMOC ON
     AUTOUIC ON

@@ -25,32 +25,37 @@
   <property name="styleSheet">
    <string notr="true">
     QMainWindow {
-        background-color: rgba(21, 53, 90, 0.9);
+        background-color: #121212; /* Dark background */
     }
     QMenuBar {
-        background-color: rgba(34, 34, 34, 0.9);
+        background-color: #1e1e1e; /* Dark menu bar */
         color: white;
         font-size: 14px;
     }
     QToolBar {
-        background-color: rgba(34, 34, 34, 0.9);
+        background-color: #1e1e1e;
         border: 1px solid rgba(255, 255, 255, 0.2);
     }
     QStatusBar {
-        background-color: rgba(34, 34, 34, 0.9);
+        background-color: #1e1e1e;
         color: white;
     }
     QPushButton {
-        background-color: rgba(255, 0, 0, 0.5);
+        background-color: #ff3b30; /* Red button */
         border-radius: 5px;
         border: 1px solid white;
         color: white;
     }
     QPushButton:hover {
-        background-color: rgba(255, 0, 0, 0.7);
+        background-color: #ff453a;
     }
     QPushButton:pressed {
-        background-color: rgba(255, 0, 0, 1);
+        background-color: #ff3b30;
+    }
+    QLineEdit, QTextEdit {
+        background-color: #2c2c2c; /* Input fields */
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.2);
     }
    </string>
   </property>
@@ -58,18 +63,11 @@
    <layout class="QVBoxLayout">
     <item>
      <widget class="QMenuBar" name="menubar">
-      <widget class="QMenu" name="menuFile_2">
+      <widget class="QMenu" name="menuFile">
        <property name="title">
         <string>File</string>
        </property>
-       <widget class="QMenu" name="menu_New_Project">
-        <property name="title">
-         <string>&amp;New Project</string>
-        </property>
-        <addaction name="actionEmpty_Project"/>
-        <addaction name="actionTemplates"/>
-       </widget>
-       <addaction name="menu_New_Project"/>
+       <addaction name="actionNew_Project"/>
        <addaction name="actionOpen"/>
        <addaction name="actionSave"/>
        <addaction name="actionSave_As"/>
@@ -78,7 +76,7 @@
        <addaction name="actionPreferences"/>
        <addaction name="actionExit"/>
       </widget>
-      <widget class="QMenu" name="menuEdit_2">
+      <widget class="QMenu" name="menuEdit">
        <property name="title">
         <string>Edit</string>
        </property>
@@ -91,7 +89,7 @@
        <addaction name="actionSelect_All"/>
        <addaction name="actionFind_Replace"/>
       </widget>
-      <widget class="QMenu" name="menuView_2">
+      <widget class="QMenu" name="menuView">
        <property name="title">
         <string>View</string>
        </property>
@@ -104,7 +102,7 @@
        <addaction name="actionShow_Inspector"/>
        <addaction name="actionShow_Transport_Controls"/>
       </widget>
-      <widget class="QMenu" name="menuProject_2">
+      <widget class="QMenu" name="menuProject">
        <property name="title">
         <string>Project</string>
        </property>
@@ -123,6 +121,14 @@
        <addaction name="actionSolo"/>
        <addaction name="actionMute"/>
        <addaction name="actionRecord"/>
+      </widget>
+      <widget class="QMenu" name="menuSettings">
+       <property name="title">
+        <string>Settings</string>
+       </property>
+       <addaction name="actionAudio_Settings"/>
+       <addaction name="actionMIDI_Settings"/>
+       <addaction name="actionPreferences"/>
       </widget>
      </widget>
     </item>
@@ -183,32 +189,32 @@
   </action>
   <action name="actionUndo">
    <property name="text">
-    <string>&amp;Undo...</string>
+    <string>&amp;Undo</string>
    </property>
   </action>
   <action name="actionRedo">
    <property name="text">
-    <string>&amp;Redo...</string>
+    <string>&amp;Redo</string>
    </property>
   </action>
   <action name="actionCut">
    <property name="text">
-    <string>&amp;Cut...</string>
+    <string>&amp;Cut</string>
    </property>
   </action>
   <action name="actionCopy">
    <property name="text">
-    <string>C&amp;opy...</string>
+    <string>C&amp;opy</string>
    </property>
   </action>
   <action name="actionPaste">
    <property name="text">
-    <string>&amp;Paste...</string>
+    <string>&amp;Paste</string>
    </property>
   </action>
   <action name="actionDelete">
    <property name="text">
-    <string>&amp;Delete...</string>
+    <string>&amp;Delete</string>
    </property>
   </action>
   <action name="actionSelect_All">
@@ -309,6 +315,16 @@
   <action name="actionRecord">
    <property name="text">
     <string>&amp;Record</string>
+   </property>
+  </action>
+  <action name="actionAudio_Settings">
+   <property name="text">
+    <string>&amp;Audio Settings</string>
+   </property>
+  </action>
+  <action name="actionMIDI_Settings">
+   <property name="text">
+    <string>&amp;MIDI Settings</string>
    </property>
   </action>
  </widget>

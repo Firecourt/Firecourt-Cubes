@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.15.10
+** Created by: Qt User Interface Compiler version 5.15.13
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -58,21 +58,20 @@ public:
     QAction *actionSolo;
     QAction *actionMute;
     QAction *actionRecord;
-    QAction *actionEmpty_Project;
-    QAction *actionTemplates;
-    
+    QAction *actionAudio_Settings;
+    QAction *actionMIDI_Settings;
     QWidget *centralwidget;
     QVBoxLayout *vboxLayout;
     QMenuBar *menubar;
     QMenu *menuFile;
-    QMenu *menuNewProject;
     QMenu *menuEdit;
     QMenu *menuView;
     QMenu *menuProject;
     QMenu *menuTrack;
+    QMenu *menuSettings;
     QToolBar *toolBar;
     QWidget *browserWidget;
-    QVBoxLayout *browserLayout;
+    QVBoxLayout *vboxLayout1;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -81,18 +80,43 @@ public:
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(1200, 800);
         MainWindow->setMouseTracking(true);
+        MainWindow->setTabletTracking(true);
         MainWindow->setAcceptDrops(true);
-        MainWindow->setUnifiedTitleAndToolBarOnMac(true);
-        MainWindow->setStyleSheet(
-            "QMainWindow { background-color: rgba(30, 30, 30, 0.95); }"
-            "QMenuBar { background-color: rgba(50, 50, 50, 0.9); color: #FFFFFF; }"
-            "QToolBar { background-color: rgba(50, 50, 50, 0.9); border: none; }"
-            "QStatusBar { background-color: rgba(50, 50, 50, 0.9); }"
-            "QPushButton { background-color: rgba(100, 100, 100, 0.7); border-radius: 4px; color: white; }"
-            "QPushButton:hover { background-color: rgba(150, 150, 150, 0.8); }"
-            "QPushButton:pressed { background-color: rgba(200, 0, 0, 0.8); }"
-        );
-
+        MainWindow->setStyleSheet(QString::fromUtf8("\n"
+"    QMainWindow {\n"
+"        background-color: #121212; /* Dark background */\n"
+"    }\n"
+"    QMenuBar {\n"
+"        background-color: #1e1e1e; /* Dark menu bar */\n"
+"        color: white;\n"
+"        font-size: 14px;\n"
+"    }\n"
+"    QToolBar {\n"
+"        background-color: #1e1e1e;\n"
+"        border: 1px solid rgba(255, 255, 255, 0.2);\n"
+"    }\n"
+"    QStatusBar {\n"
+"        background-color: #1e1e1e;\n"
+"        color: white;\n"
+"    }\n"
+"    QPushButton {\n"
+"        background-color: #ff3b30; /* Red button */\n"
+"        border-radius: 5px;\n"
+"        border: 1px solid white;\n"
+"        color: white;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: #ff453a;\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: #ff3b30;\n"
+"    }\n"
+"    QLineEdit, QTextEdit {\n"
+"        background-color: #2c2c2c; /* Input fields */\n"
+"        color: white;\n"
+"        border: 1px solid rgba(255, 255, 255, 0.2);\n"
+"    }\n"
+"   "));
         actionOpen = new QAction(MainWindow);
         actionOpen->setObjectName(QString::fromUtf8("actionOpen"));
         actionSave = new QAction(MainWindow);
@@ -159,24 +183,18 @@ public:
         actionMute->setObjectName(QString::fromUtf8("actionMute"));
         actionRecord = new QAction(MainWindow);
         actionRecord->setObjectName(QString::fromUtf8("actionRecord"));
-        actionEmpty_Project = new QAction(MainWindow);
-        actionEmpty_Project->setObjectName(QString::fromUtf8("actionEmpty_Project"));
-        actionTemplates = new QAction(MainWindow);
-        actionTemplates->setObjectName(QString::fromUtf8("actionTemplates"));
-
+        actionAudio_Settings = new QAction(MainWindow);
+        actionAudio_Settings->setObjectName(QString::fromUtf8("actionAudio_Settings"));
+        actionMIDI_Settings = new QAction(MainWindow);
+        actionMIDI_Settings->setObjectName(QString::fromUtf8("actionMIDI_Settings"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         vboxLayout = new QVBoxLayout(centralwidget);
         vboxLayout->setObjectName(QString::fromUtf8("vboxLayout"));
-
         menubar = new QMenuBar(centralwidget);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-
         menuFile = new QMenu(menubar);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
-        menuNewProject = new QMenu(menuFile);
-        menuNewProject->setObjectName(QString::fromUtf8("menuNewProject"));
-
         menuEdit = new QMenu(menubar);
         menuEdit->setObjectName(QString::fromUtf8("menuEdit"));
         menuView = new QMenu(menubar);
@@ -185,87 +203,124 @@ public:
         menuProject->setObjectName(QString::fromUtf8("menuProject"));
         menuTrack = new QMenu(menubar);
         menuTrack->setObjectName(QString::fromUtf8("menuTrack"));
+        menuSettings = new QMenu(menubar);
+        menuSettings->setObjectName(QString::fromUtf8("menuSettings"));
 
-        toolBar = new QToolBar(MainWindow);
+        vboxLayout->addWidget(menubar);
+
+        toolBar = new QToolBar(centralwidget);
         toolBar->setObjectName(QString::fromUtf8("toolBar"));
 
-        MainWindow->setCentralWidget(centralwidget);
-        MainWindow->setMenuBar(menubar);
-        MainWindow->addToolBar(toolBar);
-        MainWindow->setStatusBar(new QStatusBar(MainWindow));
+        vboxLayout->addWidget(toolBar);
 
-        menubar->addMenu(menuFile);
-        menubar->addMenu(menuEdit);
-        menubar->addMenu(menuView);
-        menubar->addMenu(menuProject);
-        menubar->addMenu(menuTrack);
+        browserWidget = new QWidget(centralwidget);
+        browserWidget->setObjectName(QString::fromUtf8("browserWidget"));
+        browserWidget->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255, 0.1);"));
+        browserWidget->setMinimumSize(QSize(250, 0));
+        vboxLayout1 = new QVBoxLayout(browserWidget);
+        vboxLayout1->setObjectName(QString::fromUtf8("vboxLayout1"));
+        vboxLayout1->setContentsMargins(0, 0, 0, 0);
+
+        vboxLayout->addWidget(browserWidget);
+
+        MainWindow->setCentralWidget(centralwidget);
+        statusbar = new QStatusBar(MainWindow);
+        statusbar->setObjectName(QString::fromUtf8("statusbar"));
+        MainWindow->setStatusBar(statusbar);
 
         menuFile->addAction(actionOpen);
         menuFile->addAction(actionSave);
         menuFile->addAction(actionSave_As);
-        menuFile->addSeparator();
+        menuFile->addAction(actionImport);
+        menuFile->addAction(actionExport);
+        menuFile->addAction(actionPreferences);
         menuFile->addAction(actionExit);
-
         menuEdit->addAction(actionUndo);
         menuEdit->addAction(actionRedo);
-        menuEdit->addSeparator();
         menuEdit->addAction(actionCut);
         menuEdit->addAction(actionCopy);
         menuEdit->addAction(actionPaste);
         menuEdit->addAction(actionDelete);
-        menuEdit->addSeparator();
         menuEdit->addAction(actionSelect_All);
         menuEdit->addAction(actionFind_Replace);
-
         menuView->addAction(actionZoom_In);
         menuView->addAction(actionZoom_Out);
-        menuView->addSeparator();
         menuView->addAction(actionShow_Grid);
         menuView->addAction(actionShow_Tools);
         menuView->addAction(actionShow_Mixer);
         menuView->addAction(actionShow_Browser);
         menuView->addAction(actionShow_Inspector);
         menuView->addAction(actionShow_Transport_Controls);
-
-        menuProject->addAction(actionEmpty_Project);
-        menuProject->addAction(actionTemplates);
-
-        menuTrack->addAction(actionAdd_Track);
-        menuTrack->addAction(actionDelete_Track);
-        menuTrack->addAction(actionRename_Track);
-        menuTrack->addAction(actionGroup_Tracks);
-        menuTrack->addAction(actionUngroup_Tracks);
-        menuTrack->addAction(actionFreeze_Track);
-        menuTrack->addAction(actionBounce_Export_Track);
-        menuTrack->addSeparator();
+        menuProject->addAction(actionAdd_Track);
+        menuProject->addAction(actionDelete_Track);
+        menuProject->addAction(actionRename_Track);
+        menuProject->addAction(actionGroup_Tracks);
+        menuProject->addAction(actionUngroup_Tracks);
+        menuProject->addAction(actionFreeze_Track);
+        menuProject->addAction(actionBounce_Export_Track);
         menuTrack->addAction(actionSolo);
         menuTrack->addAction(actionMute);
         menuTrack->addAction(actionRecord);
+        menuSettings->addAction(actionAudio_Settings);
+        menuSettings->addAction(actionMIDI_Settings);
+        menuSettings->addAction(actionPreferences);
 
-        toolBar->addAction(actionOpen);
-        toolBar->addAction(actionSave);
-        toolBar->addSeparator();
-        toolBar->addAction(actionUndo);
-        toolBar->addAction(actionRedo);
-        toolBar->addSeparator();
-        toolBar->addAction(actionCut);
-        toolBar->addAction(actionCopy);
-        toolBar->addAction(actionPaste);
-        toolBar->addAction(actionDelete);
-        toolBar->addSeparator();
-        toolBar->addAction(actionZoom_In);
-        toolBar->addAction(actionZoom_Out);
-        toolBar->addSeparator();
-        toolBar->addAction(actionShow_Browser);
-        toolBar->addAction(actionShow_Mixer);
-        toolBar->addAction(actionShow_Tools);
-        toolBar->addAction(actionShow_Inspector);
-        toolBar->addAction(actionShow_Transport_Controls);
+        retranslateUi(MainWindow);
 
-        MainWindow->setCentralWidget(centralwidget);
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Firecourt DAW", nullptr));
-    }
+        QMetaObject::connectSlotsByName(MainWindow);
+    } // setupUi
+
+    void retranslateUi(QMainWindow *MainWindow)
+    {
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Firecourt Cubes", nullptr));
+        actionOpen->setText(QCoreApplication::translate("MainWindow", "&Open...", nullptr));
+        actionSave->setText(QCoreApplication::translate("MainWindow", "&Save...", nullptr));
+        actionSave_As->setText(QCoreApplication::translate("MainWindow", "Sa&ve As...", nullptr));
+        actionImport->setText(QCoreApplication::translate("MainWindow", "&Import...", nullptr));
+        actionExport->setText(QCoreApplication::translate("MainWindow", "&Export...", nullptr));
+        actionPreferences->setText(QCoreApplication::translate("MainWindow", "&Preferences...", nullptr));
+        actionExit->setText(QCoreApplication::translate("MainWindow", "E&xit", nullptr));
+        actionUndo->setText(QCoreApplication::translate("MainWindow", "&Undo", nullptr));
+        actionRedo->setText(QCoreApplication::translate("MainWindow", "&Redo", nullptr));
+        actionCut->setText(QCoreApplication::translate("MainWindow", "&Cut", nullptr));
+        actionCopy->setText(QCoreApplication::translate("MainWindow", "C&opy", nullptr));
+        actionPaste->setText(QCoreApplication::translate("MainWindow", "&Paste", nullptr));
+        actionDelete->setText(QCoreApplication::translate("MainWindow", "&Delete", nullptr));
+        actionSelect_All->setText(QCoreApplication::translate("MainWindow", "&Select All", nullptr));
+        actionFind_Replace->setText(QCoreApplication::translate("MainWindow", "&Find Replace", nullptr));
+        actionZoom_In->setText(QCoreApplication::translate("MainWindow", "&Zoom In", nullptr));
+        actionZoom_Out->setText(QCoreApplication::translate("MainWindow", "Zoom &Out", nullptr));
+        actionShow_Grid->setText(QCoreApplication::translate("MainWindow", "&Show Grid", nullptr));
+        actionShow_Tools->setText(QCoreApplication::translate("MainWindow", "S&how Tools", nullptr));
+        actionShow_Mixer->setText(QCoreApplication::translate("MainWindow", "Show &Mixer", nullptr));
+        actionShow_Browser->setText(QCoreApplication::translate("MainWindow", "Show &Browser", nullptr));
+        actionShow_Inspector->setText(QCoreApplication::translate("MainWindow", "Show &Inspector", nullptr));
+        actionShow_Transport_Controls->setText(QCoreApplication::translate("MainWindow", "Show &Transport Controls", nullptr));
+        actionAdd_Track->setText(QCoreApplication::translate("MainWindow", "&Add Track", nullptr));
+        actionDelete_Track->setText(QCoreApplication::translate("MainWindow", "&Delete Track", nullptr));
+        actionRename_Track->setText(QCoreApplication::translate("MainWindow", "&Rename Track", nullptr));
+        actionGroup_Tracks->setText(QCoreApplication::translate("MainWindow", "&Group Tracks", nullptr));
+        actionUngroup_Tracks->setText(QCoreApplication::translate("MainWindow", "&Ungroup Tracks", nullptr));
+        actionFreeze_Track->setText(QCoreApplication::translate("MainWindow", "&Freeze Track", nullptr));
+        actionBounce_Export_Track->setText(QCoreApplication::translate("MainWindow", "&Bounce/Export Track", nullptr));
+        actionSolo->setText(QCoreApplication::translate("MainWindow", "&Solo", nullptr));
+        actionMute->setText(QCoreApplication::translate("MainWindow", "&Mute", nullptr));
+        actionRecord->setText(QCoreApplication::translate("MainWindow", "&Record", nullptr));
+        actionAudio_Settings->setText(QCoreApplication::translate("MainWindow", "&Audio Settings", nullptr));
+        actionMIDI_Settings->setText(QCoreApplication::translate("MainWindow", "&MIDI Settings", nullptr));
+        menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
+        menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
+        menuView->setTitle(QCoreApplication::translate("MainWindow", "View", nullptr));
+        menuProject->setTitle(QCoreApplication::translate("MainWindow", "Project", nullptr));
+        menuTrack->setTitle(QCoreApplication::translate("MainWindow", "Track", nullptr));
+        menuSettings->setTitle(QCoreApplication::translate("MainWindow", "Settings", nullptr));
+    } // retranslateUi
+
 };
+
+namespace Ui {
+    class MainWindow: public Ui_MainWindow {};
+} // namespace Ui
 
 QT_END_NAMESPACE
 
