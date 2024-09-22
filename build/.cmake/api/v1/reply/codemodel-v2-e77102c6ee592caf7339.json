@@ -1,0 +1,205 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-1182c2e730a2a1ce1fdc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "FirecourtCubes",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "FirecourtCubes::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FirecourtCubes-Debug-c0fa2f540ec278568837.json",
+					"name" : "FirecourtCubes",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FirecourtCubes_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FirecourtCubes_autogen-Debug-066e616e8dbfae104373.json",
+					"name" : "FirecourtCubes_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FirecourtCubes_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FirecourtCubes_autogen_timestamp_deps-Debug-1e45833b684d708f2bad.json",
+					"name" : "FirecourtCubes_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-f86ef71fe2212d52237c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "FirecourtCubes",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "FirecourtCubes::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FirecourtCubes-Release-a43bb965610aba770098.json",
+					"name" : "FirecourtCubes",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FirecourtCubes_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FirecourtCubes_autogen-Release-4c26a675732099f6aa87.json",
+					"name" : "FirecourtCubes_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FirecourtCubes_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FirecourtCubes_autogen_timestamp_deps-Release-1e45833b684d708f2bad.json",
+					"name" : "FirecourtCubes_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-RelWithDebInfo-5914a759b8b559903b0c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "RelWithDebInfo",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "FirecourtCubes",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "FirecourtCubes::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FirecourtCubes-RelWithDebInfo-3a4cf51cddad70dbc10c.json",
+					"name" : "FirecourtCubes",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FirecourtCubes_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FirecourtCubes_autogen-RelWithDebInfo-2681acd48753beb2d62c.json",
+					"name" : "FirecourtCubes_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FirecourtCubes_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FirecourtCubes_autogen_timestamp_deps-RelWithDebInfo-1e45833b684d708f2bad.json",
+					"name" : "FirecourtCubes_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build",
+		"source" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

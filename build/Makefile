@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cyberbitch/Documents/GitHub/Firecourt-Cubes
+CMAKE_SOURCE_DIR = /home/cyberbitch/Firecourt-Cubes
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build
+CMAKE_BINARY_DIR = /home/cyberbitch/Firecourt-Cubes/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/CMakeFiles /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cyberbitch/Firecourt-Cubes/build/CMakeFiles /home/cyberbitch/Firecourt-Cubes/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cyberbitch/Firecourt-Cubes/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -224,77 +224,101 @@ FirecourtCubes_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/FirecourtCubes_autogen/mocs_compilation.cpp.s
 .PHONY : FirecourtCubes_autogen/mocs_compilation.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
-mainwindow.o: mainwindow.cpp.o
-.PHONY : mainwindow.o
+src/mainwindow.o: src/mainwindow.cpp.o
+.PHONY : src/mainwindow.o
 
 # target to build an object file
-mainwindow.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/mainwindow.cpp.o
-.PHONY : mainwindow.cpp.o
+src/mainwindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/mainwindow.cpp.o
+.PHONY : src/mainwindow.cpp.o
 
-mainwindow.i: mainwindow.cpp.i
-.PHONY : mainwindow.i
+src/mainwindow.i: src/mainwindow.cpp.i
+.PHONY : src/mainwindow.i
 
 # target to preprocess a source file
-mainwindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/mainwindow.cpp.i
-.PHONY : mainwindow.cpp.i
+src/mainwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/mainwindow.cpp.i
+.PHONY : src/mainwindow.cpp.i
 
-mainwindow.s: mainwindow.cpp.s
-.PHONY : mainwindow.s
+src/mainwindow.s: src/mainwindow.cpp.s
+.PHONY : src/mainwindow.s
 
 # target to generate assembly for a file
-mainwindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/mainwindow.cpp.s
-.PHONY : mainwindow.cpp.s
+src/mainwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/mainwindow.cpp.s
+.PHONY : src/mainwindow.cpp.s
 
-settingsdialog.o: settingsdialog.cpp.o
-.PHONY : settingsdialog.o
+src/project.o: src/project.cpp.o
+.PHONY : src/project.o
 
 # target to build an object file
-settingsdialog.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/settingsdialog.cpp.o
-.PHONY : settingsdialog.cpp.o
+src/project.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/project.cpp.o
+.PHONY : src/project.cpp.o
 
-settingsdialog.i: settingsdialog.cpp.i
-.PHONY : settingsdialog.i
+src/project.i: src/project.cpp.i
+.PHONY : src/project.i
 
 # target to preprocess a source file
-settingsdialog.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/settingsdialog.cpp.i
-.PHONY : settingsdialog.cpp.i
+src/project.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/project.cpp.i
+.PHONY : src/project.cpp.i
 
-settingsdialog.s: settingsdialog.cpp.s
-.PHONY : settingsdialog.s
+src/project.s: src/project.cpp.s
+.PHONY : src/project.s
 
 # target to generate assembly for a file
-settingsdialog.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/settingsdialog.cpp.s
-.PHONY : settingsdialog.cpp.s
+src/project.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/project.cpp.s
+.PHONY : src/project.cpp.s
+
+src/settingsdialog.o: src/settingsdialog.cpp.o
+.PHONY : src/settingsdialog.o
+
+# target to build an object file
+src/settingsdialog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/settingsdialog.cpp.o
+.PHONY : src/settingsdialog.cpp.o
+
+src/settingsdialog.i: src/settingsdialog.cpp.i
+.PHONY : src/settingsdialog.i
+
+# target to preprocess a source file
+src/settingsdialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/settingsdialog.cpp.i
+.PHONY : src/settingsdialog.cpp.i
+
+src/settingsdialog.s: src/settingsdialog.cpp.s
+.PHONY : src/settingsdialog.s
+
+# target to generate assembly for a file
+src/settingsdialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/settingsdialog.cpp.s
+.PHONY : src/settingsdialog.cpp.s
 
 # Help Target
 help:
@@ -314,15 +338,18 @@ help:
 	@echo "... FirecourtCubes_autogen/mocs_compilation.o"
 	@echo "... FirecourtCubes_autogen/mocs_compilation.i"
 	@echo "... FirecourtCubes_autogen/mocs_compilation.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... mainwindow.o"
-	@echo "... mainwindow.i"
-	@echo "... mainwindow.s"
-	@echo "... settingsdialog.o"
-	@echo "... settingsdialog.i"
-	@echo "... settingsdialog.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/mainwindow.o"
+	@echo "... src/mainwindow.i"
+	@echo "... src/mainwindow.s"
+	@echo "... src/project.o"
+	@echo "... src/project.i"
+	@echo "... src/project.s"
+	@echo "... src/settingsdialog.o"
+	@echo "... src/settingsdialog.i"
+	@echo "... src/settingsdialog.s"
 .PHONY : help
 
 

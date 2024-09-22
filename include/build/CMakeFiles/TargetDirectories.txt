@@ -1,0 +1,9 @@
+/home/cyberbitch/Firecourt-Cubes/include/build/CMakeFiles/FirecourtCubes.dir
+/home/cyberbitch/Firecourt-Cubes/include/build/CMakeFiles/edit_cache.dir
+/home/cyberbitch/Firecourt-Cubes/include/build/CMakeFiles/rebuild_cache.dir
+/home/cyberbitch/Firecourt-Cubes/include/build/CMakeFiles/list_install_components.dir
+/home/cyberbitch/Firecourt-Cubes/include/build/CMakeFiles/install.dir
+/home/cyberbitch/Firecourt-Cubes/include/build/CMakeFiles/install/local.dir
+/home/cyberbitch/Firecourt-Cubes/include/build/CMakeFiles/install/strip.dir
+/home/cyberbitch/Firecourt-Cubes/include/build/CMakeFiles/FirecourtCubes_autogen_timestamp_deps.dir
+/home/cyberbitch/Firecourt-Cubes/include/build/CMakeFiles/FirecourtCubes_autogen.dir

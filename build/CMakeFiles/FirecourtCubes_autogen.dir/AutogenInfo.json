@@ -61,7 +61,7 @@
 		"/usr/share/cmake-3.29/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake",
 		"/usr/share/cmake-3.29/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
 		"/usr/share/cmake-3.29/Modules/CMakeFindBinUtils.cmake",
-		"/usr/share/cmake-3.29/Modules/Compiler/Clang-FindBinUtils.cmake",
+		"/usr/share/cmake-3.29/Modules/Compiler/GNU-FindBinUtils.cmake",
 		"/usr/share/cmake-3.29/Modules/CMakeCXXCompiler.cmake.in",
 		"/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/CMakeFiles/3.29.6/CMakeCXXCompiler.cmake",
 		"/usr/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake",
@@ -71,12 +71,9 @@
 		"/usr/share/cmake-3.29/Modules/Platform/UnixPaths.cmake",
 		"/usr/share/cmake-3.29/Modules/CMakeCXXInformation.cmake",
 		"/usr/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake",
-		"/usr/share/cmake-3.29/Modules/Compiler/Clang-CXX.cmake",
-		"/usr/share/cmake-3.29/Modules/Compiler/Clang.cmake",
-		"/usr/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
+		"/usr/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake",
 		"/usr/share/cmake-3.29/Modules/Compiler/GNU.cmake",
 		"/usr/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
-		"/usr/share/cmake-3.29/Modules/Platform/Linux-Clang-CXX.cmake",
 		"/usr/share/cmake-3.29/Modules/Platform/Linux-GNU-CXX.cmake",
 		"/usr/share/cmake-3.29/Modules/Platform/Linux-GNU.cmake",
 		"/usr/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake",
@@ -93,6 +90,22 @@
 		"/usr/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake",
 		"/usr/share/cmake-3.29/Modules/CMakeCXXCompiler.cmake.in",
 		"/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/CMakeFiles/3.29.6/CMakeCXXCompiler.cmake",
+		"/usr/share/cmake-3.29/Modules/FindPython.cmake",
+		"/usr/share/cmake-3.29/Modules/FindPython/Support.cmake",
+		"/usr/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake",
+		"/usr/share/cmake-3.29/Modules/FindPackageMessage.cmake",
+		"/usr/lib/cmake/pybind11/pybind11ConfigVersion.cmake",
+		"/usr/lib/cmake/pybind11/pybind11Config.cmake",
+		"/usr/lib/cmake/pybind11/pybind11Targets.cmake",
+		"/usr/lib/cmake/pybind11/pybind11Common.cmake",
+		"/usr/lib/cmake/pybind11/pybind11NewTools.cmake",
+		"/usr/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake",
+		"/usr/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake",
+		"/usr/share/cmake-3.29/Modules/Internal/CheckFlagCommonConfig.cmake",
+		"/usr/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake",
+		"/usr/share/cmake-3.29/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake",
+		"/usr/share/cmake-3.29/Modules/CheckCXXSourceCompiles.cmake",
+		"/usr/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake",
@@ -138,7 +151,10 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5LinguistTools/Qt5LinguistToolsConfig.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5LinguistTools/Qt5LinguistToolsMacros.cmake",
 		"/usr/share/cmake-3.29/Modules/CMakeParseArguments.cmake",
-		"/usr/share/cmake-3.29/Modules/GNUInstallDirs.cmake"
+		"/usr/share/cmake-3.29/Modules/GNUInstallDirs.cmake",
+		"/usr/share/cmake-3.29/Modules/FindVulkan.cmake",
+		"/usr/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake",
+		"/usr/share/cmake-3.29/Modules/FindPackageMessage.cmake"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes",
 	"CROSS_CONFIG" : false,
@@ -147,28 +163,37 @@
 	"HEADERS" : 
 	[
 		[
-			"/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/mainwindow.h",
+			"/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/include/mainwindow.h",
 			"MU",
-			"EWIEGA46WW/moc_mainwindow.cpp",
+			"6YEA5652QU/moc_mainwindow.cpp",
 			null
 		],
 		[
-			"/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/project.h",
+			"/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/include/project.h",
 			"MU",
-			"EWIEGA46WW/moc_project.cpp",
+			"6YEA5652QU/moc_project.cpp",
 			null
 		],
 		[
-			"/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/settingsdialog.h",
+			"/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/include/settingsdialog.h",
 			"MU",
-			"EWIEGA46WW/moc_settingsdialog.cpp",
+			"6YEA5652QU/moc_settingsdialog.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/include",
+	"INCLUDE_DIR_Debug" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/include_Debug",
+	"INCLUDE_DIR_RelWithDebInfo" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/include_RelWithDebInfo",
+	"INCLUDE_DIR_Release" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/include_Release",
 	"MOC_COMPILATION_FILE" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/mocs_compilation.cpp",
-	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
+	"MOC_COMPILATION_FILE_Debug" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/mocs_compilation_Debug.cpp",
+	"MOC_COMPILATION_FILE_RelWithDebInfo" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/mocs_compilation_RelWithDebInfo.cpp",
+	"MOC_COMPILATION_FILE_Release" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/mocs_compilation_Release.cpp",
+	"MOC_DEFINITIONS" : [],
+	"MOC_DEFINITIONS_Debug" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
+	"MOC_DEFINITIONS_RelWithDebInfo" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NO_DEBUG", "QT_WIDGETS_LIB" ],
+	"MOC_DEFINITIONS_Release" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NO_DEBUG", "QT_WIDGETS_LIB" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
 		[
@@ -176,27 +201,61 @@
 			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
 		]
 	],
-	"MOC_INCLUDES" : 
+	"MOC_INCLUDES" : [],
+	"MOC_INCLUDES_Debug" : 
 	[
 		"/usr/include/x86_64-linux-gnu/qt5",
 		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
 		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
 		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
 		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+		"/usr/include/python3.12",
+		"/usr/include",
 		"/usr/include/c++/13",
 		"/usr/include/x86_64-linux-gnu/c++/13",
 		"/usr/include/c++/13/backward",
-		"/usr/lib/llvm-17/lib/clang/17/include",
+		"/usr/lib/gcc/x86_64-linux-gnu/13/include",
 		"/usr/local/include",
-		"/usr/include/x86_64-linux-gnu",
-		"/usr/include"
+		"/usr/include/x86_64-linux-gnu"
+	],
+	"MOC_INCLUDES_RelWithDebInfo" : 
+	[
+		"/usr/include/x86_64-linux-gnu/qt5",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
+		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
+		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
+		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+		"/usr/include/python3.12",
+		"/usr/include",
+		"/usr/include/c++/13",
+		"/usr/include/x86_64-linux-gnu/c++/13",
+		"/usr/include/c++/13/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/13/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu"
+	],
+	"MOC_INCLUDES_Release" : 
+	[
+		"/usr/include/x86_64-linux-gnu/qt5",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
+		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
+		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
+		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+		"/usr/include/python3.12",
+		"/usr/include",
+		"/usr/include/c++/13",
+		"/usr/include/x86_64-linux-gnu/c++/13",
+		"/usr/include/c++/13/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/13/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu"
 	],
 	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
 	"MOC_OPTIONS" : [],
 	"MOC_PATH_PREFIX" : false,
 	"MOC_PREDEFS_CMD" : 
 	[
-		"/usr/bin/clang++-17",
+		"/usr/bin/c++",
 		"-std=gnu++17",
 		"-dM",
 		"-E",
@@ -204,35 +263,44 @@
 		"/usr/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp"
 	],
 	"MOC_PREDEFS_FILE" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE_Debug" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/moc_predefs_Debug.h",
+	"MOC_PREDEFS_FILE_RelWithDebInfo" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/moc_predefs_RelWithDebInfo.h",
+	"MOC_PREDEFS_FILE_Release" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/moc_predefs_Release.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
-	"MULTI_CONFIG" : false,
+	"MULTI_CONFIG" : true,
 	"PARALLEL" : 6,
 	"PARSE_CACHE_FILE" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/CMakeFiles/FirecourtCubes_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE_Debug" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/CMakeFiles/FirecourtCubes_autogen.dir/ParseCache_Debug.txt",
+	"PARSE_CACHE_FILE_RelWithDebInfo" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/CMakeFiles/FirecourtCubes_autogen.dir/ParseCache_RelWithDebInfo.txt",
+	"PARSE_CACHE_FILE_Release" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/CMakeFiles/FirecourtCubes_autogen.dir/ParseCache_Release.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/lib/qt5/bin/uic",
 	"QT_VERSION_MAJOR" : 5,
 	"QT_VERSION_MINOR" : 15,
 	"SETTINGS_FILE" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/CMakeFiles/FirecourtCubes_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE_Debug" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/CMakeFiles/FirecourtCubes_autogen.dir/AutogenUsed_Debug.txt",
+	"SETTINGS_FILE_RelWithDebInfo" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/CMakeFiles/FirecourtCubes_autogen.dir/AutogenUsed_RelWithDebInfo.txt",
+	"SETTINGS_FILE_Release" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/CMakeFiles/FirecourtCubes_autogen.dir/AutogenUsed_Release.txt",
 	"SOURCES" : 
 	[
 		[
-			"/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/main.cpp",
+			"/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/src/main.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/mainwindow.cpp",
+			"/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/src/mainwindow.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/project.cpp",
+			"/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/src/project.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/settingsdialog.cpp",
+			"/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/src/settingsdialog.cpp",
 			"MU",
 			null
 		]

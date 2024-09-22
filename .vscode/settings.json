@@ -3,5 +3,6 @@
         "qdialog": "cpp",
         "qapplication": "cpp",
         "qvariant": "cpp"
-    }
+    },
+    "cmake.options.statusBarVisibility": "hidden"
 }

@@ -1,13 +1,16 @@
 FirecourtCubes_autogen/timestamp: \
-	/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/CMakeLists.txt \
-	/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/CMakeFiles/3.29.6/CMakeCXXCompiler.cmake \
-	/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/CMakeFiles/3.29.6/CMakeSystem.cmake \
-	/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/moc_predefs.h \
-	/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/main.cpp \
-	/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/mainwindow.cpp \
-	/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/mainwindow.h \
-	/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/settingsdialog.cpp \
-	/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/settingsdialog.h \
+	/home/cyberbitch/Firecourt-Cubes/CMakeLists.txt \
+	/home/cyberbitch/Firecourt-Cubes/build/CMakeFiles/3.29.6/CMakeCXXCompiler.cmake \
+	/home/cyberbitch/Firecourt-Cubes/build/CMakeFiles/3.29.6/CMakeSystem.cmake \
+	/home/cyberbitch/Firecourt-Cubes/build/FirecourtCubes_autogen/moc_predefs.h \
+	/home/cyberbitch/Firecourt-Cubes/include/mainwindow.h \
+	/home/cyberbitch/Firecourt-Cubes/include/project.h \
+	/home/cyberbitch/Firecourt-Cubes/include/settingsdialog.h \
+	/home/cyberbitch/Firecourt-Cubes/src/main.cpp \
+	/home/cyberbitch/Firecourt-Cubes/src/mainwindow.cpp \
+	/home/cyberbitch/Firecourt-Cubes/src/project.cpp \
+	/home/cyberbitch/Firecourt-Cubes/src/settingsdialog.cpp \
+	/usr/include/alloca.h \
 	/usr/include/asm-generic/errno-base.h \
 	/usr/include/asm-generic/errno.h \
 	/usr/include/assert.h \
@@ -46,6 +49,7 @@ FirecourtCubes_autogen/timestamp: \
 	/usr/include/c++/13/bits/hash_bytes.h \
 	/usr/include/c++/13/bits/invoke.h \
 	/usr/include/c++/13/bits/ios_base.h \
+	/usr/include/c++/13/bits/istream.tcc \
 	/usr/include/c++/13/bits/iterator_concepts.h \
 	/usr/include/c++/13/bits/list.tcc \
 	/usr/include/c++/13/bits/locale_classes.h \
@@ -138,6 +142,8 @@ FirecourtCubes_autogen/timestamp: \
 	/usr/include/c++/13/initializer_list \
 	/usr/include/c++/13/ios \
 	/usr/include/c++/13/iosfwd \
+	/usr/include/c++/13/iostream \
+	/usr/include/c++/13/istream \
 	/usr/include/c++/13/iterator \
 	/usr/include/c++/13/limits \
 	/usr/include/c++/13/list \
@@ -153,7 +159,6 @@ FirecourtCubes_autogen/timestamp: \
 	/usr/include/c++/13/pstl/glue_memory_defs.h \
 	/usr/include/c++/13/pstl/glue_numeric_defs.h \
 	/usr/include/c++/13/stdexcept \
-	/usr/include/c++/13/stdlib.h \
 	/usr/include/c++/13/streambuf \
 	/usr/include/c++/13/string \
 	/usr/include/c++/13/string_view \
@@ -164,14 +169,20 @@ FirecourtCubes_autogen/timestamp: \
 	/usr/include/c++/13/utility \
 	/usr/include/c++/13/vector \
 	/usr/include/ctype.h \
+	/usr/include/endian.h \
 	/usr/include/errno.h \
 	/usr/include/features-time64.h \
 	/usr/include/features.h \
+	/usr/include/limits.h \
 	/usr/include/linux/errno.h \
+	/usr/include/linux/limits.h \
 	/usr/include/locale.h \
 	/usr/include/pthread.h \
 	/usr/include/sched.h \
 	/usr/include/stdc-predef.h \
+	/usr/include/stdint.h \
+	/usr/include/stdio.h \
+	/usr/include/stdlib.h \
 	/usr/include/string.h \
 	/usr/include/strings.h \
 	/usr/include/syscall.h \
@@ -180,6 +191,7 @@ FirecourtCubes_autogen/timestamp: \
 	/usr/include/wchar.h \
 	/usr/include/wctype.h \
 	/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+	/usr/include/x86_64-linux-gnu/bits/byteswap.h \
 	/usr/include/x86_64-linux-gnu/bits/confname.h \
 	/usr/include/x86_64-linux-gnu/bits/cpu-set.h \
 	/usr/include/x86_64-linux-gnu/bits/endian.h \
@@ -191,14 +203,23 @@ FirecourtCubes_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/bits/getopt_core.h \
 	/usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
 	/usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+	/usr/include/x86_64-linux-gnu/bits/local_lim.h \
 	/usr/include/x86_64-linux-gnu/bits/locale.h \
 	/usr/include/x86_64-linux-gnu/bits/long-double.h \
+	/usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+	/usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
 	/usr/include/x86_64-linux-gnu/bits/posix_opt.h \
 	/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
 	/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
 	/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
 	/usr/include/x86_64-linux-gnu/bits/sched.h \
+	/usr/include/x86_64-linux-gnu/bits/select.h \
 	/usr/include/x86_64-linux-gnu/bits/setjmp.h \
+	/usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+	/usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+	/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+	/usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+	/usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
 	/usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
 	/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
 	/usr/include/x86_64-linux-gnu/bits/syscall.h \
@@ -210,14 +231,19 @@ FirecourtCubes_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/bits/types.h \
 	/usr/include/x86_64-linux-gnu/bits/types/FILE.h \
 	/usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+	/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+	/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
 	/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
 	/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
 	/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
 	/usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
 	/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+	/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
 	/usr/include/x86_64-linux-gnu/bits/types/error_t.h \
 	/usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
 	/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+	/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+	/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
 	/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
 	/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
 	/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
@@ -228,10 +254,15 @@ FirecourtCubes_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
 	/usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
 	/usr/include/x86_64-linux-gnu/bits/typesizes.h \
+	/usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+	/usr/include/x86_64-linux-gnu/bits/uio_lim.h \
 	/usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+	/usr/include/x86_64-linux-gnu/bits/waitflags.h \
+	/usr/include/x86_64-linux-gnu/bits/waitstatus.h \
 	/usr/include/x86_64-linux-gnu/bits/wchar.h \
 	/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
 	/usr/include/x86_64-linux-gnu/bits/wordsize.h \
+	/usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
 	/usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
 	/usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
 	/usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -244,6 +275,7 @@ FirecourtCubes_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
 	/usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
 	/usr/include/x86_64-linux-gnu/gnu/stubs.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtCore/QFile \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h \
@@ -258,6 +290,8 @@ FirecourtCubes_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainertools_impl.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h \
@@ -348,6 +382,7 @@ FirecourtCubes_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStatusBar \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTextEdit \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QToolBar \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QUndoStack \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
@@ -385,14 +420,19 @@ FirecourtCubes_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbar.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qundostack.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
 	/usr/include/x86_64-linux-gnu/sys/cdefs.h \
+	/usr/include/x86_64-linux-gnu/sys/select.h \
 	/usr/include/x86_64-linux-gnu/sys/syscall.h \
-	/usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
+	/usr/include/x86_64-linux-gnu/sys/types.h \
+	/usr/lib/cmake/pybind11/pybind11Common.cmake \
+	/usr/lib/cmake/pybind11/pybind11Config.cmake \
+	/usr/lib/cmake/pybind11/pybind11ConfigVersion.cmake \
+	/usr/lib/cmake/pybind11/pybind11NewTools.cmake \
+	/usr/lib/cmake/pybind11/pybind11Targets.cmake \
 	/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
 	/usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
-	/usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
-	/usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
 	/usr/lib/linux/uapi/x86/asm/errno.h \
 	/usr/lib/linux/uapi/x86/asm/unistd.h \
 	/usr/lib/linux/uapi/x86/asm/unistd_64.h \
@@ -439,6 +479,7 @@ FirecourtCubes_autogen/timestamp: \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake \
 	/usr/share/cmake-3.29/Modules/CMakeCXXInformation.cmake \
+	/usr/share/cmake-3.29/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
 	/usr/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake \
 	/usr/share/cmake-3.29/Modules/CMakeGenericSystem.cmake \
 	/usr/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake \
@@ -446,14 +487,25 @@ FirecourtCubes_autogen/timestamp: \
 	/usr/share/cmake-3.29/Modules/CMakeParseArguments.cmake \
 	/usr/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake \
 	/usr/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake \
+	/usr/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake \
+	/usr/share/cmake-3.29/Modules/CheckCXXSourceCompiles.cmake \
 	/usr/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
 	/usr/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake \
 	/usr/share/cmake-3.29/Modules/Compiler/GNU.cmake \
+	/usr/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake \
+	/usr/share/cmake-3.29/Modules/FindPackageMessage.cmake \
+	/usr/share/cmake-3.29/Modules/FindPython.cmake \
+	/usr/share/cmake-3.29/Modules/FindPython/Support.cmake \
+	/usr/share/cmake-3.29/Modules/FindVulkan.cmake \
 	/usr/share/cmake-3.29/Modules/GNUInstallDirs.cmake \
+	/usr/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake \
+	/usr/share/cmake-3.29/Modules/Internal/CheckFlagCommonConfig.cmake \
+	/usr/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake \
 	/usr/share/cmake-3.29/Modules/Platform/Linux-GNU-CXX.cmake \
 	/usr/share/cmake-3.29/Modules/Platform/Linux-GNU.cmake \
 	/usr/share/cmake-3.29/Modules/Platform/Linux-Initialize.cmake \
 	/usr/share/cmake-3.29/Modules/Platform/Linux.cmake \
 	/usr/share/cmake-3.29/Modules/Platform/UnixPaths.cmake \
-	/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/settingsdialog.ui \
+	/home/cyberbitch/Firecourt-Cubes/src/mainwindow.ui \
+	/home/cyberbitch/Firecourt-Cubes/src/settingsdialog.ui \
 	/usr/bin/cmake

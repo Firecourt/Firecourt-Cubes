@@ -1,0 +1,4 @@
+/ai_module/venv
+.venv
+.cache
+.vscode
