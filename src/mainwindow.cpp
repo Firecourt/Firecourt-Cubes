@@ -12,6 +12,7 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::on_actionOpen_triggered() {
+   
     // Code to open a file
 }
 

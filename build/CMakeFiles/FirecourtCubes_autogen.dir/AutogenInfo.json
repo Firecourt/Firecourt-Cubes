@@ -113,8 +113,17 @@
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/include",
+	"INCLUDE_DIR_Debug" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/include_Debug",
+	"INCLUDE_DIR_RelWithDebInfo" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/include_RelWithDebInfo",
+	"INCLUDE_DIR_Release" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/include_Release",
 	"MOC_COMPILATION_FILE" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/mocs_compilation.cpp",
-	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NO_DEBUG", "QT_WIDGETS_LIB" ],
+	"MOC_COMPILATION_FILE_Debug" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/mocs_compilation_Debug.cpp",
+	"MOC_COMPILATION_FILE_RelWithDebInfo" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/mocs_compilation_RelWithDebInfo.cpp",
+	"MOC_COMPILATION_FILE_Release" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/mocs_compilation_Release.cpp",
+	"MOC_DEFINITIONS" : [],
+	"MOC_DEFINITIONS_Debug" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
+	"MOC_DEFINITIONS_RelWithDebInfo" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NO_DEBUG", "QT_WIDGETS_LIB" ],
+	"MOC_DEFINITIONS_Release" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NO_DEBUG", "QT_WIDGETS_LIB" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
 		[
@@ -122,7 +131,40 @@
 			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
 		]
 	],
-	"MOC_INCLUDES" : 
+	"MOC_INCLUDES" : [],
+	"MOC_INCLUDES_Debug" : 
+	[
+		"/usr/include/x86_64-linux-gnu/qt5",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
+		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
+		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
+		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+		"/usr/include/python3.12",
+		"/usr/include",
+		"/usr/include/c++/14",
+		"/usr/include/x86_64-linux-gnu/c++/14",
+		"/usr/include/c++/14/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/14/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu"
+	],
+	"MOC_INCLUDES_RelWithDebInfo" : 
+	[
+		"/usr/include/x86_64-linux-gnu/qt5",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
+		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
+		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
+		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+		"/usr/include/python3.12",
+		"/usr/include",
+		"/usr/include/c++/14",
+		"/usr/include/x86_64-linux-gnu/c++/14",
+		"/usr/include/c++/14/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/14/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu"
+	],
+	"MOC_INCLUDES_Release" : 
 	[
 		"/usr/include/x86_64-linux-gnu/qt5",
 		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
@@ -151,20 +193,29 @@
 		"/usr/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp"
 	],
 	"MOC_PREDEFS_FILE" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE_Debug" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/moc_predefs_Debug.h",
+	"MOC_PREDEFS_FILE_RelWithDebInfo" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/moc_predefs_RelWithDebInfo.h",
+	"MOC_PREDEFS_FILE_Release" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/FirecourtCubes_autogen/moc_predefs_Release.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : 
 	[
 		"/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/ui_mainwindow.h",
 		"/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/ui_settingsdialog.h"
 	],
-	"MULTI_CONFIG" : false,
+	"MULTI_CONFIG" : true,
 	"PARALLEL" : 6,
 	"PARSE_CACHE_FILE" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/CMakeFiles/FirecourtCubes_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE_Debug" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/CMakeFiles/FirecourtCubes_autogen.dir/ParseCache_Debug.txt",
+	"PARSE_CACHE_FILE_RelWithDebInfo" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/CMakeFiles/FirecourtCubes_autogen.dir/ParseCache_RelWithDebInfo.txt",
+	"PARSE_CACHE_FILE_Release" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/CMakeFiles/FirecourtCubes_autogen.dir/ParseCache_Release.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/lib/qt5/bin/uic",
 	"QT_VERSION_MAJOR" : 5,
 	"QT_VERSION_MINOR" : 15,
 	"SETTINGS_FILE" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/CMakeFiles/FirecourtCubes_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE_Debug" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/CMakeFiles/FirecourtCubes_autogen.dir/AutogenUsed_Debug.txt",
+	"SETTINGS_FILE_RelWithDebInfo" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/CMakeFiles/FirecourtCubes_autogen.dir/AutogenUsed_RelWithDebInfo.txt",
+	"SETTINGS_FILE_Release" : "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/CMakeFiles/FirecourtCubes_autogen.dir/AutogenUsed_Release.txt",
 	"SOURCES" : 
 	[
 		[

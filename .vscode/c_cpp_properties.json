@@ -4,12 +4,12 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/include/**",
-                "/usr/include/x86_64-linux-gnu/**",
-                "/usr/include/qt5/**",
-                "/usr/include/qt5/QtWidgets",
-                "/usr/include/qt5/QtCore",
-                "/usr/include/qt5/QtGui",
+                "/usr/include/x86_64-linux-gnu/qt5/QtCore",
+                "/usr/include/x86_64-linux-gnu/qt6/QtCore",
+                "/usr/include/x86_64-linux-gnu/qt6/QtCore/6.6.2/QtCore",
+                "/usr/share/qtcreator/cplusplus/wrappedQtHeaders/QtCore",
+                "/usr/share/qtcreator/indexer_preincludes/QtCore",
+                "/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
                 "/usr/include/x86_64-linux-gnu/qt5"
             ],
             "defines": [],
