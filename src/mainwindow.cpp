@@ -1,222 +1,300 @@
 #include "../include/mainwindow.h"
-#include "../include/ui_mainwindow.h" // Ensure this is correct and exists
-
-#include <QFile>
-#include <QFileDialog>
-#include <QDebug>
-#include <QInputDialog>
-#include <QDir>
-#include <QKeySequence>
-#include <QShortcut>
-#include <string>
+#include "../include/ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent), ui(new Ui::MainWindow), undoStack(new QUndoStack(this)) {
+    : QMainWindow(parent)
+    , ui(new Ui::MainWindow) {
     ui->setupUi(this);
-    setupCustomUi();  // Custom UI setup
 }
 
 MainWindow::~MainWindow() {
     delete ui;
 }
 
-void MainWindow::setupCustomUi() {
-    // Initialize custom UI components, connect signals/slots, etc.
-    new QShortcut(QKeySequence("Ctrl+N"), this, SLOT(newProject()));
-    new QShortcut(QKeySequence("Ctrl+O"), this, SLOT(openFile()));
-    // Additional shortcuts...
+void MainWindow::on_actionOpen_triggered() {
+    // Code to open a file
 }
 
-void MainWindow::newProject() {
-    currentProject.clear();  // Assuming Project class has a clear method
-    qDebug() << "New project created.";
+void MainWindow::on_actionSave_triggered() {
+    // Code to save a file
 }
 
-void MainWindow::openFile() {
-    QStringList files = QFileDialog::getOpenFileNames(this, tr("Open Audio Files"), "", 
-                          tr("Audio Files (*.mp3 *.wav *.ogg *.flac *.aac)"));
-    if (!files.isEmpty()) {
-        for (const QString &filePath : files) {
-            qDebug() << "File selected: " << filePath;
-            // Logic to handle opened files (e.g., loading into the project)
-        }
-    }
+void MainWindow::on_actionSave_As_triggered() {
+    // Code to save a file as...
 }
 
-void MainWindow::importFile() {
-    QString filePath = QFileDialog::getOpenFileName(this, tr("Import Audio File"), "", 
-                          tr("Audio Files (*.mp3 *.wav *.ogg *.flac *.aac)"));
-    if (!filePath.isEmpty()) {
-        qDebug() << "File imported: " << filePath;
-        // Implement import functionality
-    }
+void MainWindow::on_actionImport_triggered() {
+    // Code to import a file
 }
 
-void MainWindow::saveFile() {
-    QString filePath = QFileDialog::getSaveFileName(this, tr("Save Project"), "", 
-                          tr("Project Files (*.proj)"));
-    if (!filePath.isEmpty()) {
-        QFile file(filePath);
-        if (file.open(QIODevice::WriteOnly)) {
-            // Save project data to file
-            qDebug() << "Project saved at: " << filePath;
-            file.close();  // Close the file after saving
-        } else {
-            qDebug() << "Failed to save project at: " << filePath;
-        }
-    }
+void MainWindow::on_actionExport_triggered() {
+    // Code to export a file
 }
 
-void MainWindow::saveFileAs() {
-    saveFile();  // Reuse saveFile logic for simplicity
+void MainWindow::on_actionPreferences_triggered() {
+    // Code to open preferences
 }
 
-void MainWindow::exportFile() {
-    qDebug() << "Exporting project...";
-    // Implement export functionality
+void MainWindow::on_actionExit_triggered() {
+    close();
 }
 
-void MainWindow::openPreferences() {
-    qDebug() << "Opening preferences...";
-    // Implement preferences dialog
+void MainWindow::on_actionUndo_triggered() {
+    // Code for undo action
 }
 
-void MainWindow::exitApp() {
-    qDebug() << "Exiting application.";
-    close();  // Or QApplication::quit();
+void MainWindow::on_actionRedo_triggered() {
+    // Code for redo action
 }
 
-void MainWindow::undoAction() {
-    if (undoStack->canUndo()) {
-        undoStack->undo();
-        qDebug() << "Undo action performed.";
-    }
+void MainWindow::on_actionCut_triggered() {
+    // Code for cut action
 }
 
-void MainWindow::redoAction() {
-    if (undoStack->canRedo()) {
-        undoStack->redo();
-        qDebug() << "Redo action performed.";
-    }
+void MainWindow::on_actionCopy_triggered() {
+    // Code for copy action
 }
 
-// Implementing additional actions
-void MainWindow::cutAction() {
-    qDebug() << "Cut action triggered.";
-    // Implement cut functionality
+void MainWindow::on_actionPaste_triggered() {
+    // Code for paste action
 }
 
-void MainWindow::copyAction() {
-    qDebug() << "Copy action triggered.";
-    // Implement copy functionality
+void MainWindow::on_actionDelete_triggered() {
+    // Code for delete action
 }
 
-void MainWindow::pasteAction() {
-    qDebug() << "Paste action triggered.";
-    // Implement paste functionality
+void MainWindow::on_actionSelect_All_triggered() {
+    // Code to select all
 }
 
-void MainWindow::deleteAction() {
-    qDebug() << "Delete action triggered.";
-    // Implement delete functionality
+void MainWindow::on_actionFind_Replace_triggered() {
+    // Code for find and replace
 }
 
-void MainWindow::selectAll() {
-    qDebug() << "Select all action triggered.";
-    // Implement select all functionality
+void MainWindow::on_actionZoom_In_triggered() {
+    // Code for zooming in
 }
 
-void MainWindow::findReplace() {
-    qDebug() << "Find and replace action triggered.";
-    // Implement find and replace functionality
+void MainWindow::on_actionZoom_Out_triggered() {
+    // Code for zooming out
 }
 
-void MainWindow::zoomIn() {
-    qDebug() << "Zoom in action triggered.";
-    // Implement zoom in functionality
+void MainWindow::on_actionShow_Grid_triggered() {
+    // Code to show grid
 }
 
-void MainWindow::zoomOut() {
-    qDebug() << "Zoom out action triggered.";
-    // Implement zoom out functionality
+void MainWindow::on_actionShow_Tools_triggered() {
+    // Code to show tools
 }
 
-void MainWindow::showGrid() {
-    qDebug() << "Showing grid.";
-    // Implement grid display functionality
+void MainWindow::on_actionShow_Mixer_triggered() {
+    // Code to show mixer
 }
 
-void MainWindow::showTools() {
-    qDebug() << "Showing tools.";
-    // Implement tool display functionality
+void MainWindow::on_actionShow_Browser_triggered() {
+    // Code to show browser
 }
 
-void MainWindow::showMixer() {
-    qDebug() << "Showing mixer.";
-    // Implement mixer display functionality
+void MainWindow::on_actionShow_Inspector_triggered() {
+    // Code to show inspector
 }
 
-void MainWindow::showBrowser() {
-    qDebug() << "Showing browser.";
-    // Implement browser display functionality
+void MainWindow::on_actionShow_Transport_Controls_triggered() {
+    // Code to show transport controls
 }
 
-void MainWindow::showInspector() {
-    qDebug() << "Showing inspector.";
-    // Implement inspector display functionality
+void MainWindow::on_actionAdd_Track_triggered() {
+    // Code to add a track
 }
 
-void MainWindow::showTransportControls() {
-    qDebug() << "Showing transport controls.";
-    // Implement transport controls functionality
+void MainWindow::on_actionDelete_Track_triggered() {
+    // Code to delete a track
 }
 
-void MainWindow::addTrack() {
-    qDebug() << "Adding track.";
-    // Implement track addition functionality
+void MainWindow::on_actionRename_Track_triggered() {
+    // Code to rename a track
 }
 
-void MainWindow::deleteTrack() {
-    qDebug() << "Deleting track.";
-    // Implement track deletion functionality
+void MainWindow::on_actionGroup_Tracks_triggered() {
+    // Code to group tracks
 }
 
-void MainWindow::renameTrack() {
-    qDebug() << "Renaming track.";
-    // Implement track renaming functionality
+void MainWindow::on_actionUngroup_Tracks_triggered() {
+    // Code to ungroup tracks
 }
 
-void MainWindow::groupTracks() {
-    qDebug() << "Grouping tracks.";
-    // Implement track grouping functionality
+void MainWindow::on_actionFreeze_Track_triggered() {
+    // Code to freeze a track
 }
 
-void MainWindow::ungroupTracks() {
-    qDebug() << "Ungrouping tracks.";
-    // Implement track ungrouping functionality
+void MainWindow::on_actionBounce_Export_Track_triggered() {
+    // Code to bounce/export a track
 }
 
-void MainWindow::freezeTrack() {
-    qDebug() << "Freezing track.";
-    // Implement track freezing functionality
+void MainWindow::on_actionSolo_triggered() {
+    // Code to solo a track
 }
 
-void MainWindow::bounceExportTrack() {
-    qDebug() << "Bouncing and exporting track.";
-    // Implement bouncing and exporting functionality
+void MainWindow::on_actionMute_triggered() {
+    // Code to mute a track
 }
 
-void MainWindow::soloTrack() {
-    qDebug() << "Soloing track.";
-    // Implement track soloing functionality
+void MainWindow::on_actionRecord_triggered() {
+    // Code to record
 }
 
-void MainWindow::muteTrack() {
-    qDebug() << "Muting track.";
-    // Implement track muting functionality
+void MainWindow::on_actionAudio_Settings_triggered() {
+    // Code to open audio settings
 }
 
-void MainWindow::recordTrack() {
-    qDebug() << "Recording track.";
-    // Implement track recording functionality
+void MainWindow::on_actionMIDI_Settings_triggered() {
+    // Code to open MIDI settings
+}
+
+void MainWindow::on_actionNew_Track_triggered() {
+    // Code to create a new track
+}
+
+void MainWindow::on_actionSelect_track_triggered() {
+    // Code to select a track
+}
+
+void MainWindow::on_actionSelect_all_tracks_triggered() {
+    // Code to select all tracks
+}
+
+void MainWindow::on_actionEdit_track_triggered() {
+    // Code to edit a track
+}
+
+void MainWindow::on_actionDelete_track_triggered() {
+    // Code to delete a track
+}
+
+void MainWindow::on_actionZoom_In_2_triggered() {
+    // Code for zooming in (alternative)
+}
+
+void MainWindow::on_actionZoom_Out_2_triggered() {
+    // Code for zooming out (alternative)
+}
+
+void MainWindow::on_actionHorizontal_triggered() {
+    // Code for horizontal view
+}
+
+void MainWindow::on_actionVertical_triggered() {
+    // Code for vertical view
+}
+
+void MainWindow::on_actionTerminal_triggered() {
+    // Code to open terminal
+}
+
+void MainWindow::on_actionMixer_triggered() {
+    // Code to open mixer
+}
+
+void MainWindow::on_actionEQ_triggered() {
+    // Code to open EQ
+}
+
+void MainWindow::on_actionInstruments_triggered() {
+    // Code to open instruments
+}
+
+void MainWindow::on_actionEffects_triggered() {
+    // Code to open effects
+}
+
+void MainWindow::on_actionOpen_2_triggered() {
+    // Code for alternative open action
+}
+
+void MainWindow::on_actionDialogbox_triggered() {
+    // Code to show a dialog box
+}
+
+void MainWindow::on_actionMessage_Box_triggered() {
+    // Code to show a message box
+}
+
+void MainWindow::on_actionClose_triggered() {
+    // Code to close the application
+}
+
+void MainWindow::on_actionTutor_triggered() {
+    // Code to show tutor
+}
+
+void MainWindow::on_actionDocumentation_triggered() {
+    // Code to show documentation
+}
+
+void MainWindow::on_actionWhat_is_triggered() {
+    // Code to show "What is?"
+}
+
+void MainWindow::on_actionCompile_triggered() {
+    // Code to compile
+}
+
+void MainWindow::on_actionEmpty_Project_triggered() {
+    // Code to create an empty project
+}
+
+void MainWindow::on_actionTemplates_triggered() {
+    // Code to manage templates
+}
+
+void MainWindow::on_actionMusician_triggered() {
+    // Code for musician mode
+}
+
+void MainWindow::on_actionProducer_triggered() {
+    // Code for producer mode
+}
+
+void MainWindow::on_actionEngineer_triggered() {
+    // Code for engineer mode
+}
+
+void MainWindow::on_actionAppearance_triggered() {
+    // Code to manage appearance settings
+}
+
+void MainWindow::on_actionGeneral_triggered() {
+    // Code for general settings
+}
+
+void MainWindow::on_actionMDI_triggered() {
+    // Code to manage MIDI settings
+}
+
+void MainWindow::on_actionDevices_triggered() {
+    // Code to manage devices
+}
+
+void MainWindow::on_actionRenet_triggered() {
+    // Code to manage Renet
+}
+
+void MainWindow::on_actionConsole_triggered() {
+    // Code to open console
+}
+
+void MainWindow::on_actionMargins_triggered() {
+    // Code to manage margins
+}
+
+void MainWindow::on_actionTheme_triggered() {
+    // Code to manage theme settings
+}
+
+void MainWindow::on_actionOpen_File_triggered() {
+    // Code to open a specific file
+}
+
+void MainWindow::on_actionOpen_Project_triggered() {
+    // Code to open a project
 }

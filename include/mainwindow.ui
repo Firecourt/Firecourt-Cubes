@@ -63,91 +63,113 @@
    <layout class="QVBoxLayout">
     <item>
      <widget class="QMenuBar" name="menubar">
-      <widget class="QMenu" name="menuFile">
+      <widget class="QMenu" name="menuFile_2">
        <property name="title">
         <string>File</string>
        </property>
-       <addaction name="actionNew_Project"/>
-       <addaction name="actionOpen"/>
-       <addaction name="actionSave"/>
-       <addaction name="actionSave_As"/>
-       <addaction name="actionImport"/>
-       <addaction name="actionExport"/>
-       <addaction name="actionPreferences"/>
-       <addaction name="actionExit"/>
+       <widget class="QMenu" name="menuNew_Project">
+        <property name="title">
+         <string>New Project..</string>
+        </property>
+        <addaction name="actionEmpty_Project"/>
+        <addaction name="actionTemplates"/>
+       </widget>
+       <widget class="QMenu" name="menuMode">
+        <property name="title">
+         <string>Mode</string>
+        </property>
+        <addaction name="actionMusician"/>
+        <addaction name="actionProducer"/>
+        <addaction name="actionEngineer"/>
+       </widget>
+       <widget class="QMenu" name="menuSettings_2">
+        <property name="title">
+         <string>Settings</string>
+        </property>
+        <addaction name="actionAppearance"/>
+        <addaction name="actionGeneral"/>
+        <addaction name="actionMDI"/>
+        <addaction name="actionDevices"/>
+        <addaction name="actionRenet"/>
+       </widget>
+       <widget class="QMenu" name="menuPreferences">
+        <property name="title">
+         <string>Preferences</string>
+        </property>
+        <addaction name="actionConsole"/>
+        <addaction name="actionMargins"/>
+        <addaction name="actionTheme"/>
+       </widget>
+       <addaction name="menuNew_Project"/>
+       <addaction name="actionOpen_File"/>
+       <addaction name="actionOpen_Project"/>
+       <addaction name="actionSave_2"/>
+       <addaction name="actionSave_As_2"/>
+       <addaction name="menuMode"/>
+       <addaction name="menuSettings_2"/>
+       <addaction name="menuPreferences"/>
+       <addaction name="actionExit_2"/>
+       <addaction name="actionCompile"/>
       </widget>
-      <widget class="QMenu" name="menuEdit">
-       <property name="title">
-        <string>Edit</string>
-       </property>
-       <addaction name="actionUndo"/>
-       <addaction name="actionRedo"/>
-       <addaction name="actionCut"/>
-       <addaction name="actionCopy"/>
-       <addaction name="actionPaste"/>
-       <addaction name="actionDelete"/>
-       <addaction name="actionSelect_All"/>
-       <addaction name="actionFind_Replace"/>
-      </widget>
-      <widget class="QMenu" name="menuView">
-       <property name="title">
-        <string>View</string>
-       </property>
-       <addaction name="actionZoom_In"/>
-       <addaction name="actionZoom_Out"/>
-       <addaction name="actionShow_Grid"/>
-       <addaction name="actionShow_Tools"/>
-       <addaction name="actionShow_Mixer"/>
-       <addaction name="actionShow_Browser"/>
-       <addaction name="actionShow_Inspector"/>
-       <addaction name="actionShow_Transport_Controls"/>
-      </widget>
-      <widget class="QMenu" name="menuProject">
-       <property name="title">
-        <string>Project</string>
-       </property>
-       <addaction name="actionAdd_Track"/>
-       <addaction name="actionDelete_Track"/>
-       <addaction name="actionRename_Track"/>
-       <addaction name="actionGroup_Tracks"/>
-       <addaction name="actionUngroup_Tracks"/>
-       <addaction name="actionFreeze_Track"/>
-       <addaction name="actionBounce_Export_Track"/>
-      </widget>
-      <widget class="QMenu" name="menuTrack">
+      <widget class="QMenu" name="menuTrack_2">
        <property name="title">
         <string>Track</string>
        </property>
-       <addaction name="actionSolo"/>
-       <addaction name="actionMute"/>
-       <addaction name="actionRecord"/>
+       <addaction name="actionNew_Track"/>
+       <addaction name="actionSelect_track"/>
+       <addaction name="actionSelect_all_tracks"/>
+       <addaction name="actionEdit_track"/>
+       <addaction name="actionDelete_track"/>
       </widget>
-      <widget class="QMenu" name="menuSettings">
+      <widget class="QMenu" name="menuView_2">
        <property name="title">
-        <string>Settings</string>
+        <string>View</string>
        </property>
-       <addaction name="actionAudio_Settings"/>
-       <addaction name="actionMIDI_Settings"/>
-       <addaction name="actionPreferences"/>
+       <addaction name="actionZoom_In_2"/>
+       <addaction name="actionZoom_Out_2"/>
+       <addaction name="actionHorizontal"/>
+       <addaction name="actionVertical"/>
+       <addaction name="actionTerminal"/>
       </widget>
+      <widget class="QMenu" name="menuPlugins">
+       <property name="title">
+        <string>Plugins</string>
+       </property>
+       <addaction name="actionMixer"/>
+       <addaction name="actionEQ"/>
+       <addaction name="actionInstruments"/>
+       <addaction name="actionEffects"/>
+      </widget>
+      <widget class="QMenu" name="menuRenet">
+       <property name="title">
+        <string>Renet</string>
+       </property>
+       <addaction name="actionOpen_2"/>
+       <addaction name="actionDialogbox"/>
+       <addaction name="actionMessage_Box"/>
+       <addaction name="actionClose"/>
+      </widget>
+      <widget class="QMenu" name="menuHelp">
+       <property name="title">
+        <string>Help</string>
+       </property>
+       <addaction name="actionTutor"/>
+       <addaction name="actionDocumentation"/>
+       <addaction name="actionWhat_is"/>
+      </widget>
+      <addaction name="menuFile_2"/>
+      <addaction name="menuTrack_2"/>
+      <addaction name="menuView_2"/>
+      <addaction name="menuPlugins"/>
+      <addaction name="menuRenet"/>
+      <addaction name="menuHelp"/>
      </widget>
     </item>
     <item>
      <widget class="QToolBar" name="toolBar"/>
     </item>
     <item>
-     <widget class="QWidget" name="browserWidget">
-      <property name="styleSheet">
-       <string notr="true">background-color: rgba(255, 255, 255, 0.1);</string>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>250</width>
-        <height>0</height>
-       </size>
-      </property>
-      <layout class="QVBoxLayout"/>
-     </widget>
+     <layout class="QVBoxLayout"/>
     </item>
    </layout>
   </widget>
@@ -327,5 +349,207 @@
     <string>&amp;MIDI Settings</string>
    </property>
   </action>
+  <action name="actionSave_2">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionSave_As_2">
+   <property name="text">
+    <string>Save As ...</string>
+   </property>
+  </action>
+  <action name="actionExit_2">
+   <property name="text">
+    <string>Export</string>
+   </property>
+  </action>
+  <action name="actionNew_Track">
+   <property name="text">
+    <string>New Track</string>
+   </property>
+  </action>
+  <action name="actionSelect_track">
+   <property name="text">
+    <string>Select track </string>
+   </property>
+  </action>
+  <action name="actionSelect_all_tracks">
+   <property name="text">
+    <string>Select all tracks</string>
+   </property>
+  </action>
+  <action name="actionEdit_track">
+   <property name="text">
+    <string>Edit track</string>
+   </property>
+  </action>
+  <action name="actionDelete_track">
+   <property name="text">
+    <string>Delete track</string>
+   </property>
+  </action>
+  <action name="actionZoom_In_2">
+   <property name="text">
+    <string>Zoom In </string>
+   </property>
+  </action>
+  <action name="actionZoom_Out_2">
+   <property name="text">
+    <string>Zoom Out</string>
+   </property>
+  </action>
+  <action name="actionHorizontal">
+   <property name="text">
+    <string>Horizontal</string>
+   </property>
+  </action>
+  <action name="actionVertical">
+   <property name="text">
+    <string>Vertical </string>
+   </property>
+  </action>
+  <action name="actionTerminal">
+   <property name="text">
+    <string>Terminal </string>
+   </property>
+  </action>
+  <action name="actionMixer">
+   <property name="text">
+    <string>Mixer</string>
+   </property>
+  </action>
+  <action name="actionEQ">
+   <property name="text">
+    <string>EQ</string>
+   </property>
+  </action>
+  <action name="actionInstruments">
+   <property name="text">
+    <string>Instruments </string>
+   </property>
+  </action>
+  <action name="actionEffects">
+   <property name="text">
+    <string>Effects</string>
+   </property>
+  </action>
+  <action name="actionOpen_2">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionDialogbox">
+   <property name="text">
+    <string>Dialogbox </string>
+   </property>
+  </action>
+  <action name="actionMessage_Box">
+   <property name="text">
+    <string>Message Box</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="text">
+    <string>Close...</string>
+   </property>
+  </action>
+  <action name="actionTutor">
+   <property name="text">
+    <string>Tutor</string>
+   </property>
+  </action>
+  <action name="actionDocumentation">
+   <property name="text">
+    <string>Documentation </string>
+   </property>
+  </action>
+  <action name="actionWhat_is">
+   <property name="text">
+    <string>What is?</string>
+   </property>
+  </action>
+  <action name="actionCompile">
+   <property name="text">
+    <string>Compile</string>
+   </property>
+  </action>
+  <action name="actionEmpty_Project">
+   <property name="text">
+    <string>Empty Project</string>
+   </property>
+  </action>
+  <action name="actionTemplates">
+   <property name="text">
+    <string>Templates</string>
+   </property>
+  </action>
+  <action name="actionMusician">
+   <property name="text">
+    <string>Musician</string>
+   </property>
+  </action>
+  <action name="actionProducer">
+   <property name="text">
+    <string>Producer</string>
+   </property>
+  </action>
+  <action name="actionEngineer">
+   <property name="text">
+    <string>Engineer</string>
+   </property>
+  </action>
+  <action name="actionAppearance">
+   <property name="text">
+    <string>Appearance </string>
+   </property>
+  </action>
+  <action name="actionGeneral">
+   <property name="text">
+    <string>General</string>
+   </property>
+  </action>
+  <action name="actionMDI">
+   <property name="text">
+    <string>MIDI</string>
+   </property>
+  </action>
+  <action name="actionDevices">
+   <property name="text">
+    <string>Devices</string>
+   </property>
+  </action>
+  <action name="actionRenet">
+   <property name="text">
+    <string>Renet</string>
+   </property>
+  </action>
+  <action name="actionConsole">
+   <property name="text">
+    <string>Console </string>
+   </property>
+  </action>
+  <action name="actionMargins">
+   <property name="text">
+    <string>Margins</string>
+   </property>
+  </action>
+  <action name="actionTheme">
+   <property name="text">
+    <string>Theme</string>
+   </property>
+  </action>
+  <action name="actionOpen_File">
+   <property name="text">
+    <string>Open File </string>
+   </property>
+  </action>
+  <action name="actionOpen_Project">
+   <property name="text">
+    <string>Open Project</string>
+   </property>
+  </action>
  </widget>
+ <resources/>
+ <connections/>
 </ui>

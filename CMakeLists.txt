@@ -14,7 +14,7 @@ set(PYBIND11_FINDPYTHON ON)
 find_package(pybind11 REQUIRED)
 
 # Find Qt5 package
-find_package(Qt5 REQUIRED COMPONENTS Widgets LinguistTools)
+find_package(Qt5 REQUIRED COMPONENTS Widgets )
 
 # Set TS files
 set(TS_FILES FirecourtCubes_en_US.ts)
