@@ -1,6 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
+* The JVM level was changed from '23' to '21' as the Kotlin version does not support Java 23 yet.
 * The original package name '.Renet' is invalid and this project uses 'Renet' instead.
 
 # Getting Started
@@ -8,9 +9,10 @@ The following was discovered as part of building this project:
 ### Reference Documentation
 For further reference, please consider the following sections:
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/3.3.4/maven-plugin)
-* [Create an OCI image](https://docs.spring.io/spring-boot/3.3.4/maven-plugin/build-image.html)
+* [Official Gradle documentation](https://docs.gradle.org)
+* [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/3.3.4/gradle-plugin)
+* [Create an OCI image](https://docs.spring.io/spring-boot/3.3.4/gradle-plugin/packaging-oci-image.html)
+* [Coroutines section of the Spring Framework Documentation](https://docs.spring.io/spring/docs/6.1.13/spring-framework-reference/languages.html#coroutines)
 * [GraalVM Native Image Support](https://docs.spring.io/spring-boot/3.3.4/reference/packaging/native-image/introducing-graalvm-native-images.html)
 * [Spring Integration AMQP Module Reference Guide](https://docs.spring.io/spring-integration/reference/html/amqp.html)
 * [Spring Integration Test Module Reference Guide](https://docs.spring.io/spring-integration/reference/html/testing.html)
@@ -73,6 +75,7 @@ The following guides illustrate how to use some features concretely:
 ### Additional Links
 These additional references should also help you:
 
+* [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
 * [Configure AOT settings in Build Plugin](https://docs.spring.io/spring-boot/3.3.4/how-to/aot.html)
 
 ## GraphQL code generation with DGS
@@ -81,7 +84,7 @@ This project has been configured to use the Netflix DGS Codegen plugin.
 This plugin can be used to generate client files for accessing remote GraphQL services.
 The default setup assumes that the GraphQL schema file for the remote service is added to the `src/main/resources/graphql-client/` location.
 
-You can learn more about the [plugin configuration options](https://github.com/deweyjose/graphqlcodegen) and
+You can learn more about the [plugin configuration options](https://netflix.github.io/dgs/generating-code-from-schema/#configuring-code-generation) and
 [how to use the generated types](https://netflix.github.io/dgs/generating-code-from-schema/) to adapt the default setup.
 
 
@@ -107,7 +110,7 @@ Docker should be installed and configured on your machine prior to creating the 
 To create the image, run the following goal:
 
 ```
-$ ./mvnw spring-boot:build-image -Pnative
+$ ./gradlew bootBuildImage
 ```
 
 Then, you can run the app like any other container:
@@ -125,12 +128,12 @@ NOTE: GraalVM 22.3+ is required.
 To create the executable, run the following goal:
 
 ```
-$ ./mvnw native:compile -Pnative
+$ ./gradlew nativeCompile
 ```
 
 Then, you can run the app as follows:
 ```
-$ target/Renet
+$ build/native/nativeCompile/Renet
 ```
 
 You can also run your existing tests suite in a native image.
@@ -139,9 +142,15 @@ This is an efficient way to validate the compatibility of your application.
 To run your existing tests in a native image, run the following goal:
 
 ```
-$ ./mvnw test -PnativeTest
+$ ./gradlew nativeTest
 ```
 
+### Gradle Toolchain support
+
+There are some limitations regarding Native Build Tools and Gradle toolchains.
+Native Build Tools disable toolchain support by default.
+Effectively, native image compilation is done with the JDK used to execute Gradle.
+You can read more about [toolchain support in the Native Build Tools here](https://graalvm.github.io/native-build-tools/latest/gradle-plugin.html#configuration-toolchains).
 
 ## JTE
 
@@ -162,11 +171,4 @@ gg.jte.use-precompiled-templates=true
 
 instead.
 For more details, please take a look at [the official documentation](https://jte.gg/spring-boot-starter-3/).
-
-### Maven Parent overrides
-
-Due to Maven's design, elements are inherited from the parent POM to the project POM.
-While most of the inheritance is fine, it also inherits unwanted elements like `<license>` and `<developers>` from the parent.
-To prevent this, the project POM contains empty overrides for these elements.
-If you manually switch to a different parent and actually want the inheritance, you need to remove those overrides.
 
