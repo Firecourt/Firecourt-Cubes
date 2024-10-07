@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -42,50 +42,14 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/FirecourtCubes" AND
-       NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/FirecourtCubes")
-      file(RPATH_CHECK
-           FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/FirecourtCubes"
-           RPATH "")
-    endif()
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/Debug/FirecourtCubes")
-    if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/FirecourtCubes" AND
-       NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/FirecourtCubes")
-      if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/FirecourtCubes")
-      endif()
-    endif()
-  elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/FirecourtCubes" AND
-       NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/FirecourtCubes")
-      file(RPATH_CHECK
-           FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/FirecourtCubes"
-           RPATH "")
-    endif()
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/Release/FirecourtCubes")
-    if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/FirecourtCubes" AND
-       NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/FirecourtCubes")
-      if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/FirecourtCubes")
-      endif()
-    endif()
-  elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/FirecourtCubes" AND
-       NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/FirecourtCubes")
-      file(RPATH_CHECK
-           FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/FirecourtCubes"
-           RPATH "")
-    endif()
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/RelWithDebInfo/FirecourtCubes")
-    if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/FirecourtCubes" AND
-       NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/FirecourtCubes")
-      if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/FirecourtCubes")
-      endif()
-    endif()
-  endif()
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/ai_module/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/Renet/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

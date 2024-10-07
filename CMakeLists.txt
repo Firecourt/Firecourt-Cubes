@@ -1,87 +1,67 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.30)
+project(FirecourtCubes)
 
-# Set the policy to avoid deprecated Python modules warning
-cmake_policy(SET CMP0148 NEW)
-
-project(FirecourtCubes VERSION 0.1 LANGUAGES CXX)
-
+# Specify C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Find Python and pybind11 packages
-find_package(Python REQUIRED COMPONENTS Interpreter Development)
-set(PYBIND11_FINDPYTHON ON)
-find_package(pybind11 REQUIRED)
+# Include directories
+include_directories(${PROJECT_SOURCE_DIR}/include)
+include_directories(${PROJECT_SOURCE_DIR}/src/core)
 
-# Find Qt5 package
-find_package(Qt5 REQUIRED COMPONENTS Widgets )
+# Qt5 settings
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTORCC ON)
+find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
-# Set TS files
-set(TS_FILES FirecourtCubes_en_US.ts)
-
-# Collect all source files
-set(PROJECT_SOURCES
+# Add source files
+set(SOURCES
     src/main.cpp
     src/mainwindow.cpp
     src/project.cpp
-    include/project.h
-    include/mainwindow.h
     src/settingsdialog.cpp
-    include/settingsdialog.h
-    ${TS_FILES}
+    src/core/graphics_init.cpp
 )
 
-set(UI_FILES
+# Add header files
+set(HEADERS
+    include/mainwindow.h
+    include/settingsdialog.h
+    include/project.h
+    include/graphics_init.h
+)
+
+# Add UI files
+set(UIS
     include/mainwindow.ui
     include/settingsdialog.ui
 )
 
-# Use qt5_wrap_ui to generate the header files from UI files
-qt5_wrap_ui(UI_HEADERS ${UI_FILES})
-
-# Add the executable with both sources and generated UI headers
-add_executable(FirecourtCubes ${PROJECT_SOURCES} ${UI_HEADERS})
-
-# Automatically handle MOC, UIC, and RCC
-set(CMAKE_AUTOUIC ON)  # Automatically handle .ui files
-
-set_target_properties(FirecourtCubes PROPERTIES
-    AUTOMOC ON
-    AUTOUIC ON
-    AUTORCC ON
+# Add translations (if needed)
+set(TRANSLATIONS
+    FirecourtCubes_en_US.ts
 )
 
-# Link libraries
-target_link_libraries(FirecourtCubes PRIVATE Qt5::Widgets pybind11::module)
+# Create the executable
+add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS} ${UIS})
 
-# Install rules
-include(GNUInstallDirs)
-install(TARGETS FirecourtCubes
-    BUNDLE DESTINATION .
-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-)
+# Link Qt5 libraries
+target_link_libraries(${PROJECT_NAME} Qt5::Widgets)
 
-# Platform-specific configurations
+# Platform-specific libraries
 if(APPLE)
-    # macOS specific settings
-    find_library(CORE_AUDIO_LIB CoreAudio)
-    target_link_libraries(FirecourtCubes PRIVATE ${CORE_AUDIO_LIB})
+    find_library(COREAUDIO_LIBRARY CoreAudio)
+    target_link_libraries(${PROJECT_NAME} ${COREAUDIO_LIBRARY})
 elseif(UNIX)
-    # Linux specific settings
-    find_library(JACK_LIB jack)
-    target_link_libraries(FirecourtCubes PRIVATE ${JACK_LIB})
+
 endif()
 
-# Vulkan support
-find_package(Vulkan REQUIRED)
-if(Vulkan_FOUND)
-    target_link_libraries(FirecourtCubes PRIVATE Vulkan::Vulkan)
-else()
-    message(FATAL_ERROR "Vulkan not found")
-endif()
+# Additional settings for Python AI module integration
+add_subdirectory(ai_module)
 
-# Handle Qt 6 specific finalization
-if(QT_VERSION_MAJOR EQUAL 6)
-    qt_finalize_executable(FirecourtCubes)
-endif()
+# Additional target for the Renet sub-project
+add_subdirectory(Renet)
+
+# CMake build settings
+set_property(TARGET ${PROJECT_NAME} PROPERTY RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)

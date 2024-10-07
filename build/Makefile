@@ -85,51 +85,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-.PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/CMakeFiles /home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build//CMakeFiles/progress.marks
@@ -223,6 +178,30 @@ FirecourtCubes_autogen/mocs_compilation.s: FirecourtCubes_autogen/mocs_compilati
 FirecourtCubes_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/FirecourtCubes_autogen/mocs_compilation.cpp.s
 .PHONY : FirecourtCubes_autogen/mocs_compilation.cpp.s
+
+src/core/graphics_init.o: src/core/graphics_init.cpp.o
+.PHONY : src/core/graphics_init.o
+
+# target to build an object file
+src/core/graphics_init.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/core/graphics_init.cpp.o
+.PHONY : src/core/graphics_init.cpp.o
+
+src/core/graphics_init.i: src/core/graphics_init.cpp.i
+.PHONY : src/core/graphics_init.i
+
+# target to preprocess a source file
+src/core/graphics_init.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/core/graphics_init.cpp.i
+.PHONY : src/core/graphics_init.cpp.i
+
+src/core/graphics_init.s: src/core/graphics_init.cpp.s
+.PHONY : src/core/graphics_init.s
+
+# target to generate assembly for a file
+src/core/graphics_init.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/core/graphics_init.cpp.s
+.PHONY : src/core/graphics_init.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -327,10 +306,6 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... install"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... FirecourtCubes_autogen"
 	@echo "... FirecourtCubes_autogen_timestamp_deps"
@@ -338,6 +313,9 @@ help:
 	@echo "... FirecourtCubes_autogen/mocs_compilation.o"
 	@echo "... FirecourtCubes_autogen/mocs_compilation.i"
 	@echo "... FirecourtCubes_autogen/mocs_compilation.s"
+	@echo "... src/core/graphics_init.o"
+	@echo "... src/core/graphics_init.i"
+	@echo "... src/core/graphics_init.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
