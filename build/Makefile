@@ -179,6 +179,54 @@ FirecourtCubes_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/FirecourtCubes_autogen/mocs_compilation.cpp.s
 .PHONY : FirecourtCubes_autogen/mocs_compilation.cpp.s
 
+src/appearancesettingsdialog.o: src/appearancesettingsdialog.cpp.o
+.PHONY : src/appearancesettingsdialog.o
+
+# target to build an object file
+src/appearancesettingsdialog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/appearancesettingsdialog.cpp.o
+.PHONY : src/appearancesettingsdialog.cpp.o
+
+src/appearancesettingsdialog.i: src/appearancesettingsdialog.cpp.i
+.PHONY : src/appearancesettingsdialog.i
+
+# target to preprocess a source file
+src/appearancesettingsdialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/appearancesettingsdialog.cpp.i
+.PHONY : src/appearancesettingsdialog.cpp.i
+
+src/appearancesettingsdialog.s: src/appearancesettingsdialog.cpp.s
+.PHONY : src/appearancesettingsdialog.s
+
+# target to generate assembly for a file
+src/appearancesettingsdialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/appearancesettingsdialog.cpp.s
+.PHONY : src/appearancesettingsdialog.cpp.s
+
+src/applicationmode.o: src/applicationmode.cpp.o
+.PHONY : src/applicationmode.o
+
+# target to build an object file
+src/applicationmode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/applicationmode.cpp.o
+.PHONY : src/applicationmode.cpp.o
+
+src/applicationmode.i: src/applicationmode.cpp.i
+.PHONY : src/applicationmode.i
+
+# target to preprocess a source file
+src/applicationmode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/applicationmode.cpp.i
+.PHONY : src/applicationmode.cpp.i
+
+src/applicationmode.s: src/applicationmode.cpp.s
+.PHONY : src/applicationmode.s
+
+# target to generate assembly for a file
+src/applicationmode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/applicationmode.cpp.s
+.PHONY : src/applicationmode.cpp.s
+
 src/core/graphics_init.o: src/core/graphics_init.cpp.o
 .PHONY : src/core/graphics_init.o
 
@@ -202,6 +250,174 @@ src/core/graphics_init.s: src/core/graphics_init.cpp.s
 src/core/graphics_init.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/core/graphics_init.cpp.s
 .PHONY : src/core/graphics_init.cpp.s
+
+src/customdialog.o: src/customdialog.cpp.o
+.PHONY : src/customdialog.o
+
+# target to build an object file
+src/customdialog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/customdialog.cpp.o
+.PHONY : src/customdialog.cpp.o
+
+src/customdialog.i: src/customdialog.cpp.i
+.PHONY : src/customdialog.i
+
+# target to preprocess a source file
+src/customdialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/customdialog.cpp.i
+.PHONY : src/customdialog.cpp.i
+
+src/customdialog.s: src/customdialog.cpp.s
+.PHONY : src/customdialog.s
+
+# target to generate assembly for a file
+src/customdialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/customdialog.cpp.s
+.PHONY : src/customdialog.cpp.s
+
+src/effectsdialog.o: src/effectsdialog.cpp.o
+.PHONY : src/effectsdialog.o
+
+# target to build an object file
+src/effectsdialog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/effectsdialog.cpp.o
+.PHONY : src/effectsdialog.cpp.o
+
+src/effectsdialog.i: src/effectsdialog.cpp.i
+.PHONY : src/effectsdialog.i
+
+# target to preprocess a source file
+src/effectsdialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/effectsdialog.cpp.i
+.PHONY : src/effectsdialog.cpp.i
+
+src/effectsdialog.s: src/effectsdialog.cpp.s
+.PHONY : src/effectsdialog.s
+
+# target to generate assembly for a file
+src/effectsdialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/effectsdialog.cpp.s
+.PHONY : src/effectsdialog.cpp.s
+
+src/eqdialog.o: src/eqdialog.cpp.o
+.PHONY : src/eqdialog.o
+
+# target to build an object file
+src/eqdialog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/eqdialog.cpp.o
+.PHONY : src/eqdialog.cpp.o
+
+src/eqdialog.i: src/eqdialog.cpp.i
+.PHONY : src/eqdialog.i
+
+# target to preprocess a source file
+src/eqdialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/eqdialog.cpp.i
+.PHONY : src/eqdialog.cpp.i
+
+src/eqdialog.s: src/eqdialog.cpp.s
+.PHONY : src/eqdialog.s
+
+# target to generate assembly for a file
+src/eqdialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/eqdialog.cpp.s
+.PHONY : src/eqdialog.cpp.s
+
+src/findreplacedialog.o: src/findreplacedialog.cpp.o
+.PHONY : src/findreplacedialog.o
+
+# target to build an object file
+src/findreplacedialog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/findreplacedialog.cpp.o
+.PHONY : src/findreplacedialog.cpp.o
+
+src/findreplacedialog.i: src/findreplacedialog.cpp.i
+.PHONY : src/findreplacedialog.i
+
+# target to preprocess a source file
+src/findreplacedialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/findreplacedialog.cpp.i
+.PHONY : src/findreplacedialog.cpp.i
+
+src/findreplacedialog.s: src/findreplacedialog.cpp.s
+.PHONY : src/findreplacedialog.s
+
+# target to generate assembly for a file
+src/findreplacedialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/findreplacedialog.cpp.s
+.PHONY : src/findreplacedialog.cpp.s
+
+src/group.o: src/group.cpp.o
+.PHONY : src/group.o
+
+# target to build an object file
+src/group.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/group.cpp.o
+.PHONY : src/group.cpp.o
+
+src/group.i: src/group.cpp.i
+.PHONY : src/group.i
+
+# target to preprocess a source file
+src/group.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/group.cpp.i
+.PHONY : src/group.cpp.i
+
+src/group.s: src/group.cpp.s
+.PHONY : src/group.s
+
+# target to generate assembly for a file
+src/group.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/group.cpp.s
+.PHONY : src/group.cpp.s
+
+src/instrumentsdialog.o: src/instrumentsdialog.cpp.o
+.PHONY : src/instrumentsdialog.o
+
+# target to build an object file
+src/instrumentsdialog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/instrumentsdialog.cpp.o
+.PHONY : src/instrumentsdialog.cpp.o
+
+src/instrumentsdialog.i: src/instrumentsdialog.cpp.i
+.PHONY : src/instrumentsdialog.i
+
+# target to preprocess a source file
+src/instrumentsdialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/instrumentsdialog.cpp.i
+.PHONY : src/instrumentsdialog.cpp.i
+
+src/instrumentsdialog.s: src/instrumentsdialog.cpp.s
+.PHONY : src/instrumentsdialog.s
+
+# target to generate assembly for a file
+src/instrumentsdialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/instrumentsdialog.cpp.s
+.PHONY : src/instrumentsdialog.cpp.s
+
+src/layout.o: src/layout.cpp.o
+.PHONY : src/layout.o
+
+# target to build an object file
+src/layout.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/layout.cpp.o
+.PHONY : src/layout.cpp.o
+
+src/layout.i: src/layout.cpp.i
+.PHONY : src/layout.i
+
+# target to preprocess a source file
+src/layout.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/layout.cpp.i
+.PHONY : src/layout.cpp.i
+
+src/layout.s: src/layout.cpp.s
+.PHONY : src/layout.s
+
+# target to generate assembly for a file
+src/layout.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/layout.cpp.s
+.PHONY : src/layout.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -299,6 +515,126 @@ src/settingsdialog.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/settingsdialog.cpp.s
 .PHONY : src/settingsdialog.cpp.s
 
+src/templatesdialog.o: src/templatesdialog.cpp.o
+.PHONY : src/templatesdialog.o
+
+# target to build an object file
+src/templatesdialog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/templatesdialog.cpp.o
+.PHONY : src/templatesdialog.cpp.o
+
+src/templatesdialog.i: src/templatesdialog.cpp.i
+.PHONY : src/templatesdialog.i
+
+# target to preprocess a source file
+src/templatesdialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/templatesdialog.cpp.i
+.PHONY : src/templatesdialog.cpp.i
+
+src/templatesdialog.s: src/templatesdialog.cpp.s
+.PHONY : src/templatesdialog.s
+
+# target to generate assembly for a file
+src/templatesdialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/templatesdialog.cpp.s
+.PHONY : src/templatesdialog.cpp.s
+
+src/terminaldialog.o: src/terminaldialog.cpp.o
+.PHONY : src/terminaldialog.o
+
+# target to build an object file
+src/terminaldialog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/terminaldialog.cpp.o
+.PHONY : src/terminaldialog.cpp.o
+
+src/terminaldialog.i: src/terminaldialog.cpp.i
+.PHONY : src/terminaldialog.i
+
+# target to preprocess a source file
+src/terminaldialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/terminaldialog.cpp.i
+.PHONY : src/terminaldialog.cpp.i
+
+src/terminaldialog.s: src/terminaldialog.cpp.s
+.PHONY : src/terminaldialog.s
+
+# target to generate assembly for a file
+src/terminaldialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/terminaldialog.cpp.s
+.PHONY : src/terminaldialog.cpp.s
+
+src/track.o: src/track.cpp.o
+.PHONY : src/track.o
+
+# target to build an object file
+src/track.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/track.cpp.o
+.PHONY : src/track.cpp.o
+
+src/track.i: src/track.cpp.i
+.PHONY : src/track.i
+
+# target to preprocess a source file
+src/track.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/track.cpp.i
+.PHONY : src/track.cpp.i
+
+src/track.s: src/track.cpp.s
+.PHONY : src/track.s
+
+# target to generate assembly for a file
+src/track.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/track.cpp.s
+.PHONY : src/track.cpp.s
+
+src/trackviewmode.o: src/trackviewmode.cpp.o
+.PHONY : src/trackviewmode.o
+
+# target to build an object file
+src/trackviewmode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/trackviewmode.cpp.o
+.PHONY : src/trackviewmode.cpp.o
+
+src/trackviewmode.i: src/trackviewmode.cpp.i
+.PHONY : src/trackviewmode.i
+
+# target to preprocess a source file
+src/trackviewmode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/trackviewmode.cpp.i
+.PHONY : src/trackviewmode.cpp.i
+
+src/trackviewmode.s: src/trackviewmode.cpp.s
+.PHONY : src/trackviewmode.s
+
+# target to generate assembly for a file
+src/trackviewmode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/trackviewmode.cpp.s
+.PHONY : src/trackviewmode.cpp.s
+
+src/tutordialog.o: src/tutordialog.cpp.o
+.PHONY : src/tutordialog.o
+
+# target to build an object file
+src/tutordialog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/tutordialog.cpp.o
+.PHONY : src/tutordialog.cpp.o
+
+src/tutordialog.i: src/tutordialog.cpp.i
+.PHONY : src/tutordialog.i
+
+# target to preprocess a source file
+src/tutordialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/tutordialog.cpp.i
+.PHONY : src/tutordialog.cpp.i
+
+src/tutordialog.s: src/tutordialog.cpp.s
+.PHONY : src/tutordialog.s
+
+# target to generate assembly for a file
+src/tutordialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FirecourtCubes.dir/build.make CMakeFiles/FirecourtCubes.dir/src/tutordialog.cpp.s
+.PHONY : src/tutordialog.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -313,9 +649,36 @@ help:
 	@echo "... FirecourtCubes_autogen/mocs_compilation.o"
 	@echo "... FirecourtCubes_autogen/mocs_compilation.i"
 	@echo "... FirecourtCubes_autogen/mocs_compilation.s"
+	@echo "... src/appearancesettingsdialog.o"
+	@echo "... src/appearancesettingsdialog.i"
+	@echo "... src/appearancesettingsdialog.s"
+	@echo "... src/applicationmode.o"
+	@echo "... src/applicationmode.i"
+	@echo "... src/applicationmode.s"
 	@echo "... src/core/graphics_init.o"
 	@echo "... src/core/graphics_init.i"
 	@echo "... src/core/graphics_init.s"
+	@echo "... src/customdialog.o"
+	@echo "... src/customdialog.i"
+	@echo "... src/customdialog.s"
+	@echo "... src/effectsdialog.o"
+	@echo "... src/effectsdialog.i"
+	@echo "... src/effectsdialog.s"
+	@echo "... src/eqdialog.o"
+	@echo "... src/eqdialog.i"
+	@echo "... src/eqdialog.s"
+	@echo "... src/findreplacedialog.o"
+	@echo "... src/findreplacedialog.i"
+	@echo "... src/findreplacedialog.s"
+	@echo "... src/group.o"
+	@echo "... src/group.i"
+	@echo "... src/group.s"
+	@echo "... src/instrumentsdialog.o"
+	@echo "... src/instrumentsdialog.i"
+	@echo "... src/instrumentsdialog.s"
+	@echo "... src/layout.o"
+	@echo "... src/layout.i"
+	@echo "... src/layout.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
@@ -328,6 +691,21 @@ help:
 	@echo "... src/settingsdialog.o"
 	@echo "... src/settingsdialog.i"
 	@echo "... src/settingsdialog.s"
+	@echo "... src/templatesdialog.o"
+	@echo "... src/templatesdialog.i"
+	@echo "... src/templatesdialog.s"
+	@echo "... src/terminaldialog.o"
+	@echo "... src/terminaldialog.i"
+	@echo "... src/terminaldialog.s"
+	@echo "... src/track.o"
+	@echo "... src/track.i"
+	@echo "... src/track.s"
+	@echo "... src/trackviewmode.o"
+	@echo "... src/trackviewmode.i"
+	@echo "... src/trackviewmode.s"
+	@echo "... src/tutordialog.o"
+	@echo "... src/tutordialog.i"
+	@echo "... src/tutordialog.s"
 .PHONY : help
 
 

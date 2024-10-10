@@ -63,16 +63,30 @@
     }</string>
   </property>
   <widget class="QWidget" name="mainWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>240</width>
+     <height>140</height>
+    </rect>
+   </property>
    <layout class="QVBoxLayout">
     <item>
      <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
       <widget class="QWidget" name="generalTab">
-       <property name="title">
+       <property name="title" stdset="0">
         <string>General</string>
        </property>
+       <attribute name="title">
+        <string/>
+       </attribute>
        <layout class="QFormLayout">
         <item row="0" column="0">
-         <widget class="QLabel">
+         <widget class="QLabel" name="label">
           <property name="text">
            <string>Username:</string>
           </property>
@@ -82,7 +96,7 @@
          <widget class="QLineEdit" name="usernameLineEdit"/>
         </item>
         <item row="1" column="0">
-         <widget class="QLabel">
+         <widget class="QLabel" name="label">
           <property name="text">
            <string>Email:</string>
           </property>
@@ -91,16 +105,18 @@
         <item row="1" column="1">
          <widget class="QLineEdit" name="emailLineEdit"/>
         </item>
-        <!-- Add more general settings here -->
        </layout>
       </widget>
       <widget class="QWidget" name="appearanceTab">
-       <property name="title">
+       <property name="title" stdset="0">
         <string>Appearance</string>
        </property>
+       <attribute name="title">
+        <string/>
+       </attribute>
        <layout class="QFormLayout">
         <item row="0" column="0">
-         <widget class="QLabel">
+         <widget class="QLabel" name="label">
           <property name="text">
            <string>Theme:</string>
           </property>
@@ -118,11 +134,10 @@
             <string>Dark</string>
            </property>
           </item>
-          <!-- Add more themes here -->
          </widget>
         </item>
         <item row="1" column="0">
-         <widget class="QLabel">
+         <widget class="QLabel" name="label">
           <property name="text">
            <string>Font Size:</string>
           </property>
@@ -138,16 +153,28 @@
           </property>
          </widget>
         </item>
-        <!-- Add more appearance settings here -->
+        <item row="2" column="1">
+         <widget class="QDialogButtonBox" name="buttonBox">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="standardButtons">
+           <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+          </property>
+         </widget>
+        </item>
        </layout>
       </widget>
       <widget class="QWidget" name="audioTab">
-       <property name="title">
+       <property name="title" stdset="0">
         <string>Audio</string>
        </property>
+       <attribute name="title">
+        <string/>
+       </attribute>
        <layout class="QFormLayout">
         <item row="0" column="0">
-         <widget class="QLabel">
+         <widget class="QLabel" name="label">
           <property name="text">
            <string>Audio Output:</string>
           </property>
@@ -165,11 +192,10 @@
             <string>External Device</string>
            </property>
           </item>
-          <!-- Add more audio outputs here -->
          </widget>
         </item>
         <item row="1" column="0">
-         <widget class="QLabel">
+         <widget class="QLabel" name="label">
           <property name="text">
            <string>Volume:</string>
           </property>
@@ -177,28 +203,29 @@
         </item>
         <item row="1" column="1">
          <widget class="QSlider" name="volumeSlider">
-          <property name="orientation">
-           <enum>Qt::Orientation::Horizontal</enum>
-          </property>
           <property name="minimum">
            <number>0</number>
           </property>
           <property name="maximum">
            <number>100</number>
           </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
          </widget>
         </item>
-        <!-- Add more audio settings here -->
        </layout>
       </widget>
       <widget class="QWidget" name="advancedTab">
-       <property name="title">
+       <property name="title" stdset="0">
         <string>Advanced</string>
        </property>
+       <attribute name="title">
+        <string/>
+       </attribute>
        <layout class="QFormLayout">
-        <!-- Add advanced settings here -->
         <item row="0" column="0">
-         <widget class="QLabel">
+         <widget class="QLabel" name="label">
           <property name="text">
            <string>Advanced Setting:</string>
           </property>
@@ -209,24 +236,6 @@
         </item>
        </layout>
       </widget>
-     </widget>
-    </item>
-    <item>
-     <widget class="QDialogButtonBox" name="buttonBox">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>340</y>
-        <width>541</width>
-        <height>32</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Orientation::Horizontal</enum>
-      </property>
-      <property name="standardButtons">
-       <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok</set>
-      </property>
      </widget>
     </item>
    </layout>

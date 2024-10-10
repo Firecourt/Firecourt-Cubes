@@ -1,73 +1,42 @@
 #ifndef PROJECT_H
 #define PROJECT_H
-#include <QFile>
 
-class Project
-{
+#include <QList>
+#include <QObject>
+#include "track.h"  // Include your Track class header
+#include "group.h"  // Include your Group class header
+
+class Project : public QObject {
+    Q_OBJECT
+
 public:
-    Project() : modified(false) {}
+    Project(QObject *parent = nullptr);
 
-    bool loadFromFile(const QString& fileName) {
-        // Logic to load project data from a file
-        QFile file(fileName);
-        if (!file.open(QIODevice::ReadOnly)) {
-            return false;
-        }
-        // Load data
-        modified = false;
-        this->fileName = fileName;
-        return true;
-    }
+    // Copy constructor
+    Project(const Project& other);
 
-    bool saveToFile(const QString& fileName) {
-        // Logic to save project data to a file
-        QFile file(fileName);
-        if (!file.open(QIODevice::WriteOnly)) {
-            return false;
-        }
-        // Save data
-        modified = false;
-        this->fileName = fileName;
-        return true;
-    }
+    // Move constructor
+    Project(Project&& other) noexcept;
 
-    void clear() {
-        // Clear the project data (reset to initial state)
-        tracks.clear();
-        modified = false;
-        fileName.clear();
-    }
+    // Copy assignment operator
+    Project& operator=(const Project& other);
 
-    void setName(const QString& name) {
-        projectName = name;
-    }
+    // Move assignment operator
+    Project& operator=(Project&& other) noexcept;
 
-    QString getFileName() const {
-        return fileName;
-    }
+    void addTrack(Track* track);
+    void deleteTrack(Track* track);
+    void groupTracks(const QList<Track*>& tracks);
+    void ungroupTracks(Group* group);
 
-    bool isModified() const {
-        return modified;
-    }
+    QList<Track*> getTracks() const { return tracks; }
+    QList<Group*> getGroups() const { return groups; }
 
-    void markModified() {
-        modified = true;
-    }
-
-    void importFile(const QString& fileName) {
-        // Logic to import files into the project
-        // For example, add the file as a track or resource
-        tracks.append(fileName); // Example track list
-        modified = true;
-    }
-
-    // Add more project-related methods as needed
+    ~Project(); // Destructor to clean up dynamic memory
 
 private:
-    QString projectName;
-    QString fileName;
-    bool modified;
-    QList<QString> tracks; // Example list of tracks
+    QList<Track*> tracks;   // List of tracks in the project
+    QList<Group*> groups;   // List of groups of tracks
 };
 
 #endif // PROJECT_H

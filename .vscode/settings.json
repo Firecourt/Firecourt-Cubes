@@ -9,7 +9,12 @@
         "qundostack": "cpp",
         "qvboxlayout": "cpp",
         "qinputdialog": "cpp",
-        "qdir": "cpp"
+        "qdir": "cpp",
+        "charconv": "cpp",
+        "qfile": "cpp",
+        "*.inc": "cpp",
+        "qwidget": "cpp",
+        "qtextstream": "cpp"
     },
     "cmake.options.statusBarVisibility": "hidden"
 }

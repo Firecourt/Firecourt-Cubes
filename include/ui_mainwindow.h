@@ -16,7 +16,7 @@
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QToolBar>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -102,6 +102,7 @@ public:
     QAction *actionOpen_Project;
     QWidget *centralwidget;
     QVBoxLayout *vboxLayout;
+    QTextEdit *textEdit;
     QMenuBar *menubar;
     QMenu *menuFile_2;
     QMenu *menuNew_Project;
@@ -113,17 +114,93 @@ public:
     QMenu *menuPlugins;
     QMenu *menuRenet;
     QMenu *menuHelp;
-    QToolBar *toolBar;
-    QVBoxLayout *vboxLayout1;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
+        MainWindow->setWindowModality(Qt::ApplicationModal);
         MainWindow->resize(1200, 800);
+        QPalette palette;
+        QBrush brush(QColor(255, 255, 255, 255));
+        brush.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        QBrush brush1(QColor(18, 18, 18, 255));
+        brush1.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Button, brush1);
+        QBrush brush2(QColor(0, 0, 190, 255));
+        brush2.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Light, brush2);
+        QBrush brush3(QColor(0, 0, 158, 255));
+        brush3.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Midlight, brush3);
+        QBrush brush4(QColor(0, 0, 63, 255));
+        brush4.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Dark, brush4);
+        QBrush brush5(QColor(0, 0, 85, 255));
+        brush5.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Mid, brush5);
+        palette.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette.setBrush(QPalette::Active, QPalette::BrightText, brush);
+        palette.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette.setBrush(QPalette::Active, QPalette::Base, brush1);
+        palette.setBrush(QPalette::Active, QPalette::Window, brush1);
+        QBrush brush6(QColor(0, 0, 0, 255));
+        brush6.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Shadow, brush6);
+        palette.setBrush(QPalette::Active, QPalette::AlternateBase, brush4);
+        QBrush brush7(QColor(255, 255, 220, 255));
+        brush7.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::ToolTipBase, brush7);
+        palette.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
+        QBrush brush8(QColor(255, 255, 255, 128));
+        brush8.setStyle(Qt::SolidPattern);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette::Active, QPalette::PlaceholderText, brush8);
+#endif
+        palette.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Light, brush2);
+        palette.setBrush(QPalette::Inactive, QPalette::Midlight, brush3);
+        palette.setBrush(QPalette::Inactive, QPalette::Dark, brush4);
+        palette.setBrush(QPalette::Inactive, QPalette::Mid, brush5);
+        palette.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Base, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
+        palette.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush4);
+        palette.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush7);
+        palette.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush8);
+#endif
+        palette.setBrush(QPalette::Disabled, QPalette::WindowText, brush4);
+        palette.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Light, brush2);
+        palette.setBrush(QPalette::Disabled, QPalette::Midlight, brush3);
+        palette.setBrush(QPalette::Disabled, QPalette::Dark, brush4);
+        palette.setBrush(QPalette::Disabled, QPalette::Mid, brush5);
+        palette.setBrush(QPalette::Disabled, QPalette::Text, brush4);
+        palette.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
+        palette.setBrush(QPalette::Disabled, QPalette::ButtonText, brush4);
+        palette.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
+        QBrush brush9(QColor(0, 0, 127, 255));
+        brush9.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush9);
+        palette.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush7);
+        palette.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush8);
+#endif
+        MainWindow->setPalette(palette);
         MainWindow->setMouseTracking(true);
         MainWindow->setTabletTracking(true);
+        MainWindow->setFocusPolicy(Qt::WheelFocus);
         MainWindow->setAcceptDrops(true);
         MainWindow->setStyleSheet(QString::fromUtf8("\n"
 "    QMainWindow {\n"
@@ -314,6 +391,12 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         vboxLayout = new QVBoxLayout(centralwidget);
         vboxLayout->setObjectName(QString::fromUtf8("vboxLayout"));
+        textEdit = new QTextEdit(centralwidget);
+        textEdit->setObjectName(QString::fromUtf8("textEdit"));
+        textEdit->setTabletTracking(true);
+
+        vboxLayout->addWidget(textEdit);
+
         menubar = new QMenuBar(centralwidget);
         menubar->setObjectName(QString::fromUtf8("menubar"));
         menuFile_2 = new QMenu(menubar);
@@ -338,16 +421,6 @@ public:
         menuHelp->setObjectName(QString::fromUtf8("menuHelp"));
 
         vboxLayout->addWidget(menubar);
-
-        toolBar = new QToolBar(centralwidget);
-        toolBar->setObjectName(QString::fromUtf8("toolBar"));
-
-        vboxLayout->addWidget(toolBar);
-
-        vboxLayout1 = new QVBoxLayout();
-        vboxLayout1->setObjectName(QString::fromUtf8("vboxLayout1"));
-
-        vboxLayout->addLayout(vboxLayout1);
 
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
@@ -414,8 +487,17 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Firecourt Cubes", nullptr));
         actionOpen->setText(QCoreApplication::translate("MainWindow", "&Open...", nullptr));
+#if QT_CONFIG(shortcut)
+        actionOpen->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+O", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionSave->setText(QCoreApplication::translate("MainWindow", "&Save...", nullptr));
+#if QT_CONFIG(shortcut)
+        actionSave->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+S", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionSave_As->setText(QCoreApplication::translate("MainWindow", "Sa&ve As...", nullptr));
+#if QT_CONFIG(shortcut)
+        actionSave_As->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+Shift+S", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionImport->setText(QCoreApplication::translate("MainWindow", "&Import...", nullptr));
         actionExport->setText(QCoreApplication::translate("MainWindow", "&Export...", nullptr));
         actionPreferences->setText(QCoreApplication::translate("MainWindow", "&Preferences...", nullptr));
@@ -451,14 +533,32 @@ public:
         actionSave_2->setText(QCoreApplication::translate("MainWindow", "Save", nullptr));
         actionSave_As_2->setText(QCoreApplication::translate("MainWindow", "Save As ...", nullptr));
         actionExit_2->setText(QCoreApplication::translate("MainWindow", "Export", nullptr));
+#if QT_CONFIG(shortcut)
+        actionExit_2->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+Shift+E", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionNew_Track->setText(QCoreApplication::translate("MainWindow", "New Track", nullptr));
         actionSelect_track->setText(QCoreApplication::translate("MainWindow", "Select track ", nullptr));
         actionSelect_all_tracks->setText(QCoreApplication::translate("MainWindow", "Select all tracks", nullptr));
         actionEdit_track->setText(QCoreApplication::translate("MainWindow", "Edit track", nullptr));
+#if QT_CONFIG(shortcut)
+        actionEdit_track->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+R", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionDelete_track->setText(QCoreApplication::translate("MainWindow", "Delete track", nullptr));
+#if QT_CONFIG(shortcut)
+        actionDelete_track->setShortcut(QCoreApplication::translate("MainWindow", "Del", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionZoom_In_2->setText(QCoreApplication::translate("MainWindow", "Zoom In ", nullptr));
+#if QT_CONFIG(shortcut)
+        actionZoom_In_2->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl++", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionZoom_Out_2->setText(QCoreApplication::translate("MainWindow", "Zoom Out", nullptr));
+#if QT_CONFIG(shortcut)
+        actionZoom_Out_2->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+-", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionHorizontal->setText(QCoreApplication::translate("MainWindow", "Horizontal", nullptr));
+#if QT_CONFIG(shortcut)
+        actionHorizontal->setShortcut(QCoreApplication::translate("MainWindow", "Alt+H", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionVertical->setText(QCoreApplication::translate("MainWindow", "Vertical ", nullptr));
         actionTerminal->setText(QCoreApplication::translate("MainWindow", "Terminal ", nullptr));
         actionMixer->setText(QCoreApplication::translate("MainWindow", "Mixer", nullptr));
@@ -487,7 +587,13 @@ public:
         actionMargins->setText(QCoreApplication::translate("MainWindow", "Margins", nullptr));
         actionTheme->setText(QCoreApplication::translate("MainWindow", "Theme", nullptr));
         actionOpen_File->setText(QCoreApplication::translate("MainWindow", "Open File ", nullptr));
+#if QT_CONFIG(shortcut)
+        actionOpen_File->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+O", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionOpen_Project->setText(QCoreApplication::translate("MainWindow", "Open Project", nullptr));
+#if QT_CONFIG(shortcut)
+        actionOpen_Project->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+O, Ctrl+P", nullptr));
+#endif // QT_CONFIG(shortcut)
         menuFile_2->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuNew_Project->setTitle(QCoreApplication::translate("MainWindow", "New Project..", nullptr));
         menuMode->setTitle(QCoreApplication::translate("MainWindow", "Mode", nullptr));
