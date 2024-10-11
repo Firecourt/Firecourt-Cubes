@@ -2,41 +2,39 @@
 #define LAYOUT_H
 
 #include <QWidget>
-#include <QMenu>
-#include <QMenuBar>
-#include <QSplitter>
-#include <QVBoxLayout>
-#include <QLineEdit>
-#include <QListWidget>
-#include <QGroupBox>
-#include <QGridLayout>
-#include <QStatusBar>
+#include "settingsdialog.h"
+
+class MainWindow; // Forward declaration
 
 class Layout : public QWidget {
     Q_OBJECT
 
 public:
-    explicit Layout(QWidget* parent = nullptr);
+    explicit Layout(MainWindow *mainWindow, QWidget *parent = nullptr);
 
-private slots:
-    void createFileMenu();
-    void createTrackMenu();
-    void createPluginMenu();
-    void createRenetMenu();
-    void createHelpMenu();
+signals: // Signal declarations
+    void fileOpenRequested();
+    void projectOpenRequested();
+    void fileSaveRequested();
+    void fileSaveAsRequested();
+    void exitRequested();
+    void editTrackRequested();
+    void deleteTrackRequested();
+    void zoomInRequested();
+    void zoomOutRequested();
+    void setHorizontalViewRequested();
+    void setVerticalViewRequested();
+    void closeRenetRequested();
+    void openRenet();
+    void openTutor();
 
+public slots: // Slot declarations
+    void openSettingsDialog();
+    void showTerminalRequested(); // Ensure it's only declared here
 
 private:
-
-    QMenu* createFileMenu(QMenuBar* menuBar);
-    QMenu* createTrackMenu(QMenuBar* menuBar);
-    QMenu* createViewMenu(QMenuBar* menuBar);
-    QMenu* createPluginsMenu(QMenuBar* menuBar);
-    QMenu* createRenetMenu(QMenuBar* menuBar);
-    QMenu* createHelpMenu(QMenuBar* menuBar);
-    QWidget* createLeftPanel();
-    QWidget* createBrowserPanel();
-    QWidget* createPlaylist();
+    MainWindow *mainWindow;
+    SettingsDialog *settingsDialog;
 };
 
 #endif // LAYOUT_H

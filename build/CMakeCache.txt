@@ -224,17 +224,32 @@ FirecourtCubes_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 FirecourtCubes_SOURCE_DIR:STATIC=/home/cyberbitch/Documents/GitHub/Firecourt-Cubes
 
+//The directory containing a CMake configuration file for Maven.
+Maven_DIR:PATH=Maven_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for Qt5Core.
 Qt5Core_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Core
 
 //The directory containing a CMake configuration file for Qt5Gui.
 Qt5Gui_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui
 
+//The directory containing a CMake configuration file for Qt5WebEngineWidgets.
+Qt5WebEngineWidgets_DIR:PATH=Qt5WebEngineWidgets_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for Qt5Widgets.
 Qt5Widgets_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets
 
 //The directory containing a CMake configuration file for Qt5.
 Qt5_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5
+
+//Value Computed by CMake
+Renet_BINARY_DIR:STATIC=/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/build/Renet
+
+//Value Computed by CMake
+Renet_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+Renet_SOURCE_DIR:STATIC=/home/cyberbitch/Documents/GitHub/Firecourt-Cubes/Renet
 
 
 ########################

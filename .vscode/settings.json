@@ -16,5 +16,6 @@
         "qwidget": "cpp",
         "qtextstream": "cpp"
     },
-    "cmake.options.statusBarVisibility": "hidden"
+    "cmake.options.statusBarVisibility": "hidden",
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

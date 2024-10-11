@@ -2,24 +2,32 @@
 #define SETTINGSDIALOG_H
 
 #include <QDialog>
+#include <QVBoxLayout>
+#include <QLabel>
+#include <QLineEdit>
+#include <QComboBox>
+#include <QDialogButtonBox>
+#include <QSpinBox>
+#include <QCheckBox>
 
-namespace Ui {
-class SettingsDialog; // Forward declaration
-}
-
-class SettingsDialog : public QDialog
-{
+class SettingsDialog : public QDialog {
     Q_OBJECT
 
 public:
-    explicit SettingsDialog(QWidget *parent = nullptr);
+    explicit SettingsDialog(QWidget* parent = nullptr);
     ~SettingsDialog();
-
-private:
-    Ui::SettingsDialog *ui; // Use pointer instead of object directly
 
 private slots:
     void applySettings();
+
+private:
+    QLineEdit* usernameEdit;
+    QComboBox* themeComboBox;
+    QSpinBox* fontSizeSpinBox;
+    QComboBox* languageComboBox;
+    QCheckBox* notificationsCheckBox;
+    QVBoxLayout* layout;
+    QDialogButtonBox* buttonBox;
 };
 
 #endif // SETTINGSDIALOG_H

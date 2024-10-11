@@ -38,7 +38,8 @@ TerminalDialog::~TerminalDialog()
 
 void TerminalDialog::executeCommand(const QString &command)
 {
-    process->start(command);
+    // Start a Linux shell to execute the command
+    process->start("bash", QStringList() << "-c" << command);
 }
 
 void TerminalDialog::on_sendButton_clicked()

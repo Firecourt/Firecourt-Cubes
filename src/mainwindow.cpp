@@ -1,341 +1,407 @@
-#include "../include/mainwindow.h"
-#include "appearancesettingsdialog.h"
-#include "customdialog.h"
-#include "effectsdialog.h"
-#include "findreplacedialog.h"
-#include "instrumentsdialog.h"
-#include "project.h"
-#include "settingsdialog.h"
-#include "templatesdialog.h"
-#include "terminaldialog.h"
-#include "tutordialog.h"
-#include <QFileDialog>
-#include <QFile>
-#include <QTextStream>
-#include <QInputDialog>
-#include <QMessageBox>
-#include <QDesktopServices>
-#include <QUrl>
-#include <QProcess>
-#include <QMenuBar>
-#include <QToolBar>
-#include <QTextEdit>
-#include <QVBoxLayout>
-#include <QWidget>
-#include <QSplitter>
-#include <QLabel>
-#include <QListView>
-#include "track.h"
+#include "mainwindow.h"
 #include "layout.h"
+#include "terminaldialog.h"
+#include <QMenuBar>
+#include <QStatusBar>
+#include <QMessageBox>
+#include <QFileDialog>
+#include <QTextStream>
+#include <QApplication>
 
-// MainWindow constructor
+// Constructor for MainWindow
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , applicationMode(Normal) // Set the initial application mode
-{
-    // Set the Layout instance as the central widget of the MainWindow
+    : QMainWindow(parent) {
+
+    // Set up the layout
     Layout *layout = new Layout(this);
     setCentralWidget(layout);
 
-    // Setup connections for the signals and slots
-    setupConnections();
+    // Connect signals from Layout to slots in MainWindow
+    connect(layout, &Layout::fileOpenRequested, this, &MainWindow::openFile);
+    connect(layout, &Layout::projectOpenRequested, this, &MainWindow::openProject);
+    connect(layout, &Layout::fileSaveRequested, this, &MainWindow::saveFile);
+    connect(layout, &Layout::fileSaveAsRequested, this, &MainWindow::saveFileAs);
+    connect(layout, &Layout::exitRequested, this, &MainWindow::exitApplication);
+    connect(layout, &Layout::editTrackRequested, this, &MainWindow::editTrack);
+    connect(layout, &Layout::deleteTrackRequested, this, &MainWindow::deleteTrack);
+    connect(layout, &Layout::zoomInRequested, this, &MainWindow::zoomIn);
+    connect(layout, &Layout::zoomOutRequested, this, &MainWindow::zoomOut);
+    connect(layout, &Layout::setHorizontalViewRequested, this, &MainWindow::setHorizontalView);
+    connect(layout, &Layout::setVerticalViewRequested, this, &MainWindow::setVerticalView);
+    connect(layout, &Layout::showTerminalRequested, this, &MainWindow::showTerminal);
+    connect(layout, &Layout::closeRenetRequested, this, &MainWindow::closeRenet);
 }
-
-// MainWindow destructor
 MainWindow::~MainWindow() {
-    // No need to delete ui pointer since we are managing widgets directly
+    // Cleanup code, if necessary
 }
 
-// Method to set application mode
-void MainWindow::setApplicationMode(ApplicationMode mode) {
-    applicationMode = mode;
 
-    // Update UI or behavior based on mode
-    switch (applicationMode) {
-    case Normal:
-        // Configure UI for normal mode
-        break;
-    case Editing:
-        // Configure UI for editing mode
-        break;
-    case Mixing:
-        // Configure UI for mixing mode
-        break;
-    case Recording:
-        // Configure UI for recording mode
-        break;
-    }
-}
-
-// Method to set up connections
-void MainWindow::setupConnections() {
-    // Connect menu actions to corresponding slots
-    connect(textEdit, &QTextEdit::textChanged, this, &MainWindow::onTextChanged);
-}
-
-// Method to open a file
+// Open file slot
 void MainWindow::openFile() {
-    QString fileName = QFileDialog::getOpenFileName(this, "Open File", QDir::homePath(), "All Files (*.*);;Text Files (*.txt)");
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"), "", tr("All Files (*.*)"));
     if (!fileName.isEmpty()) {
         QFile file(fileName);
-        if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-            QMessageBox::warning(this, "Error", "Could not open file for reading.");
-            return;
+        if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+            QTextStream in(&file);
+            // Process the file content here
+            file.close();
+            statusBar()->showMessage(tr("Opened file: %1").arg(fileName));
+        } else {
+            QMessageBox::warning(this, tr("Error"), tr("Cannot open file: %1").arg(file.errorString()));
         }
-        QTextStream stream(&file);
-        QString content = stream.readAll();
-        textEdit->setPlainText(content);
-        file.close();
-        QMessageBox::information(this, "File Loaded", "File loaded successfully.");
-
-        // Open Dolphin with the file path
-        QProcess::startDetached("dolphin", QStringList() << fileName);
     }
 }
 
+// Open project slot
+void MainWindow::openProject() {
+    QString projectDir = QFileDialog::getExistingDirectory(this, tr("Open Project Directory"));
+    if (!projectDir.isEmpty()) {
+        // Load project resources here
+        statusBar()->showMessage(tr("Opened project: %1").arg(projectDir));
+    }
+}
+
+// Save file slot
+void MainWindow::saveFile() {
+    // Logic to save the current file
+    statusBar()->showMessage(tr("File saved."));
+}
+
+// Save file as slot
+void MainWindow::saveFileAs() {
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Save File As"), "", tr("All Files (*.*)"));
+    if (!fileName.isEmpty()) {
+        QFile file(fileName);
+        if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+            QTextStream out(&file);
+            // Write content to the file here
+            file.close();
+            statusBar()->showMessage(tr("Saved file: %1").arg(fileName));
+        } else {
+            QMessageBox::warning(this, tr("Error"), tr("Cannot save file: %1").arg(file.errorString()));
+        }
+    }
+}
+
+// Exit application slot
+void MainWindow::exitApplication() {
+    QApplication::quit();
+}
+
+// Edit track slot
+void MainWindow::editTrack() {
+    // Logic to edit the selected track
+    statusBar()->showMessage(tr("Edit track functionality to be implemented."));
+}
+
+// Delete track slot
+void MainWindow::deleteTrack() {
+    // Logic to delete the selected track
+    statusBar()->showMessage(tr("Delete track functionality to be implemented."));
+}
+
+// Zoom in slot
+void MainWindow::zoomIn() {
+    // Logic for zooming in
+    statusBar()->showMessage(tr("Zoomed in."));
+}
+
+// Zoom out slot
+void MainWindow::zoomOut() {
+    // Logic for zooming out
+    statusBar()->showMessage(tr("Zoomed out."));
+}
+
+// Set horizontal view slot
+void MainWindow::setHorizontalView() {
+    // Logic for setting horizontal view
+    statusBar()->showMessage(tr("Set horizontal view."));
+}
+
+// Set vertical view slot
+void MainWindow::setVerticalView() {
+    // Logic for setting vertical view
+    statusBar()->showMessage(tr("Set vertical view."));
+}
+
+// Show terminal slot
+void MainWindow::showTerminal() {
+    // Logic for showing terminal
+    statusBar()->showMessage(tr("Showing terminal."));
+}
+
+// Close renet slot
+void MainWindow::closeRenet() {
+    // Logic to close Renet
+    statusBar()->showMessage(tr("Closed Renet."));
+}
+
+// Save action triggered
 void MainWindow::on_actionSave_triggered() {
-    QString fileName = QFileDialog::getSaveFileName(this, "Save File", QDir::homePath(), "All Files (*.*);;Text Files (*.txt)");
-    if (!fileName.isEmpty()) {
-        QFile file(fileName);
-        if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
-            QMessageBox::warning(this, "Error", "Could not open file for writing.");
-            return;
-        }
-        QTextStream stream(&file);
-        stream << textEdit->toPlainText();
-        file.close();
-        QMessageBox::information(this, "File Saved", "File saved successfully.");
-    }
+    saveFile(); // Call to save the current file
 }
 
+// Save As action triggered
 void MainWindow::on_actionSave_As_triggered() {
-    on_actionSave_triggered(); // Reuse save function
+    saveFileAs(); // Call to save the current file with a new name
 }
 
+// Import action triggered
 void MainWindow::on_actionImport_triggered() {
-    openFile(); // Call the openFile function for import
-}
-
-void MainWindow::on_actionExport_triggered() {
-    QString fileName = QFileDialog::getSaveFileName(this, "Export File", QDir::homePath(), "All Files (*.*);;Text Files (*.txt)");
+    // Logic for importing a file
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Import File"), "", tr("All Files (*.*)"));
     if (!fileName.isEmpty()) {
-        QFile file(fileName);
-        if (!file.open(QIODevice::WriteOnly)) {
-            QMessageBox::warning(this, "Error", "Could not open file for writing.");
-            return;
-        }
-        QTextStream stream(&file);
-        stream << "Exported content goes here."; // Replace with actual data
-        file.close();
-        QMessageBox::information(this, "File Exported", "File exported successfully.");
+        // Implement your import logic here
+        statusBar()->showMessage(tr("Imported file: %1").arg(fileName));
     }
 }
 
+// Export action triggered
+void MainWindow::on_actionExport_triggered() {
+    // Logic for exporting a file
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Export File"), "", tr("All Files (*.*)"));
+    if (!fileName.isEmpty()) {
+        // Implement your export logic here
+        statusBar()->showMessage(tr("Exported file: %1").arg(fileName));
+    }
+}
+
+// Preferences action triggered
 void MainWindow::on_actionPreferences_triggered() {
-    SettingsDialog preferencesDialog(this);
-    preferencesDialog.exec();
+    // Open preferences dialog
+    QMessageBox::information(this, tr("Preferences"), tr("Preferences functionality to be implemented."));
 }
 
+// Exit action triggered
 void MainWindow::on_actionExit_triggered() {
-    close();
+    exitApplication(); // Call to exit the application
 }
 
-// Implement remaining functions as before...
-
-// Define each function
-void MainWindow::on_actionNew_Project_triggered() {
-    // Your implementation to create a new project
-}
-
-void MainWindow::on_actionUndo_triggered() {
-    // Your implementation for undo functionality
-}
-
-void MainWindow::on_actionRedo_triggered() {
-    // Your implementation for redo functionality
-}
-
+// Add Track action triggered
 void MainWindow::on_actionAdd_Track_triggered() {
-    // Your implementation
+    // Logic to add a new track
+    statusBar()->showMessage(tr("Add Track functionality to be implemented."));
 }
 
+// Delete Track action triggered
 void MainWindow::on_actionDelete_Track_triggered() {
-    // Your implementation
+    deleteTrack(); // Call to delete the selected track
 }
 
+// Rename Track action triggered
 void MainWindow::on_actionRename_Track_triggered() {
-    // Your implementation
+    // Logic to rename the selected track
+    statusBar()->showMessage(tr("Rename Track functionality to be implemented."));
 }
 
+// Group Tracks action triggered
 void MainWindow::on_actionGroup_Tracks_triggered() {
-    // Your implementation
+    // Logic to group selected tracks
+    statusBar()->showMessage(tr("Group Tracks functionality to be implemented."));
 }
 
+// Ungroup Tracks action triggered
 void MainWindow::on_actionUngroup_Tracks_triggered() {
-    // Your implementation
+    // Logic to ungroup selected tracks
+    statusBar()->showMessage(tr("Ungroup Tracks functionality to be implemented."));
 }
 
+// Freeze Track action triggered
 void MainWindow::on_actionFreeze_Track_triggered() {
-    // Your implementation
+    // Logic to freeze the selected track
+    statusBar()->showMessage(tr("Freeze Track functionality to be implemented."));
 }
 
+// Bounce Export Track action triggered
 void MainWindow::on_actionBounce_Export_Track_triggered() {
-    // Your implementation
+    // Logic for bouncing/exporting the selected track
+    statusBar()->showMessage(tr("Bounce Export Track functionality to be implemented."));
 }
 
+// Solo action triggered
 void MainWindow::on_actionSolo_triggered() {
-    // Your implementation
+    // Logic to solo the selected track
+    statusBar()->showMessage(tr("Solo functionality to be implemented."));
 }
 
+// Mute action triggered
 void MainWindow::on_actionMute_triggered() {
-    // Your implementation
+    // Logic to mute the selected track
+    statusBar()->showMessage(tr("Mute functionality to be implemented."));
 }
 
+// Record action triggered
 void MainWindow::on_actionRecord_triggered() {
-    // Your implementation
+    startRecording(); // Call to start recording audio
 }
 
+// Audio Settings action triggered
 void MainWindow::on_actionAudio_Settings_triggered() {
-    // Your implementation
+    // Logic to open audio settings
+    QMessageBox::information(this, tr("Audio Settings"), tr("Audio Settings functionality to be implemented."));
 }
 
+// MIDI Settings action triggered
 void MainWindow::on_actionMIDI_Settings_triggered() {
-    // Your implementation
+    // Logic to open MIDI settings
+    QMessageBox::information(this, tr("MIDI Settings"), tr("MIDI Settings functionality to be implemented."));
 }
 
+// New Track action triggered
 void MainWindow::on_actionNew_Track_triggered() {
-    // Your implementation
+    // Logic to create a new track
+    statusBar()->showMessage(tr("New Track functionality to be implemented."));
 }
 
+// Select Track action triggered
 void MainWindow::on_actionSelect_track_triggered() {
-    // Your implementation
+    // Logic to select a specific track
+    statusBar()->showMessage(tr("Select Track functionality to be implemented."));
 }
 
-void MainWindow::onTextChanged() {
-    // Handle text change event
+// Select All Tracks action triggered
+void MainWindow::on_actionSelect_all_tracks_triggered() {
+    selectAllTracks(); // Call to select all tracks
 }
 
+// Edit Track action triggered
 void MainWindow::on_actionEdit_track_triggered() {
-    // Code to edit a track
-    Track* track = getSelectedTrack();
-    if (track) {
-        editTrack(track);
-    }
+ // Call to edit the currently selected track
 }
 
+// Delete Track action triggered
 void MainWindow::on_actionDelete_track_triggered() {
-    // Code to delete a track
-    Track* track = getSelectedTrack();
-    if (track) {
-        // Logic to delete the track
-    }
+    deleteTrack(); // Call to delete the selected track
 }
 
-void MainWindow::on_actionZoom_In_triggered() {
-    // Code to zoom in the view
-    zoomIn();
-}
-
-void MainWindow::on_actionZoom_Out_triggered() {
-    // Code to zoom out the view
-    zoomOut();
-}
-
+// Horizontal View action triggered
 void MainWindow::on_actionHorizontal_triggered() {
-    // Code to set view to horizontal
-    setViewMode(TrackViewMode::Horizontal);
+    setHorizontalView(); // Call to set horizontal view
 }
 
+// Vertical View action triggered
 void MainWindow::on_actionVertical_triggered() {
-    // Code to set view to vertical
-    setViewMode(TrackViewMode::Vertical);
+    setVerticalView(); // Call to set vertical view
+}
+void showTerminal(){
+    TerminalDialog terminalDialog;
+
 }
 
+
+
+// Terminal action triggered
 void MainWindow::on_actionTerminal_triggered() {
-    // Code to open the terminal view
-    // Add logic for the terminal view
+    showTerminal(); // Call to show the terminal
 }
 
+// Mixer action triggered
 void MainWindow::on_actionMixer_triggered() {
-    // Code to open the mixer view
-    // Add logic for the mixer view
+    // Logic to show the mixer
+    QMessageBox::information(this, tr("Mixer"), tr("Mixer functionality to be implemented."));
 }
 
+// EQ action triggered
 void MainWindow::on_actionEQ_triggered() {
-    // Code to open the EQ view
-    // Add logic for the EQ view
+    // Logic to show the EQ
+    QMessageBox::information(this, tr("EQ"), tr("EQ functionality to be implemented."));
 }
 
+// Instruments action triggered
 void MainWindow::on_actionInstruments_triggered() {
-    // Code to open the instruments view
-    // Add logic for the instruments view
+    // Logic to show instruments
+    QMessageBox::information(this, tr("Instruments"), tr("Instruments functionality to be implemented."));
 }
 
+// Effects action triggered
 void MainWindow::on_actionEffects_triggered() {
-    // Code to open the effects view
-    // Add logic for the effects view
+    // Logic to show effects
+    QMessageBox::information(this, tr("Effects"), tr("Effects functionality to be implemented."));
 }
 
+// Open action triggered (alternative)
 void MainWindow::on_actionOpen_2_triggered() {
-    // Code for the Open action
-    openFile();
+    openFile(); // Call to open a file
 }
 
+// Dialogbox action triggered
 void MainWindow::on_actionDialogbox_triggered() {
-    // Code to open a dialog box
-    // Example logic for a dialog box
+    // Logic to show a dialog box
+    QMessageBox::information(this, tr("Dialog Box"), tr("Dialog box functionality to be implemented."));
 }
 
+// Message Box action triggered
 void MainWindow::on_actionMessage_Box_triggered() {
-    // Code to open a message box
-    // Example logic for a message box
+    QMessageBox::information(this, tr("Message Box"), tr("Message box functionality to be implemented."));
 }
 
+// Close action triggered
 void MainWindow::on_actionClose_triggered() {
-    // Code to close the application or window
-    close();
+    // Logic to close the application or a specific window
+    QMessageBox::information(this, tr("Close"), tr("Close functionality to be implemented."));
 }
 
+// Tutor action triggered
 void MainWindow::on_actionTutor_triggered() {
-    // Code to open the tutor/help section
-    // Add logic for opening the tutor/help section
+    // Logic to show a tutorial
+    QMessageBox::information(this, tr("Tutor"), tr("Tutor functionality to be implemented."));
 }
 
+// Documentation action triggered
 void MainWindow::on_actionDocumentation_triggered() {
-    // Code to open the documentation
-    // Add logic for opening documentation
+    // Logic to show documentation
+    QMessageBox::information(this, tr("Documentation"), tr("Documentation functionality to be implemented."));
 }
 
+// What Is action triggered
 void MainWindow::on_actionWhat_is_triggered() {
-    // Code for the "What is" action
-    // Add logic for this action
+    // Logic to show information about the application
+    QMessageBox::information(this, tr("What Is"), tr("What Is functionality to be implemented."));
 }
 
+// Compile action triggered
 void MainWindow::on_actionCompile_triggered() {
-    // Code to compile the project
-    compileProject();
+    compileProject(); // Call to compile the project
 }
 
+// Empty Project action triggered
 void MainWindow::on_actionEmpty_Project_triggered() {
-    // Code to create a new empty project
-    // Add logic for creating a new project
+    // Logic to create an empty project
+    QMessageBox::information(this, tr("Empty Project"), tr("Empty Project functionality to be implemented."));
 }
 
-void MainWindow::setViewMode(TrackViewMode::Mode mode) {
-    // Set the view mode based on the parameter
-    // Add logic for changing the view mode
+// Undo action triggered
+void MainWindow::on_actionUndo_triggered() {
+    // Logic for undoing the last action
+    statusBar()->showMessage(tr("Undo functionality to be implemented."));
+}
+
+// Redo action triggered
+void MainWindow::on_actionRedo_triggered() {
+    // Logic for redoing the last undone action
+    statusBar()->showMessage(tr("Redo functionality to be implemented."));
+}
+
+// New Project action triggered
+void MainWindow::on_actionNew_Project_triggered() {
+    // Logic to create a new project
+    statusBar()->showMessage(tr("New Project functionality to be implemented."));
+}
+
+// Text changed slot
+void MainWindow::onTextChanged() {
+    // Logic to handle text changes, e.g., in a text editor
+    statusBar()->showMessage(tr("Text changed."));
+}
+void MainWindow::startRecording() {
+    // Implement recording logic
+}
+
+void MainWindow::selectAllTracks() {
+    // Implement track selection logic
 }
 
 void MainWindow::compileProject() {
-    // Code to compile the current project
-    // Add logic for compiling the project
+    // Implement project compilation logic
 }
 
-Track* MainWindow::getSelectedTrack() {
-    // Logic to get the selected track
-    return nullptr; // Replace with actual logic
-}
-
-void MainWindow::editTrack(Track* track) {
-    // Logic to edit the selected track
-}

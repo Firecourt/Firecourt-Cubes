@@ -1,190 +1,146 @@
 #include "layout.h"
+#include "mainwindow.h"
+#include "settingsdialog.h" // Include the SettingsDialog header
+#include "terminaldialog.h" // Include the TerminalDialog header
 #include <QMenuBar>
 #include <QMenu>
-#include <QSplitter>
 #include <QVBoxLayout>
-#include <QLineEdit>
-#include <QListWidget>
-#include <QGroupBox>
-#include <QGridLayout>
+#include <QTextEdit>
 #include <QStatusBar>
 #include <QAction>
+#include <QProcess>
 
-Layout::Layout(QWidget* parent) : QWidget(parent) {
-    // Main layout for the window
-    auto* mainLayout = new QVBoxLayout(this);
+// Constructor for the Layout class
+Layout::Layout(MainWindow *mainWindow, QWidget *parent)
+    : QWidget(parent), mainWindow(mainWindow) {
 
-    // Menu Bar
-    auto* menuBar = new QMenuBar(this);
+    // Create the main layout
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
-    // File Menu
-    auto* fileMenu = createFileMenu(menuBar);
+    // Create the menu bar
+    QMenuBar *menuBar = new QMenuBar(this);
 
-    // Track Menu
-    auto* trackMenu = createTrackMenu(menuBar);
+    // Create "File" menu
+    QMenu *fileMenu = new QMenu("File", this);
+    QMenu *newProjectMenu = new QMenu("New Project..", this);
+    newProjectMenu->addAction("Empty Project", this, &Layout::fileOpenRequested);
+    newProjectMenu->addAction("Templates", this, &Layout::fileOpenRequested);
+    fileMenu->addMenu(newProjectMenu);
+    fileMenu->addAction("Open File", this, &Layout::fileOpenRequested);
+    fileMenu->addAction("Open Project", this, &Layout::projectOpenRequested);
+    fileMenu->addAction("Save", this, &Layout::fileSaveRequested);
+    fileMenu->addAction("Save As...", this, &Layout::fileSaveAsRequested);
+    fileMenu->addAction("Exit", this, &Layout::exitRequested);
 
-    // View Menu
-    auto* viewMenu = createViewMenu(menuBar);
-
-    // Plugins Menu
-    auto* pluginsMenu = createPluginsMenu(menuBar);
-
-    // Renet Menu
-    auto* renetMenu = createRenetMenu(menuBar);
-
-    // Help Menu
-    auto* helpMenu = createHelpMenu(menuBar);
-
-    mainLayout->setMenuBar(menuBar);
-
-    // Main splitter to separate left and right panels
-    auto* mainSplitter = new QSplitter(Qt::Horizontal, this);
-
-    // Left Panel
-    auto* leftPanel = createLeftPanel();
-    mainSplitter->addWidget(leftPanel);
-
-    // Right Splitter (contains browser and playlist)
-    auto* rightSplitter = new QSplitter(Qt::Vertical, this);
-    auto* browserPanel = createBrowserPanel();
-    rightSplitter->addWidget(browserPanel);
-
-    auto* playlist = createPlaylist();
-    rightSplitter->addWidget(playlist);
-
-    mainSplitter->addWidget(rightSplitter);
-
-    // Add the main splitter to the main layout
-    mainLayout->addWidget(mainSplitter);
-
-    // Set up a status bar
-    auto* statusBar = new QStatusBar(this);
-    mainLayout->addWidget(statusBar);
-
-    // Set the layout for the main window
-    setLayout(mainLayout);
-}
-
-QMenu* Layout::createFileMenu(QMenuBar* menuBar) {
-    auto* fileMenu = menuBar->addMenu("File");
-
-    auto* newProjectMenu = fileMenu->addMenu("New Project..");
-    newProjectMenu->addAction("Empty Project");
-    newProjectMenu->addAction("Templates");
-
-    fileMenu->addAction("Open File");
-    fileMenu->addAction("Open Project");
-    fileMenu->addAction("Save");
-    fileMenu->addAction("Save As");
-
-    auto* modeMenu = fileMenu->addMenu("Mode");
+    // Create "Mode" menu
+    QMenu *modeMenu = new QMenu("Mode", this);
     modeMenu->addAction("Musician");
     modeMenu->addAction("Producer");
     modeMenu->addAction("Engineer");
+    fileMenu->addMenu(modeMenu);
 
-    auto* settingsMenu = fileMenu->addMenu("Settings");
-    settingsMenu->addAction("Appearance");
+    // Create "Settings" menu
+    QMenu *settingsMenu = new QMenu("Settings", this);
+    settingsMenu->addAction("Appearance", this, &Layout::openSettingsDialog); // Action to open settings dialog
     settingsMenu->addAction("General");
-    settingsMenu->addAction("MDI");
+    settingsMenu->addAction("MIDI");
     settingsMenu->addAction("Devices");
     settingsMenu->addAction("Renet");
+    fileMenu->addMenu(settingsMenu);
 
-    auto* preferencesMenu = fileMenu->addMenu("Preferences");
+    // Create "Preferences" menu
+    QMenu *preferencesMenu = new QMenu("Preferences", this);
     preferencesMenu->addAction("Console");
     preferencesMenu->addAction("Margins");
     preferencesMenu->addAction("Theme");
+    fileMenu->addMenu(preferencesMenu);
 
-    fileMenu->addAction("Exit");
+    // Add actions to the "File" menu
+    fileMenu->addAction("Compile", this, &Layout::fileOpenRequested);
+    fileMenu->addAction("Exit", this, &Layout::exitRequested);
 
-    return fileMenu;
-}
+    // Add "File" menu to the menu bar
+    menuBar->addMenu(fileMenu);
 
-QMenu* Layout::createTrackMenu(QMenuBar* menuBar) {
-    auto* trackMenu = menuBar->addMenu("Track");
-    trackMenu->addAction("New Track");
+    // Create "Track" menu
+    QMenu *trackMenu = new QMenu("Track", this);
+    trackMenu->addAction("New Track", this, &Layout::fileOpenRequested);
     trackMenu->addAction("Select Track");
     trackMenu->addAction("Select All Tracks");
-    trackMenu->addAction("Edit Track");
-    trackMenu->addAction("Delete Track");
-    return trackMenu;
-}
+    trackMenu->addAction("Edit Track", this, &Layout::editTrackRequested);
+    trackMenu->addAction("Delete Track", this, &Layout::deleteTrackRequested);
+    menuBar->addMenu(trackMenu);
 
-QMenu* Layout::createViewMenu(QMenuBar* menuBar) {
-    auto* viewMenu = menuBar->addMenu("View");
-    viewMenu->addAction("Zoom In");
-    viewMenu->addAction("Zoom Out");
-    viewMenu->addAction("Horizontal");
-    viewMenu->addAction("Vertical");
-    viewMenu->addAction("Terminal");
-    return viewMenu;
-}
+    // Create "View" menu
+    QMenu *viewMenu = new QMenu("View", this);
+    viewMenu->addAction("Zoom In", this, &Layout::zoomInRequested);
+    viewMenu->addAction("Zoom Out", this, &Layout::zoomOutRequested);
+    viewMenu->addAction("Horizontal", this, &Layout::setHorizontalViewRequested);
+    viewMenu->addAction("Vertical", this, &Layout::setVerticalViewRequested);
+    viewMenu->addAction("Terminal", this, &Layout::showTerminalRequested);
+    menuBar->addMenu(viewMenu);
 
-QMenu* Layout::createPluginsMenu(QMenuBar* menuBar) {
-    auto* pluginsMenu = menuBar->addMenu("Plugins");
+    // Create "Plugins" menu
+    QMenu *pluginsMenu = new QMenu("Plugins", this);
     pluginsMenu->addAction("Mixer");
     pluginsMenu->addAction("EQ");
     pluginsMenu->addAction("Instruments");
     pluginsMenu->addAction("Effects");
-    return pluginsMenu;
-}
+    menuBar->addMenu(pluginsMenu);
 
-QMenu* Layout::createRenetMenu(QMenuBar* menuBar) {
-    auto* renetMenu = menuBar->addMenu("Renet");
-    renetMenu->addAction("Open");
-    renetMenu->addAction("Dialogbox");
+    // Create "Renet" menu
+    QMenu *renetMenu = new QMenu("Renet", this);
+    renetMenu->addAction("Open", this, &Layout::openRenet); // Connect to slot
+    renetMenu->addAction("Dialog Box");
     renetMenu->addAction("Message Box");
-    renetMenu->addAction("Close");
-    return renetMenu;
-}
+    renetMenu->addAction("Close", this, &Layout::closeRenetRequested);
+    menuBar->addMenu(renetMenu);
 
-QMenu* Layout::createHelpMenu(QMenuBar* menuBar) {
-    auto* helpMenu = menuBar->addMenu("Help");
-    helpMenu->addAction("Tutor");
+    // Create "Help" menu
+    QMenu *helpMenu = new QMenu("Help", this);
+    helpMenu->addAction("Tutor", this, &Layout::openTutor); // Connect to slot
     helpMenu->addAction("Documentation");
-    helpMenu->addAction("What is...");
-    return helpMenu;
+    helpMenu->addAction("What is?");
+    menuBar->addMenu(helpMenu);
+
+    // Add the menu bar to the main layout
+    mainLayout->setMenuBar(menuBar);
+
+    // Create a text edit widget
+    QTextEdit *textEdit = new QTextEdit(this);
+    textEdit->setTabletTracking(true);
+
+    // Add the text edit to the main layout
+    mainLayout->addWidget(textEdit);
+
+    // Create the status bar
+    QStatusBar *statusBar = new QStatusBar(this);
+    mainLayout->addWidget(statusBar);
+
+    // Set the layout for the central widget
+    setLayout(mainLayout);
+}
+void Layout::showTerminalRequested() {
+    TerminalDialog *terminalDialog = new TerminalDialog(this);
+    terminalDialog->setModal(true);
+
+    // Start the shell or terminal when the dialog is shown
+#ifdef Q_OS_WIN
+    terminalDialog->executeCommand("cmd.exe");
+#elif defined(Q_OS_UNIX)
+    terminalDialog->executeCommand("/bin/bash");
+#elif defined (Q_OS_UNIX)
+    terminalDialog->executeCommand("/bin/zsh");
+#endif
+
+    terminalDialog->exec();
 }
 
-QWidget* Layout::createLeftPanel() {
-    auto* leftPanel = new QWidget(this);
-    auto* leftPanelLayout = new QVBoxLayout(leftPanel);
-
-    // Snap Panel
-    auto* snapPanel = new QGroupBox("Snap Panel", leftPanel);
-    leftPanelLayout->addWidget(snapPanel);
-
-    // Play Panel
-    auto* playPanel = new QGroupBox("Play Panel", leftPanel);
-    leftPanelLayout->addWidget(playPanel);
-
-    // Audio Edit Tools Panel
-    auto* audioEditToolsPanel = new QGroupBox("Audio Edit Tools Panel", leftPanel);
-    leftPanelLayout->addWidget(audioEditToolsPanel);
-
-    leftPanel->setLayout(leftPanelLayout);
-    return leftPanel;
-}
-
-QWidget* Layout::createBrowserPanel() {
-    auto* browserPanel = new QWidget(this);
-    auto* browserLayout = new QVBoxLayout(browserPanel);
-
-    auto* searchBar = new QLineEdit(browserPanel);
-    searchBar->setPlaceholderText("Search...");
-    browserLayout->addWidget(searchBar);
-
-    auto* browserList = new QListWidget(browserPanel);
-    browserList->setToolTip("Hover over an item for more details");
-    browserLayout->addWidget(browserList);
-
-    browserPanel->setLayout(browserLayout);
-    return browserPanel;
-}
-
-QWidget* Layout::createPlaylist() {
-    auto* playlist = new QWidget(this);
-    auto* playlistLayout = new QGridLayout(playlist);
-    playlist->setLayout(playlistLayout);
-    playlist->setToolTip("Drag and drop tracks here");
-    return playlist;
+// Slot to open the settings dialog
+void Layout::openSettingsDialog() {
+    SettingsDialog settingsDialog(this);
+    if (settingsDialog.exec() == QDialog::Accepted) {
+        // Apply the settings if needed
+        // You can add logic here to respond to the user's choices
+    }
 }

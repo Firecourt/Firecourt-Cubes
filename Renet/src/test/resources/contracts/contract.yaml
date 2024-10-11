@@ -1,0 +1,19 @@
+import org.springframework.cloud.contract.spec.Contract
+
+Contract.make {
+    request {
+        method 'GET'
+        url '/api/example'
+    }
+    response {
+        status 200
+        body("""
+            {
+                "message": "Hello, World!"
+            }
+        """)
+        headers {
+            contentType(applicationJson())
+        }
+    }
+}
