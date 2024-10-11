@@ -17,5 +17,6 @@
         "qtextstream": "cpp"
     },
     "cmake.options.statusBarVisibility": "hidden",
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.compile.nullAnalysis.mode": "automatic"
 }
